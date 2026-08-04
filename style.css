@@ -125,3 +125,13 @@ footer a:hover{color:#fff}
 /* TESTIMONIALS */
 .hood.quote{border-left-color:var(--amber);font-style:italic}
 .hood.quote h3{font-style:normal;margin-top:12px;font-size:14px;color:var(--moss)}
+
+/* ARTICLES */
+.article{max-width:820px}
+.article h2{font-size:clamp(20px,2.6vw,26px);color:var(--pine);font-weight:800;margin:34px 0 12px}
+.article h2:first-child{margin-top:0}
+.article p{margin-bottom:14px;font-size:15.5px}
+.article ul.svc{margin:10px 0 18px}
+.article a{font-weight:600}
+.hood h3 a{color:var(--pine);text-decoration:none}
+.hood h3 a:hover{color:var(--amber-dark)}
