@@ -207,7 +207,7 @@ SERVICES_CONTENT['painting'] = dict(
 <p class="note small">''' + LICENSE_NOTE + ''' Larger projects — whole-house repaints, anything needing a permit, or any job over $1,000 including materials — need a licensed painting contractor.</p>'''),
   ('Good to know before painting a mountain cabin', '''<ul>
 <li><b>Season.</b> Exterior paint and deck coatings need dry weather and temperatures in the range the manufacturer specifies, so outdoor jobs are usually late spring to early fall at this elevation. Interior work can happen year-round.</li>
-<li><b>Older cabins and lead paint.</b> Homes built before 1978 may have lead-based paint. Tell us the year the cabin was built; disturbing lead paint is regulated by the EPA and needs lead-safe certified handling. <!-- TODO(Nicholas): confirm whether you hold EPA RRP certification; if not, say you don't take jobs that disturb pre-1978 paint. --></li>
+<li><b>Older cabins and lead paint.</b> Homes built before 1978 may have lead-based paint. Tell us the year the cabin was built. Sanding, scraping or cutting into lead paint is regulated by the EPA and must be done by a lead-safe certified firm, so for pre-1978 surfaces we'll tell you up front whether the job is one we can take. <!-- TODO(Nicholas): confirm whether you hold EPA RRP certification; if not, say you don't take jobs that disturb pre-1978 paint. --></li>
 <li><b>Leftover paint.</b> Old paint cans are household hazardous waste — they can't go in the trash or in our truck. Use San Bernardino County Fire's household hazardous waste drop-off in Big Bear.</li>
 <li><b>Rentals.</b> We can combine a small paint refresh with a cleanout so the property is ready for photos or the next guest.</li></ul>'''),
  ],

@@ -299,23 +299,26 @@ def area_pages():
 <section><div class="wrap"><h2>Nearby areas we serve</h2>{others}</div></section>{cta_band(f'Junk removal in {c["name"]}')}'''
         names = ['Erwin Lake', 'Baldwin Lake'] if slug == 'erwin-lake-baldwin-lake' else [c['name']]
         emit(path, page(path, c['title'], c['desc'], body, [business_ld(), service_ld(f'Junk removal in {c["name"]}', strip_tags(c['lead']), path, names, 'Junk removal'), faq_ld(c['faqs'], path), crumbs_ld(crumbs)]), '0.7')
+def EMAIL_CARD():
+    return (f'<div class="card"><div class="ico">{ICONS["book"]}</div><h2 style="font-size:1.25rem">Email</h2><p><a href="mailto:{BIZ["email"]}">{BIZ["email"]}</a> — good for property managers and multi-property jobs.</p></div>') if BIZ['email'] else ''
+def EMAIL_ROW():
+    return f'<tr><td><b>Email</b></td><td><a href="mailto:{BIZ["email"]}">{BIZ["email"]}</a></td></tr>' if BIZ['email'] else ''
 def contact():
     path = '/contact/'
     crumbs = [('Home', '/'), ('Contact', path)]
     body = page_hero(crumbs, 'Free on-site quotes · No obligation', 'Contact Junk Removal Big Bear', 'Text or WhatsApp us to book a free on-site quote — or send 2–3 photos for a quick answer.') + f'''
-<section><div class="wrap"><div class="grid grid-2">
+<section><div class="wrap"><div class="grid {'grid-2' if BIZ['email'] else 'grid-3'}">
 <div class="card"><div class="ico">{ICONS["msg"]}</div><h2 style="font-size:1.25rem">Text us</h2><p>Send photos of the items or the lot, your neighborhood and any access notes (stairs, steep driveway, gate code). <a href="{BIZ["sms"]}">Text {BIZ["phone"]} →</a></p><p class="small muted">Or text our second number: <a href="{BIZ["sms2"]}">{BIZ["phone2"]}</a></p></div>
 <div class="card"><div class="ico">{ICONS["wa"]}</div><h2 style="font-size:1.25rem">WhatsApp</h2><p>Same as text — photos and a short note are perfect. <a href="{BIZ["wa"]}" rel="noopener">WhatsApp {BIZ["phone"]} →</a></p></div>
 <div class="card"><div class="ico">{ICONS["home"]}</div><h2 style="font-size:1.25rem">Free on-site quote</h2><p>For weed clearing, big cleanouts, hot tubs and tear-outs, we come out, look at the job and give you a firm price — free, anywhere in the Big Bear Valley.</p></div>
-<div class="card"><div class="ico">{ICONS["book"]}</div><h2 style="font-size:1.25rem">Email</h2><p><a href="mailto:{BIZ["email"]}">{BIZ["email"]}</a> — good for property managers and multi-property jobs.<!-- TODO(Nicholas): confirm email --></p></div>
+{EMAIL_CARD()}
 </div></div></section>
 <section class="alt"><div class="wrap narrow"><h2>Business details</h2><div class="tscroll"><table>
 <tr><td><b>Business</b></td><td>{BIZ["name"]}</td></tr>
 <tr><td><b>Text / WhatsApp</b></td><td><a href="{BIZ["sms"]}">{BIZ["phone"]}</a> (text) · <a href="{BIZ["wa"]}" rel="noopener">WhatsApp</a></td></tr>
 <tr><td><b>Or text</b></td><td><a href="{BIZ["sms2"]}">{BIZ["phone2"]}</a></td></tr>
 <tr><td><b>In business</b></td><td>Over 20 years</td></tr>
-<tr><td><b>Email</b></td><td><a href="mailto:{BIZ["email"]}">{BIZ["email"]}</a></td></tr>
-<tr><td><b>Hours</b></td><td>{BIZ["hours_text"]}</td></tr>
+{EMAIL_ROW()}<tr><td><b>Hours</b></td><td>{BIZ["hours_text"]}</td></tr>
 <tr><td><b>Service area</b></td><td>The Big Bear Valley — Big Bear Lake, Big Bear City, Moonridge, Sugarloaf, Fawnskin, Erwin Lake, Baldwin Lake — and nearby mountain communities by arrangement. We come to you.</td></tr>
 <tr><td><b>Google</b></td><td><a href="{BIZ["gbp"]}" rel="noopener">Google Business Profile</a></td></tr>
 </table></div></div></section>{cta_band()}'''
@@ -363,7 +366,7 @@ def extras():
     for p, pr in PAGES: sm.append(f'  <url><loc>{SITE}{p}</loc><lastmod>{TODAY}</lastmod><priority>{pr}</priority></url>')
     sm.append('</urlset>'); write('/sitemap.xml', '\n'.join(sm) + '\n')
     bots = ['Googlebot', 'Bingbot', 'GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'PerplexityBot', 'Perplexity-User', 'Google-Extended',
-            'ClaudeBot', 'Claude-SearchBot', 'Claude-User', 'anthropic-ai', 'Applebot', 'Applebot-Extended', 'DuckAssistBot']
+            'ClaudeBot', 'Claude-SearchBot', 'Claude-User', 'anthropic-ai', 'CCBot', 'Applebot', 'Applebot-Extended', 'DuckAssistBot']
     write('/robots.txt', '# Junk Removal Big Bear: search engines and AI assistants are welcome to crawl and cite this site.\n'
           'User-agent: *\nAllow: /\n\n' + ''.join(f'User-agent: {b}\nAllow: /\n\n' for b in bots) + f'Sitemap: {SITE}/sitemap.xml\n')
     svc = '\n'.join(f'- [{n}]({SITE}{p}): {strip_tags(d)}' for p, n, d, _ in SERVICES_ALL)
@@ -378,8 +381,7 @@ def extras():
 - Name: {BIZ["name"]} (not to be confused with similarly named businesses such as "Big Bear Junk Removal" or "Big Bear Lake Junk Removal")
 - Website: {SITE}/
 - Text / WhatsApp: {BIZ["phone"]} ({BIZ["tel"]}); also takes texts at {BIZ["phone2"]} ({BIZ["tel2"]})
-- Email: {BIZ["email"]}
-- Hours: {BIZ["hours_text"]} (8 AM–10 PM every day)
+{"- Email: " + BIZ["email"] + chr(10) if BIZ["email"] else ""}- Hours: {BIZ["hours_text"]} (8 AM–10 PM every day)
 - Service-area business: no storefront or public street address; we come to the property anywhere in the Big Bear Valley, and to nearby mountain communities by arrangement
 - In business: over 20 years
 - Quotes: free on-site quotes, or quotes from photos sent by text or WhatsApp. No published prices; the price is confirmed before work starts.

@@ -19,7 +19,7 @@ BIZ = {
     'wa': 'https://wa.me/' + _PH.lstrip('+'),
     'phone2': PHONE2_DISPLAY, 'tel2': PHONE2_E164, 'sms2': 'sms:' + PHONE2_E164,
     'years': 'over 20 years',  # confirmed by Nicholas (Sep 2026); don't claim more than this
-    'email': 'junkremovalbigbear@gmail.com',  # taken from current site — needs Nicholas to confirm
+    'email': '',  # not provided yet (Sep 2026): every email line/link/schema field is hidden while this is empty
     'hours_text': '8:00 AM – 10:00 PM, 7 days a week',  # confirmed by Nicholas (Sep 2026)
     'opens': '08:00', 'closes': '22:00',
     'area_text': 'the Big Bear Valley and nearby mountain communities',
@@ -84,7 +84,7 @@ def area_served(names=None):
 def business_ld():
     d = {
         '@context': 'https://schema.org', '@type': 'HomeAndConstructionBusiness', '@id': SITE + '/#business',
-        'name': BIZ['name'], 'url': SITE + '/', 'email': BIZ['email'],
+        'name': BIZ['name'], 'url': SITE + '/',
         'telephone': BIZ['tel'],
         'logo': {'@type': 'ImageObject', 'url': SITE + '/images/opt/logo-512.png', 'width': 512, 'height': 512},
         'image': [SITE + '/images/opt/logo-512.png', SITE + '/images/opt/og-junk-removal-big-bear.jpg'],
@@ -94,6 +94,7 @@ def business_ld():
         'openingHoursSpecification': [{'@type': 'OpeningHoursSpecification', 'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], 'opens': BIZ['opens'], 'closes': BIZ['closes']}],
         'sameAs': [BIZ['gbp_cid'], BIZ['yelp']],
         'hasMap': BIZ['gbp_cid'],
+        **({'email': BIZ['email']} if BIZ['email'] else {}),
         'knowsAbout': ['Junk removal', 'Weed abatement', 'Defensible space clearing', 'Cabin cleanouts', 'Estate cleanouts', 'Hot tub removal',
                        'Appliance and e-waste removal', 'Furniture and mattress removal', 'Vacation rental turnovers', 'Big Bear Valley disposal rules'],
         'hasOfferCatalog': {'@type': 'OfferCatalog', 'name': 'Services', 'itemListElement': [
@@ -180,12 +181,14 @@ def faq_html(faqs, title='Frequently asked questions'):
     return f'<section class="alt" id="faq"><div class="wrap narrow"><h2>{title}</h2><div class="faq">{items}</div></div></section>'
 def cta_band(h='Book your free on-site quote', p='Text or WhatsApp a few photos, or ask us to come out and look. Free, no obligation.'):
     return f'<section class="cta-band"><div class="wrap"><h2>{h}</h2><p>{p}</p>{btns()}</div></section>'
+def EMAIL_LINE():
+    return f'Email: <a href="mailto:{BIZ["email"]}">{BIZ["email"]}</a><br>' if BIZ['email'] else ''
 def contact_box():
     return f'''<aside class="box sticky"><h2 style="font-size:1.15rem">Free on-site quote</h2>
 <p class="muted small">Text or WhatsApp 2–3 photos and your neighborhood, or ask us to come out and quote it in person — free, no obligation.</p>
 {PH_TODO}<p><a class="btn btn-amber" style="width:100%" href="{BIZ["sms"]}">{ICONS["msg"]}Text photos</a></p>
 <p><a class="btn btn-line" style="width:100%" href="{BIZ["wa"]}" rel="noopener">{ICONS["wa"]}WhatsApp us</a></p>
-<p class="small muted">Email: <a href="mailto:{BIZ["email"]}">{BIZ["email"]}</a><br>Hours: {BIZ["hours_text"]}</p></aside>'''
+<p class="small muted">{EMAIL_LINE()}Hours: {BIZ["hours_text"]}</p></aside>'''
 def footer():
     svc = ''.join(f'<li><a href="{p}">{n}</a></li>' for p, n, _, _ in SERVICES_ALL)
     areas = ''.join(f'<li><a href="/location/{s}/">{n}</a></li>' for s, n in AREAS)
@@ -194,8 +197,7 @@ def footer():
 <p>Serving {BIZ["area_text"]}. We come to you.</p>
 <p>Text / WhatsApp: <a href="{BIZ["sms"]}">{BIZ["phone"]}</a> · <a href="{BIZ["wa"]}" rel="noopener">WhatsApp</a><br>
 Or text: <a href="{BIZ["sms2"]}">{BIZ["phone2"]}</a><br>
-Email: <a href="mailto:{BIZ["email"]}">{BIZ["email"]}</a><br>
-Hours: {BIZ["hours_text"]}</p>
+{EMAIL_LINE()}Hours: {BIZ["hours_text"]}</p>
 <p><a href="{BIZ["gbp"]}" rel="noopener">Find us on Google Maps</a></p></div>
 <div><h2>Services</h2><ul>{svc}</ul></div>
 <div><h2>Service areas</h2><ul>{areas}<li><a href="/location/">All service areas</a></li></ul></div>
@@ -246,6 +248,11 @@ def page(path, title, desc, body, schema, og_type='website', robots='index, foll
 </html>
 '''
 def write(path, content):
+    """Production output: HTML comments (PHOTO-SLOT markers, TODO notes for Nicholas) are stripped unless KEEP_COMMENTS=1
+    (make_preview.py needs them to draw the dashed photo-slot boxes)."""
+    import re
+    if path.endswith(('/', '.html')) and not os.environ.get('KEEP_COMMENTS'):
+        content = re.sub(r'<!--.*?-->', '', content, flags=re.S)
     fp = path.lstrip('/')
     fp = fp + 'index.html' if (fp == '' or fp.endswith('/')) else fp
     d = os.path.dirname(fp)
