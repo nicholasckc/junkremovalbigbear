@@ -1,0 +1,6 @@
+# GitHub Pages (Jekyll) settings: keep build tooling and internal docs off the public site.
+exclude:
+  - _build
+  - README.md
+  - LAUNCH-GUIDE.md
+  - localize-images.sh
