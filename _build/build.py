@@ -50,7 +50,7 @@ def home():
 <section><div class="wrap"><h2>What we do</h2><p class="sec-intro">Everything except moving. Pick a service for details and local tips.</p>
 {svc_cards()}</div></section>
 <section class="alt"><div class="wrap two"><div>
-<span class="eyebrow" style="color:var(--amber-2)">Fire season</span><h2>Got a weed abatement letter?</h2>
+<span class="eyebrow" style="color:#7a4d05">Fire season</span><h2>Got a weed abatement letter?</h2>
 <p>Big Bear Fire mails abatement letters to property owners every year, and the letter <b>is</b> your warning — a separate notice before a citation isn't guaranteed. Their defensible-space checklist covers pine needles, weeds, brush, low limbs and even junk and lumber stored on the property.</p>
 <p>We clear it to the checklist and haul everything away on the same visit, and we can do it while you're off the mountain.</p>
 <p><a class="btn btn-amber" href="/weed-abatement/">{ICONS["leaf"]}Weed clearing &amp; abatement</a></p>
