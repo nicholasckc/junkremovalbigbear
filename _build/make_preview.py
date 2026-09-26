@@ -15,7 +15,7 @@ for n in os.listdir(SRC):
     s, d = os.path.join(SRC, n), os.path.join(OUT, n)
     shutil.copytree(s, d) if os.path.isdir(s) else shutil.copy2(s, d)
 BANNER = ('<div style="background:#b3261e;color:#fff;text-align:center;padding:8px 12px;font:600 14px/1.4 system-ui,sans-serif">'
-          'PREVIEW — not the live site. Phone number, photos and some details are placeholders pending confirmation. '
+          'PREVIEW — not the live site. Some details are still pending confirmation. Illustrations are AI-generated general scenes. '
           'Dashed boxes mark spots for real photos.</div>')
 def fix(h):
     h = re.sub(r'(href|src)="/(?!/)', lambda m: f'{m.group(1)}="{BASE}', h)

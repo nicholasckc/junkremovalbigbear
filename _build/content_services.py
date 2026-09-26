@@ -186,24 +186,34 @@ SERVICES_CONTENT['junk-removal'] = dict(
  related=['/services/cabin-cleanouts/', '/services/appliance-e-waste-removal/', '/weed-abatement/'])
 SERVICES_CONTENT['painting'] = dict(
  name='Painting (Minor Jobs)', stype='Painting',
- title='Minor Painting Jobs in Big Bear, CA | Touch-Ups, Rooms, Trim & Fences',
- desc='Small painting jobs for Big Bear cabins and rentals: touch-ups, single rooms, trim, doors, fences and sheds — often right after a cleanout. Free on-site quotes.',
- h1='Minor Painting Jobs in Big Bear',
- lead='After a cleanout or between rental seasons, a fresh coat on the scuffed walls, trim or fence makes a big difference. We take on small painting jobs.',
+ title='Minor Interior & Exterior Painting in Big Bear, CA | Rooms, Trim, Decks & Fences',
+ desc='Small interior and exterior painting jobs for Big Bear cabins and rentals: walls, ceilings, trim, doors, siding touch-ups, decks and fences — minor jobs only. Free on-site quotes.',
+ h1='Minor Interior &amp; Exterior Painting in Big Bear',
+ lead='Inside or out — scuffed walls after a cleanout, a tired ceiling, weathered trim, a deck or a fence run. We take on small interior and exterior painting jobs.',
  sections=[
-  ('Typical painting jobs', '''<ul><li>Wall touch-ups and patch painting after furniture comes out</li><li>A single room or hallway</li>
-<li>Doors, trim and baseboards</li><li>Short fence runs, sheds and outbuildings</li></ul>
-<!-- TODO(Nicholas): confirm exactly which painting jobs you take on (interior/exterior, staining, who supplies paint). -->
-<p class="note small">''' + LICENSE_NOTE + ''' Larger projects — whole-house exteriors, decks, anything needing a permit — need a licensed painting contractor.</p>'''),
+  ('Interior painting', '''<ul><li>Walls and ceilings — a single room, a hallway or a loft</li>
+<li>Patch painting and touch-ups after furniture comes out or a guest season ends</li>
+<li>Doors, trim, window casings and baseboards</li></ul>'''),
+  ('Exterior painting', '''<ul><li>Siding touch-ups and small sections of siding</li>
+<li>Exterior trim, fascia, doors and railings</li>
+<li>Decks, porches and stairs</li>
+<li>Fences, sheds and small outbuildings</li></ul>
+<p class="note small">''' + LICENSE_NOTE + ''' Larger projects — whole-house repaints, anything needing a permit, or any job over $1,000 including materials — need a licensed painting contractor.</p>'''),
   ('Good to know before painting a mountain cabin', '''<ul>
-<li><b>Season.</b> Exterior paint needs dry weather and temperatures in the range the manufacturer specifies, so outdoor jobs are usually late spring to early fall at this elevation.</li>
-<li><b>Older cabins and lead paint.</b> Homes built before 1978 may have lead-based paint. Tell us the year the cabin was built; disturbing lead paint is regulated by the EPA and needs certified handling. <!-- TODO(Nicholas): confirm whether you hold EPA RRP certification; if not, say you don't take jobs that disturb pre-1978 paint. --></li>
+<li><b>Season.</b> Exterior paint and deck coatings need dry weather and temperatures in the range the manufacturer specifies, so outdoor jobs are usually late spring to early fall at this elevation. Interior work can happen year-round.</li>
+<li><b>Older cabins and lead paint.</b> Homes built before 1978 may have lead-based paint. Tell us the year the cabin was built; disturbing lead paint is regulated by the EPA and needs lead-safe certified handling. <!-- TODO(Nicholas): confirm whether you hold EPA RRP certification; if not, say you don't take jobs that disturb pre-1978 paint. --></li>
 <li><b>Leftover paint.</b> Old paint cans are household hazardous waste — they can't go in the trash or in our truck. Use San Bernardino County Fire's household hazardous waste drop-off in Big Bear.</li>
 <li><b>Rentals.</b> We can combine a small paint refresh with a cleanout so the property is ready for photos or the next guest.</li></ul>'''),
  ],
  faqs=[
-  ('Do you paint whole houses?', 'No. We only take on minor painting jobs. Whole-house or permitted work needs a licensed painting contractor.'),
+  ('Do you do interior or exterior painting?', 'Both, as long as the job is minor: interior walls, ceilings, doors and trim, and exterior siding touch-ups, trim, decks and fences.'),
+  ('Do you paint whole houses?', 'No. We only take on minor painting jobs under $1,000 including materials. Whole-house or permitted work needs a licensed painting contractor.'),
   ('Can you paint after a cleanout?', 'Yes — combining a cleanout with a small paint touch-up is a common request for listings and rentals.'),
   ('Do you take away old paint cans?', 'No. Paint is household hazardous waste. San Bernardino County Fire runs the household hazardous waste drop-off in Big Bear.'),
  ],
  related=['/services/cabin-cleanouts/', '/vacation-rental-turnovers/', '/services/light-demolition/'])
+
+# Restored general-scene images (AI-generated, from the old site; no people, vehicles or equipment). (name, alt)
+SERVICES_CONTENT['appliance-e-waste-removal']['img'] = ('appliances-electronics-pile', 'Old appliances and electronics stacked against a block wall: a mini fridge, microwaves, a small washer, a black mini fridge and a blue bin')
+SERVICES_CONTENT['cabin-cleanouts']['img'] = ('mountain-cabin-pines', 'Two-story wood cabin with lit windows among tall pines, with a snow-patched forested hillside behind')
+SERVICES_CONTENT['junk-removal']['img'] = ('yard-junk-pile', 'Backyard junk pile: a green bin full of scrap wood and a broken chair frame, with old tires and bagged debris on the lawn by a white fence')

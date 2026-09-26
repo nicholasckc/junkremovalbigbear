@@ -20,13 +20,13 @@ TAKE = '''<div class="grid grid-2"><div class="card"><h3>We take</h3><ul>
 <div class="card"><h3>We can't take</h3><ul><li>Paint and chemicals</li><li>Motor oil and fuels</li><li>Asbestos</li><li>Propane tanks</li></ul>
 <p class="small">For these, use San Bernardino County Fire's household hazardous waste program — the Big Bear drop-off is at 42040 Garstin Dr (check current hours before you go).</p></div></div>'''
 TRUST = f'''<ul class="facts">
+<li><b>Over 20 years in business.</b> Hauling, cleanouts and yard clearing, done by people who know mountain properties.</li>
 <li><b>Free on-site quotes.</b> We come out, look at the job and give you a firm price — free, no obligation. Photos by text or WhatsApp work too.</li>
 <li><b>Price confirmed before we start.</b> No surprises on the day.</li>
 <li><b>Open 7 days.</b> {BIZ["hours_text"]}. Same-day when the schedule allows.</li>
 <li><b>Off-mountain owners welcome.</b> Lockbox or gate-code access, and before-and-after photos when we finish.</li>
 <li><b>Clearing and hauling in one visit.</b> Weed clearing, cleanouts and tear-outs end with the debris gone, not piled at the curb.</li>
 <li><b>Reviews on Google.</b> <a href="{BIZ["gbp"]}" rel="noopener">See what customers say on our Google profile</a>.</li>
-<!-- TODO(Nicholas): years in business (add a trust item only once confirmed) -->
 </ul>'''
 HOME_FAQ = [
  ('How much does junk removal or weed clearing cost?', 'Every mountain job is different, so we don\'t publish prices. We give free on-site quotes (or quotes from photos) and confirm the price before any work starts.'),
@@ -44,8 +44,8 @@ def home():
 <h1>Junk Removal &amp; Weed Clearing in Big Bear, CA</h1>
 <p class="lead">Junk hauled, cabins and garages cleared out, and weeds and pine needles cleared to fire-department standards — by a local crew that hauls it all away.</p>
 {btns()}
-<ul class="ticks"><li>Free on-site quotes — or text us photos</li><li>Weed abatement letter? We clear it and haul it in one visit</li><li>Open {BIZ["hours_text"]}</li></ul>
-</div><img class="hero-badge" loading="lazy" decoding="async" src="/images/opt/logo-384.webp" width="300" height="300" alt="Junk Removal Big Bear logo"></div></section>
+<ul class="ticks"><li>Over 20 years in business</li><li>Free on-site quotes — or text us photos</li><li>Weed abatement letter? We clear it and haul it in one visit</li><li>Open {BIZ["hours_text"]}</li></ul>
+</div><img class="hero-badge" loading="lazy" decoding="async" src="/images/logo.svg" width="300" height="300" alt="Junk Removal Big Bear logo"></div></section>
 {photo_slot('real photo of Nicholas/crew or truck at work (no customer faces or house numbers)')}
 <section><div class="wrap"><h2>What we do</h2><p class="sec-intro">Everything except moving. Pick a service for details and local tips.</p>
 {svc_cards()}</div></section>
@@ -65,8 +65,9 @@ def home():
 <section><div class="wrap"><h2>What we take (and what we can't)</h2>{TAKE}</div></section>
 <section class="alt"><div class="wrap"><h2>Service areas</h2><p class="sec-intro">The whole Big Bear Valley, plus nearby mountain communities by arrangement. Each area page covers local trash rules, dump options and access tips.</p>{area_chips()}
 <p style="margin-top:14px"><a href="/location/">See all service areas →</a></p></div></section>
-<section><div class="wrap narrow"><h2>Why we quote on-site, for free</h2>
-<p>Mountain jobs are all different — steep driveways, loft stairs, decks over a slope, snow. So we don't publish price lists. We come out, look at the job, and give you a firm quote before we touch anything. It costs you nothing, and there's no obligation.</p>{btns_light()}</div></section>
+<section><div class="wrap two"><div><h2>Why we quote on-site, for free</h2>
+<p>Mountain jobs are all different — steep driveways, loft stairs, decks over a slope, snow. So we don't publish price lists. We come out, look at the job, and give you a firm quote before we touch anything. It costs you nothing, and there's no obligation.</p>{btns_light()}</div>
+{fig('yard-junk-pile', 'Backyard junk pile: a green bin full of scrap wood and a broken chair frame, with old tires and bagged debris on the lawn by a white fence')}</div></section>
 {faq_html(HOME_FAQ)}
 <section class="alt"><div class="wrap"><h2>Local guides</h2><div class="grid grid-3">
 <a class="card" href="/guides/big-bear-fire-abatement-letter/"><div class="ico">{ICONS["leaf"]}</div><h3>Got a fire abatement letter?</h3><p>What it means and how to comply.</p></a>
@@ -83,14 +84,14 @@ def services_hub():
     body = page_hero(crumbs, 'Services', 'Junk Removal, Cleanouts &amp; Weed Clearing Services in Big Bear', 'One local crew for hauling, cleanouts, weed clearing and minor tear-outs across the Big Bear Valley. Everything except moving.') + \
         f'<section><div class="wrap">{svc_cards(SERVICES + extra)}<p class="small muted" style="margin-top:16px">{LICENSE_NOTE}</p></div></section><section class="alt"><div class="wrap"><h2>What we take (and what we can\'t)</h2>{TAKE}</div></section>{cta_band()}'
     emit('/services/', page('/services/', 'Services | Junk Removal, Cleanouts & Weed Clearing in Big Bear, CA',
-        'Junk removal, weed clearing, cabin, estate and vacation-rental cleanouts, appliance and e-waste removal, hot tub removal, light demolition and minor painting in Big Bear.',
+        'Junk removal, weed clearing, cabin, estate and vacation-rental cleanouts, appliance and e-waste removal, hot tub removal, light demolition and minor interior and exterior painting in Big Bear.',
         body, [business_ld(), crumbs_ld(crumbs)]), '0.8')
 
 def service_pages():
     for slug, c in SERVICES_CONTENT.items():
         path = f'/services/{slug}/'
         crumbs = [('Home', '/'), ('Services', '/services/'), (c['name'], path)]
-        secs = ''.join(f'<h2>{h}</h2>{b}' for h, b in c['sections'])
+        secs = ''.join(f'<h2>{h}</h2>{b}' + (fig(*c['img']) if i == 0 and c.get('img') else '') for i, (h, b) in enumerate(c['sections']))
         rel = [s for s in SERVICES + [('/services/furniture-removal/', 'Furniture & Mattress Removal', 'Sofas, beds, mattresses and patio sets hauled away.', 'sofa')] if s[0] in c['related']]
         relg = [('/guides/' + x.split('/guides/')[1], x) for x in c['related'] if '/guides/' in x]
         guide_links = ''.join(f'<li><a href="{x}">Guide: {GUIDE_TITLES.get(x, "Local guide")}</a></li>' for _, x in relg)
@@ -121,6 +122,7 @@ def vrt():
 <li><b>Appliance haul-away</b> — the dead fridge or washer out</li>
 <li><b>Deck, garage and storage clear-outs</b> — before listing photos or inspections</li>
 <li><b>Full refresh cleanouts</b> — new owner, rebrand or sale</li></ul>
+{fig('mountain-cabin-pines', 'Two-story wood cabin with lit windows among tall pines, with a snow-patched forested hillside behind')}
 <!-- Removed from current site: handyman work, spa cleaning, "new furniture placed" (moving-type service). -->
 <h2>Trash rules hosts get fined for</h2>
 <p><b>Inside the City of Big Bear Lake (92315)</b> you need a city vacation rental license. Cans can't sit at the curb more than 24 hours, and operational violations are fined $500 for a first, $1,000 for a second and $1,500 for a third violation within 12 months.</p>
@@ -250,14 +252,16 @@ def contact():
     crumbs = [('Home', '/'), ('Contact', path)]
     body = page_hero(crumbs, 'Free on-site quotes · No obligation', 'Contact Junk Removal Big Bear', 'Text or WhatsApp us to book a free on-site quote — or send 2–3 photos for a quick answer.') + f'''
 <section><div class="wrap"><div class="grid grid-2">
-<div class="card"><div class="ico">{ICONS["msg"]}</div><h2 style="font-size:1.25rem">Text us</h2><p>{PH_TODO}Send photos of the items or the lot, your neighborhood and any access notes (stairs, steep driveway, gate code). <a href="{BIZ["sms"]}">Text us →</a></p></div>
-<div class="card"><div class="ico">{ICONS["wa"]}</div><h2 style="font-size:1.25rem">WhatsApp</h2><p>{PH_TODO}Same as text — photos and a short note are perfect. <a href="{BIZ["wa"]}" rel="noopener">Open WhatsApp →</a></p></div>
+<div class="card"><div class="ico">{ICONS["msg"]}</div><h2 style="font-size:1.25rem">Text us</h2><p>Send photos of the items or the lot, your neighborhood and any access notes (stairs, steep driveway, gate code). <a href="{BIZ["sms"]}">Text {BIZ["phone"]} →</a></p><p class="small muted">Or text our second number: <a href="{BIZ["sms2"]}">{BIZ["phone2"]}</a></p></div>
+<div class="card"><div class="ico">{ICONS["wa"]}</div><h2 style="font-size:1.25rem">WhatsApp</h2><p>Same as text — photos and a short note are perfect. <a href="{BIZ["wa"]}" rel="noopener">WhatsApp {BIZ["phone"]} →</a></p></div>
 <div class="card"><div class="ico">{ICONS["home"]}</div><h2 style="font-size:1.25rem">Free on-site quote</h2><p>For weed clearing, big cleanouts, hot tubs and tear-outs, we come out, look at the job and give you a firm price — free, anywhere in the Big Bear Valley.</p></div>
 <div class="card"><div class="ico">{ICONS["book"]}</div><h2 style="font-size:1.25rem">Email</h2><p><a href="mailto:{BIZ["email"]}">{BIZ["email"]}</a> — good for property managers and multi-property jobs.<!-- TODO(Nicholas): confirm email --></p></div>
 </div></div></section>
 <section class="alt"><div class="wrap narrow"><h2>Business details</h2><div class="tscroll"><table>
 <tr><td><b>Business</b></td><td>{BIZ["name"]}</td></tr>
-<tr><td><b>Text / WhatsApp</b></td><td>{PH_TODO}<a href="{BIZ["sms"]}">Text us</a> · <a href="{BIZ["wa"]}" rel="noopener">WhatsApp</a></td></tr>
+<tr><td><b>Text / WhatsApp</b></td><td><a href="{BIZ["sms"]}">{BIZ["phone"]}</a> (text) · <a href="{BIZ["wa"]}" rel="noopener">WhatsApp</a></td></tr>
+<tr><td><b>Or text</b></td><td><a href="{BIZ["sms2"]}">{BIZ["phone2"]}</a></td></tr>
+<tr><td><b>In business</b></td><td>Over 20 years</td></tr>
 <tr><td><b>Email</b></td><td><a href="mailto:{BIZ["email"]}">{BIZ["email"]}</a></td></tr>
 <tr><td><b>Hours</b></td><td>{BIZ["hours_text"]}</td></tr>
 <tr><td><b>Service area</b></td><td>The Big Bear Valley — Big Bear Lake, Big Bear City, Moonridge, Sugarloaf, Fawnskin, Erwin Lake, Baldwin Lake — and nearby mountain communities by arrangement. We come to you.</td></tr>
@@ -306,9 +310,10 @@ def extras():
     gd = '\n'.join(f'- [{strip_tags(g["h1"])}]({SITE}/guides/{g["slug"]}/)' for g in GUIDES)
     write('/llms.txt', f'''# {BIZ["name"]}
 
-> Junk removal and weed clearing company serving the Big Bear Valley in the San Bernardino Mountains, California: junk removal, weed clearing and fire abatement, cabin, garage, estate and vacation-rental cleanouts, appliance and e-waste removal, hot tub removal, light demolition and minor painting. No moving services. Free on-site quotes.
+> Junk removal and weed clearing company serving the Big Bear Valley in the San Bernardino Mountains, California: junk removal, weed clearing and fire abatement, cabin, garage, estate and vacation-rental cleanouts, appliance and e-waste removal, hot tub removal, light demolition and minor interior and exterior painting. No moving services. Free on-site quotes.
 
-- Contact: text or WhatsApp (number to be added) — see {SITE}/contact/
+- Contact: text or WhatsApp {BIZ["phone"]} ({BIZ["tel"]}); also text {BIZ["phone2"]} — see {SITE}/contact/
+- In business: over 20 years
 - Email: {BIZ["email"]}
 - Hours: {BIZ["hours_text"]}
 - Service-area business (no storefront; we come to you)

@@ -3,18 +3,22 @@ import json, html, os
 SITE = 'https://www.junkremovalbigbear.com'
 TODAY = '2026-09-26'
 # ---------------------------------------------------------------------------
-# PHONE: Nicholas has not confirmed the number yet. Put it here ONCE (E.164, e.g. '+19095551234')
-# and rebuild; every sms:/WhatsApp link on the site uses it. Until then the links carry the
-# placeholder TODO_PHONE (search-and-replace also works on the generated HTML).
-PHONE_E164 = ''          # TODO(Nicholas): phone
-PHONE_DISPLAY = ''       # TODO(Nicholas): phone, US format e.g. '(909) 555-1234'
-_PH = PHONE_E164 or 'TODO_PHONE'
+# PHONE: confirmed by Nicholas (Sep 2026). Primary takes texts, WhatsApp and calls; every sms:/WhatsApp
+# link and the schema telephone use it. The secondary number also takes texts and is shown only as an
+# "or text" line on the contact page and in the footer.
+PHONE_E164 = '+14252332945'
+PHONE_DISPLAY = '(425) 233-2945'
+PHONE2_E164 = '+19097442305'
+PHONE2_DISPLAY = '(909) 744-2305'
+_PH = PHONE_E164
 BIZ = {
     'name': 'Junk Removal Big Bear',
     'phone': PHONE_DISPLAY,
     'tel': PHONE_E164,
     'sms': 'sms:' + _PH,
-    'wa': 'https://wa.me/' + (_PH.lstrip('+') if PHONE_E164 else _PH),
+    'wa': 'https://wa.me/' + _PH.lstrip('+'),
+    'phone2': PHONE2_DISPLAY, 'tel2': PHONE2_E164, 'sms2': 'sms:' + PHONE2_E164,
+    'years': 'over 20 years',  # confirmed by Nicholas (Sep 2026); don't claim more than this
     'email': 'junkremovalbigbear@gmail.com',  # taken from current site — needs Nicholas to confirm
     'hours_text': '8:00 AM – 10:00 PM, 7 days a week',  # confirmed by Nicholas (Sep 2026)
     'opens': '08:00', 'closes': '22:00',
@@ -22,7 +26,7 @@ BIZ = {
     'gbp': 'https://www.google.com/maps/search/?api=1&query=Junk%20Removal%20Big%20Bear&query_place_id=ChIJ75uRnPdVmUIRqmXds4EM6wQ',
     'gbp_cid': 'https://maps.google.com/?cid=354390746886661546',
 }
-PH_TODO = '<!-- TODO(Nicholas): phone -->'
+PH_TODO = ''  # phone confirmed; kept so templates can still reference it
 AREAS = [  # slug, name, note
     ('big-bear-lake', 'Big Bear Lake'), ('big-bear-city', 'Big Bear City'), ('moonridge', 'Moonridge'),
     ('sugarloaf', 'Sugarloaf'), ('fawnskin', 'Fawnskin'), ('erwin-lake-baldwin-lake', 'Erwin Lake & Baldwin Lake'),
@@ -36,7 +40,7 @@ SERVICES = [  # path, name, short blurb, icon
     ('/services/appliance-e-waste-removal/', 'Appliance & E-Waste Removal', 'Fridges, freezers, washers, dryers, stoves, TVs and computers hauled away.', 'fridge'),
     ('/services/hot-tub-removal/', 'Hot Tub & Spa Removal', 'Dead spas drained, cut down, carried off the deck and hauled away.', 'tub'),
     ('/services/light-demolition/', 'Light Demolition', 'Minor tear-outs: small sheds, deck boards, fencing, cabinets and carpet — hauled off.', 'hammer'),
-    ('/services/painting/', 'Painting (Minor Jobs)', 'Small interior and exterior painting jobs — touch-ups, single rooms, trim, doors, fences.', 'brush'),
+    ('/services/painting/', 'Painting (Minor Jobs)', 'Minor interior and exterior jobs — walls, ceilings and trim inside; siding touch-ups, decks and fences outside.', 'brush'),
 ]
 LICENSE_NOTE = 'Junk Removal Big Bear is not a licensed contractor. Painting, light demolition and similar work is limited to minor jobs under $1,000 total (labor and materials) that don\'t need a building permit, as California law allows.'
 _P = 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"'
@@ -66,8 +70,8 @@ def business_ld():
     d = {
         '@context': 'https://schema.org', '@type': 'HomeAndConstructionBusiness', '@id': SITE + '/#business',
         'name': BIZ['name'], 'url': SITE + '/', 'email': BIZ['email'],
-        'logo': SITE + '/images/opt/logo-384.webp', 'image': SITE + '/images/opt/og-junk-removal-big-bear.jpg',
-        'description': 'Junk removal, weed clearing and fire abatement, cabin, garage, estate and vacation-rental cleanouts, appliance and e-waste removal, hot tub removal, light demolition and minor painting in the Big Bear Valley, California. Free on-site quotes.',
+        'logo': SITE + '/images/opt/logo-512.png', 'image': SITE + '/images/opt/og-junk-removal-big-bear.jpg',
+        'description': 'Junk removal, weed clearing and fire abatement, cabin, garage, estate and vacation-rental cleanouts, appliance and e-waste removal, hot tub removal, light demolition and minor interior and exterior painting in the Big Bear Valley, California. Free on-site quotes.',
         'areaServed': area_served(),
         'openingHours': 'Mo-Su 08:00-22:00',
         'openingHoursSpecification': [{'@type': 'OpeningHoursSpecification', 'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], 'opens': BIZ['opens'], 'closes': BIZ['closes']}],
@@ -75,7 +79,10 @@ def business_ld():
         'hasOfferCatalog': {'@type': 'OfferCatalog', 'name': 'Services', 'itemListElement': [
             {'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': n, 'url': SITE + p}} for p, n, _, _ in SERVICES]},
     }
-    if BIZ['tel']: d['telephone'] = BIZ['tel']   # added automatically once PHONE_E164 is set
+    if BIZ['tel']: d['telephone'] = BIZ['tel']
+    if BIZ['tel2']: d['contactPoint'] = [
+        {'@type': 'ContactPoint', 'contactType': 'customer service', 'telephone': BIZ['tel'], 'areaServed': 'US', 'availableLanguage': 'English'},
+        {'@type': 'ContactPoint', 'contactType': 'customer service', 'telephone': BIZ['tel2'], 'areaServed': 'US', 'availableLanguage': 'English', 'description': 'Secondary number, also takes texts'}]
     return d
 def crumbs_ld(items):
     return {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
@@ -95,6 +102,16 @@ def btns(dark=True):
     return (f'<div class="cta-row">{PH_TODO}<a class="btn btn-amber" href="{BIZ["sms"]}">{ICONS["msg"]}Text photos for a free quote</a>'
             f'<a class="btn {sec}" href="{BIZ["wa"]}" rel="noopener">{ICONS["wa"]}WhatsApp us</a></div>')
 def btns_light(): return btns(False)
+RESTORED = {  # name: (master width, master height) - see _build/img-src and images/CREDITS.md
+    'appliances-electronics-pile': (579, 735), 'mountain-cabin-pines': (730, 570), 'yard-junk-pile': (880, 920)}
+def fig(name, alt, cap='Illustration (AI-generated scene).', maxw=None):
+    """Lazy, responsive figure for a restored general-scene image. Neutral alt/caption only (never implies it is our job)."""
+    W, H = RESTORED[name]; big = min(800, W); sm = 480
+    srcset = f'/images/opt/{name}-{sm}.webp {sm}w, /images/opt/{name}-{big}.webp {big}w'
+    maxw = maxw or (440 if H > W else 620)
+    st = f' style="max-width:{maxw}px"'
+    return (f'<figure class="photo nat"{st}><img loading="lazy" decoding="async" src="/images/opt/{name}-{sm}.webp" srcset="{srcset}" '
+            f'sizes="(min-width: {maxw + 36}px) {maxw}px, calc(100vw - 36px)" width="{W}" height="{H}" alt="{esc(alt)}"><figcaption>{cap}</figcaption></figure>')
 def photo_slot(what):
     """Placeholder for a real photo from Nicholas. Invisible in production; the preview build makes it visible."""
     return f'<!-- PHOTO-SLOT: {what} -->'
@@ -108,7 +125,7 @@ def header(path):
         return ''.join(out)
     return f'''<a class="skip" href="#main">Skip to content</a>
 <header class="site-head"><div class="wrap head-in">
-<a class="brand" href="/"><img src="/images/opt/logo-96.webp" width="42" height="42" alt="Junk Removal Big Bear logo">Junk Removal <span>Big Bear</span></a>
+<a class="brand" href="/"><img src="/images/logo-mark.svg" width="42" height="42" alt="">Junk Removal <span>Big Bear</span></a>
 <nav class="desk-nav" aria-label="Main">{links()}</nav>
 <a class="btn btn-amber btn-sm head-call" href="{BIZ["sms"]}">{ICONS["msg"]}Text for a free quote</a>
 <details class="menu"><summary>Menu</summary><nav aria-label="Main (mobile)">{links()}<a href="/weed-abatement/">Weed Abatement</a></nav></details>
@@ -136,14 +153,15 @@ def footer():
     return f'''<footer class="site-foot"><div class="wrap"><div class="foot-grid">
 <div><h2>{BIZ["name"]}</h2>
 <p>Serving {BIZ["area_text"]}. We come to you.</p>
-<p>{PH_TODO}Text / WhatsApp: <a href="{BIZ["sms"]}">text us</a> · <a href="{BIZ["wa"]}" rel="noopener">WhatsApp</a><br>
+<p>Text / WhatsApp: <a href="{BIZ["sms"]}">{BIZ["phone"]}</a> · <a href="{BIZ["wa"]}" rel="noopener">WhatsApp</a><br>
+Or text: <a href="{BIZ["sms2"]}">{BIZ["phone2"]}</a><br>
 Email: <a href="mailto:{BIZ["email"]}">{BIZ["email"]}</a><br>
 Hours: {BIZ["hours_text"]}</p>
 <p><a href="{BIZ["gbp"]}" rel="noopener">Find us on Google Maps</a></p></div>
 <div><h2>Services</h2><ul>{svc}</ul></div>
 <div><h2>Service areas</h2><ul>{areas}<li><a href="/location/">All service areas</a></li></ul></div>
 <div><h2>Help</h2><ul><li><a href="/guides/">Local guides</a></li><li><a href="/guides/big-bear-fire-abatement-letter/">Fire abatement letter guide</a></li><li><a href="/guides/big-bear-dump-transfer-station-guide/">Big Bear dump &amp; transfer station</a></li><li><a href="/contact/">Contact &amp; free quotes</a></li></ul></div>
-</div><p class="legal">© 2026 {BIZ["name"]}. {LICENSE_NOTE} We don't haul hazardous waste (paint, chemicals, oil, asbestos, propane tanks). Scenery photos: Unsplash (Joshua Chun, Josh Duke, Dušan veverkolog).</p></div></footer>
+</div><p class="legal">© 2026 {BIZ["name"]}. {LICENSE_NOTE} We don't haul hazardous waste (paint, chemicals, oil, asbestos, propane tanks). Scenery photos: Unsplash (Joshua Chun, Dušan veverkolog). Some illustrative images are AI-generated general scenes, not photos of our jobs.</p></div></footer>
 <div class="callbar">{PH_TODO}<a class="c1" href="{BIZ["sms"]}">{ICONS["msg"]}Text photos</a><a class="c2" href="{BIZ["wa"]}" rel="noopener">{ICONS["wa"]}WhatsApp</a></div>'''
 def page(path, title, desc, body, schema, og_type='website', robots='index, follow', canonical=True):
     url = SITE + path
@@ -172,7 +190,7 @@ def page(path, title, desc, body, schema, og_type='website', robots='index, foll
 <meta property="og:image" content="{SITE}/images/opt/og-junk-removal-big-bear.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Junk Removal Big Bear logo and phone number">
+<meta property="og:image:alt" content="Junk Removal Big Bear logo, services and phone number">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">

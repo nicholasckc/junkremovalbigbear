@@ -18,25 +18,28 @@ python3 _build/build.py            # regenerates every page, sitemap.xml and llm
 | `_build/content_services.py` | Text for the service pages under `/services/…/` |
 | `_build/content_areas.py` | Text for the area pages under `/location/…/` |
 | `_build/content/guides.json` | The 5 guides (made by `_build/extract_guides.py` from the `main` version, with fixes) |
-| `_build/images.py` | Logo sizes, favicons and the social share image (needs Pillow) |
+| `_build/images.py` | Responsive WebP images, favicons, schema logo PNG and the social share image (needs Pillow). Sources in `_build/img-src/` |
+| `_build/logo.py` | Generates `images/logo.svg` and `images/logo-mark.svg` (needs fontTools) |
 | `style.css` | All styling, in one file |
 
 Edit the Python files and re-run the build. Don't hand-edit the generated HTML, because the next build overwrites it.
 
-### The phone number: one place
+### Phone numbers: one place
 
-The phone number isn't confirmed yet. Set it once in `_build/tpl.py`:
+Confirmed by Nicholas (Sep 2026) and set once in `_build/tpl.py`:
 
 ```python
-PHONE_E164 = '+19095551234'      # used for sms: and https://wa.me/ links + schema telephone
-PHONE_DISPLAY = '(909) 555-1234' # shown on the page
+PHONE_E164 = '+14252332945'      # primary: sms:, https://wa.me/ links, schema telephone
+PHONE_DISPLAY = '(425) 233-2945'
+PHONE2_E164 = '+19097442305'     # secondary, also takes texts: "or text" line on /contact/ and in the footer
+PHONE2_DISPLAY = '(909) 744-2305'
 ```
 
-Then run `python3 _build/build.py`. Until it's set, every Text and WhatsApp link points at the placeholder `TODO_PHONE`, and the HTML carries `<!-- TODO(Nicholas): phone -->` comments.
+Change them there and re-run `python3 _build/build.py` (and `python3 _build/images.py`, because the share image shows the primary number).
 
 ### Open items marked in the code
 
-Search for `TODO(Nicholas)` to find facts that still need confirming (years in business, donation handling, vehicle claims, and so on). Search for `PHOTO-SLOT` to find spots for real photos.
+Search for `TODO(Nicholas)` to find facts that still need confirming (email, donation handling, vehicle claims, RRP lead-safe certification, and so on). Search for `PHOTO-SLOT` to find spots for real photos.
 
 ## Content rules for this site
 
@@ -45,7 +48,7 @@ Search for `TODO(Nicholas)` to find facts that still need confirming (years in b
 - **No star ratings, review counts, testimonials or review schema** until they are verified and allowed.
 - **Not a licensed contractor.** Painting and demolition stay "minor"/"light", and the licence disclosure (`LICENSE_NOTE`) must stay on those pages (Calif. B&P §7027.2).
 - **No moving services.**
-- **No AI images** that look like the crew, truck or jobs. Stock photos are Unsplash-licensed and listed in `images/CREDITS.md`.
+- **No AI images** that show people, the crew, a truck or any vehicle/equipment, uniforms or logos, or that could pass for our own jobs. A few AI-generated general scenes from the old site (appliances, a cabin, a yard junk pile) are used as illustrations, captioned as such. Stock photos are Unsplash-licensed. All listed in `images/CREDITS.md`.
 
 ## Deploy
 
@@ -53,4 +56,4 @@ GitHub Pages serves `main` from the root, and `CNAME` points to `www.junkremoval
 
 After it's live, submit `https://www.junkremovalbigbear.com/sitemap.xml` in Google Search Console. The domain is already verified by a DNS TXT record.
 
-> `LAUNCH-GUIDE.md` is from the original launch and is **out of date**. Among other things, it lists a different phone number. Use this README instead.
+> `LAUNCH-GUIDE.md` is from the original launch and is **out of date**. Among other things, its instructions are out of date. Use this README instead.
