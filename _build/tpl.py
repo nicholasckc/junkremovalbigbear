@@ -25,6 +25,8 @@ BIZ = {
     'area_text': 'the Big Bear Valley and nearby mountain communities',
     'gbp': 'https://www.google.com/maps/search/?api=1&query=Junk%20Removal%20Big%20Bear&query_place_id=ChIJ75uRnPdVmUIRqmXds4EM6wQ',
     'gbp_cid': 'https://maps.google.com/?cid=354390746886661546',
+    # Yelp listing verified via its Apple Maps place card (Sep 26 2026). Note: Yelp still shows an old street address + hours; Nicholas to fix.
+    'yelp': 'https://www.yelp.com/biz/junk-removal-big-bear-big-bear-lake',
 }
 PH_TODO = ''  # phone confirmed; kept so templates can still reference it
 AREAS = [  # slug, name, note
@@ -33,7 +35,7 @@ AREAS = [  # slug, name, note
 ]
 SERVICES = [  # path, name, short blurb, icon
     ('/weed-abatement/', 'Weed Clearing & Abatement', 'Weeds, pine needles, brush and low limbs cleared to Big Bear Fire standards — and hauled away the same visit.', 'leaf'),
-    ('/services/junk-removal/', 'Junk Removal', 'Single items to full loads — furniture, mattresses, yard debris and everything in between.', 'truck'),
+    ('/services/junk-removal/', 'Junk Hauling', 'Single items to full loads — furniture, mattresses, yard debris and everything in between.', 'truck'),
     ('/services/cabin-cleanouts/', 'Cabin, Garage & Home Cleanouts', 'Garages, attics, crawl spaces, sheds, storage units and whole-cabin clearances.', 'home'),
     ('/services/estate-cleanouts/', 'Estate Cleanouts', 'Respectful, organized cleanouts of inherited cabins and homes — manageable from off the mountain.', 'key'),
     ('/vacation-rental-turnovers/', 'Vacation Rental Turnovers', 'Bulky-item and junk removal for Airbnb and VRBO hosts, scheduled between guest stays.', 'calendar'),
@@ -42,6 +44,8 @@ SERVICES = [  # path, name, short blurb, icon
     ('/services/light-demolition/', 'Light Demolition', 'Minor tear-outs: small sheds, deck boards, fencing, cabinets and carpet — hauled off.', 'hammer'),
     ('/services/painting/', 'Painting (Minor Jobs)', 'Minor interior and exterior jobs — walls, ceilings and trim inside; siding touch-ups, decks and fences outside.', 'brush'),
 ]
+FURNITURE = ('/services/furniture-removal/', 'Furniture & Mattress Removal', 'Sofas, beds, mattresses, dressers and patio sets carried out and hauled away.', 'sofa')
+SERVICES_ALL = SERVICES + [FURNITURE]  # footer, schema, area pages, llms
 LICENSE_NOTE = 'Junk Removal Big Bear is not a licensed contractor. Painting, light demolition and similar work is limited to minor jobs under $1,000 total (labor and materials) that don\'t need a building permit, as California law allows.'
 _P = 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"'
 ICONS = {
@@ -64,22 +68,37 @@ ICONS = {
 def esc(s): return html.escape(s, quote=True)
 def ld(obj): return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False, separators=(',', ':')) + '</script>'
 AREA_NAMES = ['Big Bear Lake', 'Big Bear City', 'Moonridge', 'Sugarloaf', 'Fawnskin', 'Erwin Lake', 'Baldwin Lake']
-def area_served():
-    return [{'@type': 'Place', 'name': 'Big Bear Valley, San Bernardino Mountains, CA'}] + [{'@type': 'Place', 'name': n + ', CA'} for n in AREA_NAMES]
+_WIKI = 'https://en.wikipedia.org/wiki/'
+# Only Wikipedia articles verified to exist (Sep 2026); Moonridge, Erwin Lake and Baldwin Lake have no specific article.
+PLACE_SAMEAS = {'Big Bear Lake': _WIKI + 'Big_Bear_Lake,_California', 'Big Bear City': _WIKI + 'Big_Bear_City,_California',
+                'Sugarloaf': _WIKI + 'Sugarloaf,_California', 'Fawnskin': _WIKI + 'Fawnskin,_California'}
+_COUNTY = {'@type': 'AdministrativeArea', 'name': 'San Bernardino County, California'}
+def place(n):
+    """Big Bear Lake is an incorporated city; the others are unincorporated communities (schema.org Place)."""
+    d = {'@type': 'City' if n == 'Big Bear Lake' else 'Place', 'name': n + ', CA', 'containedInPlace': _COUNTY}
+    if n in PLACE_SAMEAS: d['sameAs'] = PLACE_SAMEAS[n]
+    return d
+def area_served(names=None):
+    if names: return [place(n) for n in names]
+    return [{'@type': 'Place', 'name': 'Big Bear Valley, CA', 'sameAs': _WIKI + 'Big_Bear_Valley', 'containedInPlace': _COUNTY}] + [place(n) for n in AREA_NAMES]
 def business_ld():
     d = {
         '@context': 'https://schema.org', '@type': 'HomeAndConstructionBusiness', '@id': SITE + '/#business',
         'name': BIZ['name'], 'url': SITE + '/', 'email': BIZ['email'],
-        'logo': SITE + '/images/opt/logo-512.png', 'image': SITE + '/images/opt/og-junk-removal-big-bear.jpg',
+        'telephone': BIZ['tel'],
+        'logo': {'@type': 'ImageObject', 'url': SITE + '/images/opt/logo-512.png', 'width': 512, 'height': 512},
+        'image': [SITE + '/images/opt/logo-512.png', SITE + '/images/opt/og-junk-removal-big-bear.jpg'],
         'description': 'Junk removal, weed clearing and fire abatement, cabin, garage, estate and vacation-rental cleanouts, appliance and e-waste removal, hot tub removal, light demolition and minor interior and exterior painting in the Big Bear Valley, California. Free on-site quotes.',
         'areaServed': area_served(),
         'openingHours': 'Mo-Su 08:00-22:00',
         'openingHoursSpecification': [{'@type': 'OpeningHoursSpecification', 'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], 'opens': BIZ['opens'], 'closes': BIZ['closes']}],
-        'sameAs': [BIZ['gbp_cid']],
+        'sameAs': [BIZ['gbp_cid'], BIZ['yelp']],
+        'hasMap': BIZ['gbp_cid'],
+        'knowsAbout': ['Junk removal', 'Weed abatement', 'Defensible space clearing', 'Cabin cleanouts', 'Estate cleanouts', 'Hot tub removal',
+                       'Appliance and e-waste removal', 'Furniture and mattress removal', 'Vacation rental turnovers', 'Big Bear Valley disposal rules'],
         'hasOfferCatalog': {'@type': 'OfferCatalog', 'name': 'Services', 'itemListElement': [
-            {'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': n, 'url': SITE + p}} for p, n, _, _ in SERVICES]},
+            {'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': n, 'url': SITE + p}} for p, n, _, _ in SERVICES_ALL]},
     }
-    if BIZ['tel']: d['telephone'] = BIZ['tel']
     if BIZ['tel2']: d['contactPoint'] = [
         {'@type': 'ContactPoint', 'contactType': 'customer service', 'telephone': BIZ['tel'], 'areaServed': 'US', 'availableLanguage': 'English'},
         {'@type': 'ContactPoint', 'contactType': 'customer service', 'telephone': BIZ['tel2'], 'areaServed': 'US', 'availableLanguage': 'English', 'description': 'Secondary number, also takes texts'}]
@@ -96,7 +115,7 @@ def faq_ld(faqs, path):
 def service_ld(name, desc, path, area_names=None, stype=None):
     return {'@context': 'https://schema.org', '@type': 'Service', 'name': name, 'serviceType': stype or name, 'description': desc,
             'url': SITE + path, 'provider': {'@id': SITE + '/#business'},
-            'areaServed': ([{'@type': 'Place', 'name': a + ', CA'} for a in area_names] if area_names else area_served())}
+            'areaServed': area_served(area_names)}
 def btns(dark=True):
     sec = 'btn-ghost' if dark else 'btn-line'
     return (f'<div class="cta-row">{PH_TODO}<a class="btn btn-amber" href="{BIZ["sms"]}">{ICONS["msg"]}Text photos for a free quote</a>'
@@ -148,7 +167,7 @@ def contact_box():
 <p><a class="btn btn-line" style="width:100%" href="{BIZ["wa"]}" rel="noopener">{ICONS["wa"]}WhatsApp us</a></p>
 <p class="small muted">Email: <a href="mailto:{BIZ["email"]}">{BIZ["email"]}</a><br>Hours: {BIZ["hours_text"]}</p></aside>'''
 def footer():
-    svc = ''.join(f'<li><a href="{p}">{n}</a></li>' for p, n, _, _ in SERVICES)
+    svc = ''.join(f'<li><a href="{p}">{n}</a></li>' for p, n, _, _ in SERVICES_ALL)
     areas = ''.join(f'<li><a href="/location/{s}/">{n}</a></li>' for s, n in AREAS)
     return f'''<footer class="site-foot"><div class="wrap"><div class="foot-grid">
 <div><h2>{BIZ["name"]}</h2>

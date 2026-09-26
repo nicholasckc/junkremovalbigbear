@@ -18,8 +18,9 @@ TS = '<b>Big Bear Transfer Station</b>, 38550 Holcomb Valley Rd (off Hwy 18, nor
 ROADS = 'Chain controls on Highways 18, 38 and 330 change through the winter — check Caltrans QuickMap or call 1-800-427-7623 before a storm-day appointment.'
 AREAS_CONTENT = {
 'big-bear-lake': dict(
+ h1='Junk Removal in Big Bear Lake, CA',
  name='Big Bear Lake', zip='92315',
- title='Junk Removal in Big Bear Lake, CA 92315 | Junk Removal Big Bear',
+ title='Junk Removal Big Bear Lake, CA 92315 | Cleanouts, Hot Tubs & Weed Clearing',
  desc=f'Junk removal, cleanouts and hot tub removal in the City of Big Bear Lake — the Village, Boulder Bay, Fox Farm and lakefront homes. Free on-site quotes.',
  lead='The City of Big Bear Lake has its own trash contractor, drop-off rules and vacation rental program. Here\'s what that means for getting rid of junk — and where we can help.',
  sections=[
@@ -41,8 +42,9 @@ AREAS_CONTENT = {
  ],
  sources=['city_trash', 'bbd', 'city_vr', 'hhw', 'cabb', 'caltrans']),
 'big-bear-city': dict(
+ h1='Junk Removal in Big Bear City, CA',
  name='Big Bear City', zip='92314',
- title='Junk Removal in Big Bear City, CA 92314 | Junk Removal Big Bear',
+ title='Junk Removal Big Bear City, CA 92314 | Cleanouts & Weed Clearing',
  desc=f'Junk removal, garage cleanouts, appliance and furniture removal in Big Bear City. Local rules, bulky pickup and dump options explained. Free on-site quotes.',
  lead='Big Bear City is unincorporated San Bernardino County, with trash service from the Big Bear City Community Services District (CSD) — different rules from the city of Big Bear Lake.',
  sections=[
@@ -65,8 +67,9 @@ AREAS_CONTENT = {
  ],
  sources=['csd', 'county_dup', 'county_str', 'bbfd', 'caltrans']),
 'moonridge': dict(
+ h1='Junk Removal in Moonridge',
  name='Moonridge', zip='92315 / 92314',
- title='Junk Removal in Moonridge, Big Bear | Junk Removal Big Bear',
+ title='Junk Removal in Moonridge, Big Bear | Cabin Cleanouts & Hot Tubs',
  desc=f'Junk removal, hot tub removal and cabin cleanouts in Moonridge near Bear Mountain — steep streets, ski cabins and vacation rentals. Free on-site quotes.',
  lead='Moonridge sits on the hills near Bear Mountain and the Big Bear Alpine Zoo. It is split between the City of Big Bear Lake and unincorporated county, so the rules depend on which side your property is on.',
  sections=[
@@ -86,8 +89,9 @@ AREAS_CONTENT = {
  ],
  sources=['city_trash', 'csd', 'city_vr', 'county_str', 'cabb', 'caltrans']),
 'sugarloaf': dict(
+ h1='Junk Removal in Sugarloaf, CA',
  name='Sugarloaf', zip='92386',
- title='Junk Removal in Sugarloaf, CA 92386 | Junk Removal Big Bear',
+ title='Junk Removal Sugarloaf, CA 92386 | Cleanouts & Weed Clearing',
  desc=f'Junk removal, garage and cabin cleanouts, appliance and furniture removal in Sugarloaf, Big Bear. Local trash and dump options explained. Free on-site quotes.',
  lead='Sugarloaf is an unincorporated neighborhood south of Big Bear City, between Moonridge and Erwin Lake — mostly full-time residents, older cabins and narrow, sometimes steep streets.',
  sections=[
@@ -106,8 +110,9 @@ AREAS_CONTENT = {
  ],
  sources=['csd', 'county_dup', 'bbfd', 'cabb', 'cabb_trash', 'caltrans']),
 'fawnskin': dict(
+ h1='Junk Removal in Fawnskin, CA',
  name='Fawnskin', zip='92333',
- title='Junk Removal in Fawnskin, CA 92333 | Junk Removal Big Bear',
+ title='Junk Removal Fawnskin, CA 92333 | North Shore Cleanouts & Weed Clearing',
  desc=f'Junk removal, cabin cleanouts and hot tub removal in Fawnskin on Big Bear\'s North Shore. Local trash, fire and rental rules explained. Free on-site quotes.',
  lead='Fawnskin is the small unincorporated community on the North Shore of Big Bear Lake, along Highway 38. It has different fire, trash and rental rules from the rest of the valley.',
  sections=[
@@ -126,8 +131,9 @@ AREAS_CONTENT = {
  ],
  sources=['bbfd_insp', 'county_str', 'county_dup', 'cabb', 'cabb_trash', 'caltrans']),
 'erwin-lake-baldwin-lake': dict(
+ h1='Junk Removal in Erwin Lake &amp; Baldwin Lake',
  name='Erwin Lake & Baldwin Lake', zip='92314',
- title='Junk Removal in Erwin Lake & Baldwin Lake, Big Bear | Junk Removal Big Bear',
+ title='Junk Removal Erwin Lake & Baldwin Lake, CA 92314 | Big Bear East Valley',
  desc=f'Junk removal and cleanouts in Erwin Lake and Baldwin Lake on the east end of the Big Bear Valley — dirt roads, larger lots, no curbside service in Baldwin Lake. Free on-site quotes.',
  lead='The east end of the valley is rural: dirt roads, larger lots and fewer services. Baldwin Lake has no curbside trash pickup at all, which makes getting rid of big items harder.',
  sections=[

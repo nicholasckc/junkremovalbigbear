@@ -9,8 +9,8 @@ TRASH_RULES = '''<ul>
 SERVICES_CONTENT = {
 'furniture-removal': dict(
  name='Furniture & Mattress Removal', stype='Furniture removal',
- title='Furniture & Mattress Removal in Big Bear, CA | Junk Removal Big Bear',
- desc=f'Old sofa, bed, mattress or patio set? We carry it out of your Big Bear cabin — lofts, stairs and decks included — and haul it away. Free on-site quotes.',
+ title='Furniture & Mattress Removal in Big Bear, CA | Sofas, Beds & Mattresses',
+ desc=f'Furniture and mattress removal in Big Bear: sofas, beds, mattresses, dressers and patio sets carried out of lofts, stairs and decks and hauled away. Free quotes; text {BIZ["phone"]}.',
  h1='Furniture &amp; Mattress Removal in Big Bear',
  lead='Sofas, sectionals, recliners, beds, mattresses, dressers, dining sets, desks and patio furniture — carried out from inside, down the stairs and off the property.',
  sections=[
@@ -23,6 +23,7 @@ SERVICES_CONTENT = {
   ('Replacing furniture in a vacation rental?', '''<p>We can take the old pieces away on the day the new ones are delivered, so the listing isn't missing a sofa for a week. See <a href="/vacation-rental-turnovers/">vacation rental cleanouts</a>.</p>'''),
  ],
  faqs=[
+  ('Who removes furniture and mattresses in Big Bear?', 'Junk Removal Big Bear carries out and hauls away sofas, beds, mattresses, dressers and patio sets across the Big Bear Valley, including from lofts and decks. Single items are fine.'),
   ('Can you take a mattress by itself?', f'Yes. Single items are fine — text or WhatsApp a photo for a quote.'),
   ('Do I need to move the furniture outside first?', 'No. We carry items out from inside the home, including lofts, basements and stairs.'),
   ('Can you take furniture if I am not in Big Bear?', 'Yes. Send photos, arrange access (lockbox, garage code or a neighbor), and we send before-and-after photos when the job is done.'),
@@ -31,9 +32,9 @@ SERVICES_CONTENT = {
  related=['/services/appliance-e-waste-removal/', '/services/cabin-cleanouts/', '/vacation-rental-turnovers/']),
 'appliance-e-waste-removal': dict(
  name='Appliance & E-Waste Removal', stype='Appliance and electronic waste removal',
- title='Appliance & E-Waste Removal in Big Bear, CA | Junk Removal Big Bear',
- desc=f'Refrigerators, freezers, washers, dryers, stoves, TVs and computers removed from Big Bear homes and cabins. Free on-site quotes.',
- h1='Appliance &amp; E-Waste Removal in Big Bear',
+ title='Appliance Removal & E-Waste Pickup in Big Bear, CA | Fridges, Washers, TVs',
+ desc=f'Appliance removal and e-waste pickup in Big Bear: refrigerators, freezers, washers, dryers, stoves, TVs and computers carried out and hauled away. Free quotes; text {BIZ["phone"]}.',
+ h1='Appliance Removal &amp; E-Waste Pickup in Big Bear',
  lead='Dead fridge in the garage? Old TV in the basement? We haul away appliances and electronics from homes, cabins and rentals across the Valley.',
  sections=[
   ('What we take', '''<ul>
@@ -49,6 +50,7 @@ SERVICES_CONTENT = {
 <p>If you'd rather not load a fridge into a pickup truck yourself, text us a photo and we'll quote it.</p>'''),
  ],
  faqs=[
+  ('Who picks up old appliances in Big Bear?', 'Junk Removal Big Bear removes refrigerators, freezers, washers, dryers, stoves, TVs and computers from homes and cabins across the Big Bear Valley. Text a photo to (425) 233-2945 for a quote.'),
   ('Can you take a refrigerator with food still in it?', 'Please empty it first — food waste attracts bears and can\'t go in the truck.'),
   ('Do you take TVs and computers?', 'Yes. TVs, monitors, computers, printers and other household electronics are all fine.'),
   ('Can you remove an appliance from a basement or upstairs?', 'Yes. We carry appliances out from wherever they are, including stairs.'),
@@ -57,9 +59,9 @@ SERVICES_CONTENT = {
  related=['/services/furniture-removal/', '/services/cabin-cleanouts/', '/guides/big-bear-dump-transfer-station-guide/']),
 'cabin-cleanouts': dict(
  name='Cabin & Garage Cleanouts', stype='Cleanout service',
- title='Cabin, Garage & Home Cleanouts in Big Bear, CA | Junk Removal Big Bear',
- desc=f'Garage, attic, crawl space, shed, storage unit and whole-cabin cleanouts across the Big Bear Valley. Free on-site quotes.',
- h1='Cabin &amp; Garage Cleanouts in Big Bear',
+ title='Cabin Cleanouts in Big Bear, CA | Garage, Attic, Shed & Whole-Cabin Clear-Outs',
+ desc=f'Cabin cleanouts in Big Bear: garages, attics, crawl spaces, sheds, storage units and whole cabins cleared and hauled away, even while you are off the mountain. Free on-site quotes.',
+ h1='Cabin Cleanouts in Big Bear: Garages, Attics, Sheds &amp; Whole Cabins',
  lead='From one packed garage to a whole cabin full of decades of stuff — we load it, haul it and leave the space swept.',
  sections=[
   ('What we clear', '''<ul>
@@ -77,6 +79,7 @@ SERVICES_CONTENT = {
   ('Doing some of it yourself?', '''<p>Residential property owners in unincorporated areas (92314, 92386, 92333) may be eligible for a San Bernardino County Disposal Use Permit for self-haul loads to the Big Bear Transfer Station — call County Solid Waste at (909) 386-8701. For everything that doesn't fit in your truck, call us.</p>'''),
  ],
  faqs=[
+  ('Who does cabin cleanouts in Big Bear?', 'Junk Removal Big Bear clears out cabins, garages, attics, crawl spaces and sheds across the Big Bear Valley and hauls everything away. Owners who live off the mountain can arrange it by text, with lockbox or gate access.'),
   ('How long does a garage cleanout take?', 'It depends on the size and access; we give you a time estimate with the quote. Send photos for the fastest answer.'),
   ('Do I need to sort things first?', 'It helps to set aside anything you want to keep. We take everything else, except hazardous materials.'),
   ('Can you do a cleanout while I am off the mountain?', 'Yes. Quotes from photos, access by lockbox or code, and before-and-after photos when we finish.'),
@@ -85,8 +88,8 @@ SERVICES_CONTENT = {
  related=['/services/estate-cleanouts/', '/services/furniture-removal/', '/vacation-rental-turnovers/']),
 'estate-cleanouts': dict(
  name='Estate Cleanouts', stype='Estate cleanout',
- title='Estate Cleanouts in Big Bear, CA | Inherited Cabin Cleanouts',
- desc=f'Organized, respectful estate and inherited-cabin cleanouts in Big Bear — coordinated remotely for families off the mountain. Free on-site quotes.',
+ title='Estate Cleanouts in Big Bear, CA | Inherited Cabin & Home Clear-Outs',
+ desc=f'Estate cleanouts in Big Bear: organized, respectful clear-outs of inherited cabins and homes, coordinated remotely for families off the mountain. Free walkthrough quotes.',
  h1='Estate Cleanouts in Big Bear',
  lead='Clearing a parent\'s or grandparent\'s cabin is hard. We make the physical part simple, and we can coordinate it with you, your realtor or executor from off the mountain.',
  sections=[
@@ -102,6 +105,7 @@ SERVICES_CONTENT = {
 <li>Hazardous items (old paint, chemicals, propane tanks) need separate disposal through San Bernardino County Fire's household hazardous waste program.</li></ul>'''),
  ],
  faqs=[
+  ('Who does estate cleanouts in Big Bear?', 'Junk Removal Big Bear handles estate and inherited-cabin cleanouts across the Big Bear Valley. The family marks what stays; we clear and haul the rest and can coordinate everything remotely.'),
   ('Can we arrange an estate cleanout without traveling to Big Bear?', 'Yes. The walkthrough, quote, approval and completion photos can be handled remotely, with access through your realtor, a lockbox or a local contact.'),
   ('How is an estate cleanout priced?', 'By volume. We give a firm price after a free walkthrough or from photos, before any work starts.'),
   ('Can you leave some furniture for staging?', 'Yes. Mark or list what stays and we work around it.'),
@@ -109,8 +113,8 @@ SERVICES_CONTENT = {
  related=['/services/cabin-cleanouts/', '/guides/estate-cleanout-guide-big-bear/', '/services/furniture-removal/']),
 'hot-tub-removal': dict(
  name='Hot Tub & Spa Removal', stype='Hot tub removal',
- title='Hot Tub & Spa Removal in Big Bear, CA | Junk Removal Big Bear',
- desc=f'Dead hot tub on the deck? We drain, cut down, carry out and haul away spas from Big Bear homes and vacation rentals. Free on-site quotes.',
+ title='Hot Tub Removal in Big Bear, CA | Spa Removal & Disposal',
+ desc=f'Hot tub removal in Big Bear: we drain, cut down, carry out and haul away dead spas from decks, patios and vacation rentals. Free on-site quotes; text {BIZ["phone"]}.',
  h1='Hot Tub &amp; Spa Removal in Big Bear',
  lead='Freeze damage, a failed heater or just time for a new one — we take old spas off decks and patios, including tight and tiered mountain decks.',
  sections=[
@@ -125,6 +129,7 @@ SERVICES_CONTENT = {
   ('For vacation-rental owners', '''<p>A broken hot tub hurts bookings. We can schedule removal between guest stays and coordinate access with your property manager. See <a href="/vacation-rental-turnovers/">vacation rental cleanouts</a>.</p>'''),
  ],
  faqs=[
+  ('Who removes hot tubs in Big Bear?', 'Junk Removal Big Bear removes and hauls away hot tubs and spas across the Big Bear Valley, including from upper decks and vacation rentals. Text or WhatsApp (425) 233-2945 with a photo for a free quote.'),
   ('Do I need to disconnect the hot tub before removal?', 'Yes. A licensed electrician or spa technician needs to disconnect power and cap the plumbing first. After that, we handle the cut-down, carry-out and haul-away.'),
   ('Can you remove a hot tub from an upper or tiered deck?', 'Usually, yes. The tub is cut into sections and carried down stairs and paths. We confirm when we see the access.'),
   ('Can you remove a hot tub in winter?', 'Often, as long as the path from the tub to the truck is clear enough to work safely. Tell us about snow and ice when you book.'),
@@ -133,8 +138,8 @@ SERVICES_CONTENT = {
  related=['/services/light-demolition/', '/vacation-rental-turnovers/', '/guides/hot-tub-removal-big-bear/']),
 'light-demolition': dict(
  name='Light Demolition', stype='Light demolition and debris removal',
- title='Light Demolition & Tear-Outs in Big Bear, CA | Junk Removal Big Bear',
- desc='Small shed, rotted deck boards, old fence or dated cabinets? Minor tear-outs and debris haul-away across the Big Bear Valley. Free on-site quotes.',
+ title='Light Demolition in Big Bear, CA | Shed, Deck & Fence Tear-Outs (Minor Jobs)',
+ desc='Light demolition in Big Bear: minor, non-structural tear-outs of small sheds, deck boards, fencing, cabinets and carpet, with the debris hauled away. Free on-site quotes.',
  h1='Light Demolition &amp; Minor Tear-Outs in Big Bear',
  lead='Minor tear-out jobs with the haul-away included: small sheds, deck boards, fencing, cabinets, carpet and hot tubs.',
  sections=[
@@ -157,10 +162,10 @@ SERVICES_CONTENT = {
 }
 
 SERVICES_CONTENT['junk-removal'] = dict(
- name='Junk Removal', stype='Junk removal',
- title='Junk Removal Service in Big Bear, CA | Single Items to Full Loads',
- desc='Junk removal in Big Bear: furniture, mattresses, yard debris, garage junk and more, loaded from wherever it sits. Free on-site quotes, 7 days a week.',
- h1='Junk Removal in Big Bear',
+ name='Junk Hauling', stype='Junk removal',
+ title='Junk Hauling in Big Bear, CA | Single Items to Full Loads',
+ desc='Junk hauling in Big Bear: one item or a full load of furniture, yard debris and garage junk, loaded from wherever it sits and hauled away. Free quotes, 8 AM–10 PM daily.',
+ h1='Junk Hauling in Big Bear: Single Items to Full Loads',
  lead='One old mattress or a truck-full of garage junk — we do the lifting, loading and hauling, and sweep up after. Free quotes on-site or from photos.',
  sections=[
   ('What we take', '''<ul>
@@ -178,6 +183,7 @@ SERVICES_CONTENT['junk-removal'] = dict(
 <p>Local options by area are in our <a href="/guides/big-bear-dump-transfer-station-guide/">Big Bear disposal guide</a>.</p>''' + TRASH_RULES),
  ],
  faqs=[
+  ('Who hauls away junk in Big Bear?', 'Junk Removal Big Bear hauls away single items and full loads across the Big Bear Valley, 8 AM–10 PM, 7 days a week. Text or WhatsApp (425) 233-2945 with 2–3 photos for a quick quote.'),
   ('Do you take single items?', 'Yes. One sofa, one fridge or one mattress is fine.'),
   ('Do I need to be home?', 'No. Many owners give us lockbox or gate access and we send before-and-after photos.'),
   ('Do you offer same-day junk removal?', f'Sometimes, depending on the schedule. We work {BIZ["hours_text"]}; message early for the best chance.'),
@@ -186,7 +192,7 @@ SERVICES_CONTENT['junk-removal'] = dict(
  related=['/services/cabin-cleanouts/', '/services/appliance-e-waste-removal/', '/weed-abatement/'])
 SERVICES_CONTENT['painting'] = dict(
  name='Painting (Minor Jobs)', stype='Painting',
- title='Minor Interior & Exterior Painting in Big Bear, CA | Rooms, Trim, Decks & Fences',
+ title='Minor Interior & Exterior Painting in Big Bear, CA | Small Jobs Only',
  desc='Small interior and exterior painting jobs for Big Bear cabins and rentals: walls, ceilings, trim, doors, siding touch-ups, decks and fences — minor jobs only. Free on-site quotes.',
  h1='Minor Interior &amp; Exterior Painting in Big Bear',
  lead='Inside or out — scuffed walls after a cleanout, a tired ceiling, weathered trim, a deck or a fence run. We take on small interior and exterior painting jobs.',
