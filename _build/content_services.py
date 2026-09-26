@@ -219,7 +219,30 @@ SERVICES_CONTENT['painting'] = dict(
  ],
  related=['/services/cabin-cleanouts/', '/vacation-rental-turnovers/', '/services/light-demolition/'])
 
-# Restored general-scene images (AI-generated, from the old site; no people, vehicles or equipment). (name, alt)
-SERVICES_CONTENT['appliance-e-waste-removal']['img'] = ('appliances-electronics-pile', 'Old appliances and electronics stacked against a block wall: a mini fridge, microwaves, a small washer, a black mini fridge and a blue bin')
-SERVICES_CONTENT['cabin-cleanouts']['img'] = ('mountain-cabin-pines', 'Two-story wood cabin with lit windows among tall pines, with a snow-patched forested hillside behind')
-SERVICES_CONTENT['junk-removal']['img'] = ('yard-junk-pile', 'Backyard junk pile: a green bin full of scrap wood and a broken chair frame, with old tires and bagged debris on the lawn by a white fence')
+# Photos from the old site (all 12 restored per Nicholas, Sep 26 2026). (name, alt). 'hero' = page hero, 'img' = first content section.
+ALT = {
+    'junk-removal-crew-loading-truck': 'Worker carrying a wooden dresser to an open box truck, with boxes, tires and old appliances piled on the driveway',
+    'junk-removal-crew-armchair-truck': 'Two workers in green T-shirts loading an armchair and household junk into a dump truck on a driveway lined with pines',
+    'mattress-removal-crew': 'Two workers in green shirts carrying out a mattress and taking apart a metal bed frame in a bright bedroom',
+    'hot-tub-removal-deck': 'Worker leaning over an old hot tub on a wooden deck, getting it ready to be removed',
+    'junk-hauling-box-truck': 'White box truck parked on a residential street lined with pine trees',
+    'cabinet-tear-out': 'Worker in a green shirt and cap taking out old wooden kitchen cabinets with a drill',
+    'shrub-trimming-ladder-fuel': 'Worker in a hard hat and safety vest clearing around a tall juniper shrub in a yard',
+    'weed-clearing-crew': 'Two workers raking and clearing dry weeds and grass on a lot in front of houses',
+    'wildfire-dry-brush': 'Firefighter walking through dry brush under pine trees with smoke and small flames behind',
+    'appliances-electronics-pile': 'Old appliances and electronics stacked against a block wall: a TV, mini fridges, microwaves, a small washer and a blue bin',
+    'mountain-cabin-pines': 'Two-story wood cabin with lit windows among tall pines at dusk',
+    'yard-junk-pile': 'Backyard junk pile: a green bin full of scrap wood and a broken chair frame, with old tires and bagged debris on the lawn by a white fence',
+}
+def P(n): return (n, ALT[n])
+for _slug, _hero, _img in [
+        ('junk-removal', 'junk-removal-crew-armchair-truck', 'yard-junk-pile'),
+        ('furniture-removal', 'mattress-removal-crew', None),
+        ('appliance-e-waste-removal', 'appliances-electronics-pile', None),
+        ('cabin-cleanouts', 'mountain-cabin-pines', 'junk-removal-crew-armchair-truck'),
+        ('estate-cleanouts', 'junk-removal-crew-loading-truck', None),
+        ('hot-tub-removal', 'hot-tub-removal-deck', None),
+        ('light-demolition', 'cabinet-tear-out', None),
+        ('painting', 'mountain-cabin-pines', None)]:
+    SERVICES_CONTENT[_slug]['hero'] = P(_hero)
+    if _img: SERVICES_CONTENT[_slug]['img'] = P(_img)

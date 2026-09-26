@@ -3,7 +3,7 @@ Edits made directly to generated HTML will be overwritten on the next build — 
 import sys, os, json, html
 sys.path.insert(0, os.path.dirname(__file__))
 from tpl import *
-from content_services import SERVICES_CONTENT
+from content_services import SERVICES_CONTENT, P
 from content_areas import AREAS_CONTENT, SRC
 PAGES = []  # (path, priority)
 def emit(path, html_, prio='0.7'):
@@ -80,6 +80,7 @@ def home():
 <ul class="ticks"><li>Over 20 years in business</li><li>Free on-site quotes — or text us photos</li><li>Weed abatement letter? We clear it and haul it in one visit</li><li>Open {BIZ["hours_text"]}</li></ul>
 </div><img class="hero-badge" loading="lazy" decoding="async" src="/images/opt/logo-384.webp" srcset="/images/opt/logo-384.webp 384w, /images/opt/logo-600.webp 600w" sizes="300px" width="300" height="300" alt="Junk Removal Big Bear logo"></div></section>
 {photo_slot('real photo of Nicholas/crew or truck at work (no customer faces or house numbers)')}
+<section class="gal-sec"><div class="wrap">{gallery([P('junk-removal-crew-armchair-truck') + ('/services/junk-removal/', 'Junk hauling'), P('weed-clearing-crew') + ('/weed-abatement/', 'Weed clearing'), P('junk-hauling-box-truck') + ('/location/', 'Anywhere in the Big Bear Valley')])}</div></section>
 <section><div class="wrap"><h2>What we do</h2><p class="sec-intro">Everything except moving. Pick a service for details and local tips.</p>
 {svc_cards()}</div></section>
 <section class="alt"><div class="wrap two"><div>
@@ -100,7 +101,7 @@ def home():
 <p style="margin-top:14px"><a href="/location/">See all service areas →</a></p></div></section>
 <section><div class="wrap two"><div><h2>Why we quote on-site, for free</h2>
 <p>Mountain jobs are all different — steep driveways, loft stairs, decks over a slope, snow. So we don't publish price lists. We come out, look at the job, and give you a firm quote before we touch anything. It costs you nothing, and there's no obligation.</p>{btns_light()}</div>
-{fig('yard-junk-pile', 'Backyard junk pile: a green bin full of scrap wood and a broken chair frame, with old tires and bagged debris on the lawn by a white fence')}</div></section>
+{fig(*P('yard-junk-pile'))}</div></section>
 <section class="alt"><div class="wrap narrow"><h2>Junk Removal Big Bear at a glance</h2><div class="tscroll"><table>
 <tr><td><b>Business</b></td><td>{BIZ["name"]} — junk removal and weed clearing, over 20 years in business</td></tr>
 <tr><td><b>Service area</b></td><td>The Big Bear Valley, CA: <a href="/location/big-bear-lake/">Big Bear Lake</a>, <a href="/location/big-bear-city/">Big Bear City</a>, <a href="/location/moonridge/">Moonridge</a>, <a href="/location/sugarloaf/">Sugarloaf</a>, <a href="/location/fawnskin/">Fawnskin</a>, <a href="/location/erwin-lake-baldwin-lake/">Erwin Lake and Baldwin Lake</a>. We come to you (no storefront).</td></tr>
@@ -136,7 +137,7 @@ def service_pages():
         rel = [s for s in SERVICES + [('/services/furniture-removal/', 'Furniture & Mattress Removal', 'Sofas, beds, mattresses and patio sets hauled away.', 'sofa')] if s[0] in c['related']]
         gl = list(dict.fromkeys([x for x in c['related'] if '/guides/' in x] + SERVICE_GUIDES.get(slug, [])))
         guide_links = ''.join(f'<li><a href="{x}">Local guide: {GUIDE_TITLES.get(x, "Local guide")}</a></li>' for x in gl)
-        body = page_hero(crumbs, 'Free on-site quotes · Big Bear Valley', c['h1'], c['lead']) + photo_slot(f'real photo for {c["name"]} (crew/truck/finished result; no customer faces)') + f'''<section><div class="wrap two"><div class="prose">{secs}
+        body = page_hero(crumbs, 'Free on-site quotes · Big Bear Valley', c['h1'], c['lead'], img=c.get('hero')) + photo_slot(f'real photo for {c["name"]} (crew/truck/finished result; no customer faces)') + f'''<section><div class="wrap two"><div class="prose">{secs}
 <h2>Where we do this</h2><p>All over the Big Bear Valley:</p>{area_chips('Junk removal in {n}')}</div>{contact_box()}</div></section>
 {faq_html(c['faqs'])}
 <section><div class="wrap"><h2>Related services</h2>{svc_cards(rel)}{'<h2 style="margin-top:24px">Local guides</h2><ul>' + guide_links + '</ul>' if guide_links else ''}</div></section>{cta_band()}'''
@@ -151,7 +152,7 @@ def vrt():
     path = '/vacation-rental-turnovers/'
     crumbs = [('Home', '/'), ('Vacation Rental Turnovers', path)]
     body = page_hero(crumbs, 'For Airbnb &amp; VRBO hosts and property managers', 'Airbnb &amp; Vacation Rental Junk Removal in Big Bear',
-        'Broken furniture, a dead hot tub, guest-left junk or an overflowing bin — we clear the bulky stuff between checkout and check-in so the next guest never sees it.') + f'''
+        'Broken furniture, a dead hot tub, guest-left junk or an overflowing bin — we clear the bulky stuff between checkout and check-in so the next guest never sees it.', img=P('junk-removal-crew-loading-truck')) + f'''
 <section><div class="wrap two"><div class="prose">
 <h2>What we handle for hosts</h2><ul>
 <li><b>Furniture and mattress haul-away</b> — the old piece goes the day the new one arrives</li>
@@ -163,7 +164,7 @@ def vrt():
 <li><b>Appliance haul-away</b> — the dead fridge or washer out</li>
 <li><b>Deck, garage and storage clear-outs</b> — before listing photos or inspections</li>
 <li><b>Full refresh cleanouts</b> — new owner, rebrand or sale</li></ul>
-{fig('mountain-cabin-pines', 'Two-story wood cabin with lit windows among tall pines, with a snow-patched forested hillside behind')}
+{fig(*P('mattress-removal-crew'))}
 <!-- Removed from current site: handyman work, spa cleaning, "new furniture placed" (moving-type service). -->
 <h2>Trash rules hosts get fined for</h2>
 <p><b>Inside the City of Big Bear Lake (92315)</b> you need a city vacation rental license. Cans can't sit at the curb more than 24 hours, and operational violations are fined $500 for a first, $1,000 for a second and $1,500 for a third violation within 12 months.</p>
@@ -204,7 +205,7 @@ def weed():
     crumbs = [('Home', '/'), ('Services', '/services/'), ('Weed Clearing & Abatement', path)]
     rows = ''.join(f'<tr><td><b>{a}</b></td><td>{b}</td><td>{c}</td></tr>' for a, b, c in WEED_ROWS)
     body = page_hero(crumbs, 'Fire-safety clearing + haul-away in one visit', 'Weed Abatement &amp; Defensible Space Clearing in Big Bear',
-        'Got a weed abatement letter from Big Bear Fire? We clear weeds, pine needles, brush and low limbs to the fire department\'s defensible space checklist — and haul every bit away the same visit. Free on-site quotes.') + \
+        'Got a weed abatement letter from Big Bear Fire? We clear weeds, pine needles, brush and low limbs to the fire department\'s defensible space checklist — and haul every bit away the same visit. Free on-site quotes.', img=P('weed-clearing-crew')) + \
         photo_slot('real before/after photo of a cleared lot (no house numbers or faces)') + f'''
 <section><div class="wrap two"><div class="prose">
 <h2>What we clear</h2><ul>
@@ -217,6 +218,7 @@ def weed():
 <li><b>Junk, lumber and old tires</b> — also on the fire department's list, and exactly what we haul</li>
 <li><b>Vacant lots</b> — cleared and photographed for your records</li></ul>
 <p>Everything we cut or rake leaves on our truck the same day. Piles left on the property don't make it compliant.</p>
+{fig(*P('shrub-trimming-ladder-fuel'))}
 <h2>Big Bear Fire's defensible space checklist</h2>
 <p>These are the Priority Defensible Space requirements Big Bear Fire applies from 0 to 100 feet around every structure, or up to your property line:</p>
 <div class="tscroll"><table><tr><th>Where</th><th>Requirement (summary)</th><th>What we do</th></tr>{rows}</table></div>
@@ -269,7 +271,7 @@ def location_hub():
 <section class="alt"><div class="wrap"><h2>Who handles what, by area</h2><p class="sec-intro">Trash service and rental rules change depending on whether you're inside the City of Big Bear Lake or in unincorporated San Bernardino County.</p>
 <div class="tscroll"><table><tr><th>Area</th><th>Curbside trash / bulky items</th><th>Short-term rentals</th></tr>{rows}</table></div>
 <p class="small muted">Everyone can self-haul to the Big Bear Transfer Station, 38550 Holcomb Valley Rd (Mon–Sat 8 AM–4:30 PM; call (909) 381-2404 to confirm). Details and sources are on each area page.</p></div></section>
-<section><div class="wrap narrow"><h2>Nearby mountain communities</h2><p>We also take jobs in nearby mountain communities by arrangement — message us with the location and what needs to go.</p></div></section>
+<section><div class="wrap narrow"><h2>Nearby mountain communities</h2><p>We also take jobs in nearby mountain communities by arrangement — message us with the location and what needs to go.</p>{fig(*P('junk-hauling-box-truck'))}</div></section>
 {faq_html(LOC_FAQ, 'Service area questions')}{cta_band()}'''
     emit(path, page(path, 'Service Areas | Junk Removal Across the Big Bear Valley',
         'Junk removal and weed clearing in Big Bear Lake, Big Bear City, Moonridge, Sugarloaf, Fawnskin, Erwin Lake & Baldwin Lake — with local trash and dump rules for each area.',
@@ -319,6 +321,9 @@ def contact():
 </table></div></div></section>{cta_band()}'''
     emit(path, page(path, 'Contact Junk Removal Big Bear | Free On-Site Quotes by Text or WhatsApp',
         f'Text or WhatsApp photos for a free junk removal or weed clearing quote in Big Bear, or book a free on-site quote. Open {BIZ["hours_text"]}.', body, [business_ld(), crumbs_ld(crumbs)]), '0.8')
+GUIDE_IMG = {'big-bear-fire-abatement-letter': 'wildfire-dry-brush', 'big-bear-dump-transfer-station-guide': 'junk-hauling-box-truck',
+             'hot-tub-removal-big-bear': 'hot-tub-removal-deck', 'airbnb-turnover-checklist-big-bear': 'junk-removal-crew-loading-truck',
+             'estate-cleanout-guide-big-bear': 'mountain-cabin-pines'}
 GUIDES = json.load(open(os.path.join(os.path.dirname(__file__), 'content', 'guides.json')))
 for _g in GUIDES: _g.update(GUIDE_OVERRIDES.get(_g['slug'], {}))
 GUIDE_TITLES = {f'/guides/{g["slug"]}/': strip_tags(g['h1']) for g in GUIDES}
@@ -337,6 +342,7 @@ def guides():
         body = page_hero(crumbs, g['eyebrow'], g['h1'], esc(g['desc'])) + f'''
 <section><div class="wrap two"><article class="prose">
 <div class="note"><h2 style="font-size:1.15rem;margin-top:0">{g["answer_q"]}</h2><p style="margin:0">{g["answer"]}</p></div>
+{fig(*P(GUIDE_IMG[g["slug"]])) if g["slug"] in GUIDE_IMG else ''}
 {g["body"]}
 <p class="small muted">Last reviewed: September 2026. Rules, hours and fees change — confirm with the agency before you go.</p>
 <h2>More guides</h2><ul>{others}</ul>

@@ -121,16 +121,34 @@ def btns(dark=True):
     return (f'<div class="cta-row">{PH_TODO}<a class="btn btn-amber" href="{BIZ["sms"]}">{ICONS["msg"]}Text photos for a free quote</a>'
             f'<a class="btn {sec}" href="{BIZ["wa"]}" rel="noopener">{ICONS["wa"]}WhatsApp us</a></div>')
 def btns_light(): return btns(False)
-RESTORED = {  # name: (master width, master height) - see _build/img-src and images/CREDITS.md
-    'appliances-electronics-pile': (579, 735), 'mountain-cabin-pines': (730, 570), 'yard-junk-pile': (880, 920)}
-def fig(name, alt, cap='Illustration (AI-generated scene).', maxw=None):
-    """Lazy, responsive figure for a restored general-scene image. Neutral alt/caption only (never implies it is our job)."""
-    W, H = RESTORED[name]; big = min(800, W); sm = 480
-    srcset = f'/images/opt/{name}-{sm}.webp {sm}w, /images/opt/{name}-{big}.webp {big}w'
-    maxw = maxw or (440 if H > W else 620)
-    st = f' style="max-width:{maxw}px"'
-    return (f'<figure class="photo nat"{st}><img loading="lazy" decoding="async" src="/images/opt/{name}-{sm}.webp" srcset="{srcset}" '
-            f'sizes="(min-width: {maxw + 36}px) {maxw}px, calc(100vw - 36px)" width="{W}" height="{H}" alt="{esc(alt)}"><figcaption>{cap}</figcaption></figure>')
+PHOTOS = {  # name: (master width, master height) after the 4:3 crop - photos from the old site, see _build/images.py
+    'junk-removal-crew-loading-truck': (1024, 768), 'junk-removal-crew-armchair-truck': (1024, 768), 'mattress-removal-crew': (1024, 768),
+    'hot-tub-removal-deck': (1024, 768), 'junk-hauling-box-truck': (1024, 768), 'cabinet-tear-out': (1024, 768),
+    'shrub-trimming-ladder-fuel': (1024, 768), 'weed-clearing-crew': (1024, 768), 'wildfire-dry-brush': (1024, 768),
+    'appliances-electronics-pile': (794, 596), 'mountain-cabin-pines': (1024, 768), 'yard-junk-pile': (1024, 768)}
+def photo_widths(W):
+    """480/768/1024 variants, never upscaled; the master width is added only if it is well above the largest variant."""
+    ws = [w for w in (480, 768, 1024) if w <= W]
+    return ws + [W] if W - ws[-1] > 100 else ws
+def _img(name, alt, sizes, eager=False):
+    W, H = PHOTOS[name]; ws = photo_widths(W)
+    srcset = ', '.join(f'/images/opt/{name}-{w}.webp {w}w' for w in ws)
+    load = 'fetchpriority="high"' if eager else 'loading="lazy"'
+    return (f'<img {load} decoding="async" src="/images/opt/{name}-{ws[0]}.webp" srcset="{srcset}" sizes="{sizes}" '
+            f'width="{W}" height="{H}" alt="{esc(alt)}">')
+def fig(name, alt, cap='', maxw=620):
+    """Lazy, responsive figure for a photo from the old site. Neutral, descriptive alt text; no caption by default."""
+    fc = f'<figcaption>{cap}</figcaption>' if cap else ''
+    return (f'<figure class="photo nat" style="max-width:{maxw}px">'
+            + _img(name, alt, f'(min-width: {maxw + 36}px) {maxw}px, calc(100vw - 36px)') + f'{fc}</figure>')
+def hero_pic(name, alt):
+    """Photo in the right column of a page hero (below the buttons on mobile). Not lazy: it can be the LCP element."""
+    return '<figure class="hero-pic">' + _img(name, alt, '(min-width: 1120px) 420px, (min-width: 900px) 38vw, calc(100vw - 36px)', eager=True) + '</figure>'
+def gallery(items):
+    """Row of linked photos: items = [(name, alt, href, label)]."""
+    return '<div class="gallery">' + ''.join(
+        f'<a class="gal" href="{h}">' + _img(n, a, ('(min-width: 960px) 348px, calc(100vw - 36px)' if i == 0 else '(min-width: 1120px) 348px, (min-width: 960px) 31vw, calc(50vw - 24px)')) + f'<span>{l} →</span></a>'
+        for i, (n, a, h, l) in enumerate(items)) + '</div>'
 def photo_slot(what):
     """Placeholder for a real photo from Nicholas. Invisible in production; the preview build makes it visible."""
     return f'<!-- PHOTO-SLOT: {what} -->'
@@ -149,11 +167,13 @@ def header(path):
 <a class="btn btn-amber btn-sm head-call" href="{BIZ["sms"]}">{ICONS["msg"]}Text for a free quote</a>
 <details class="menu"><summary>Menu</summary><nav aria-label="Main (mobile)">{links()}<a href="/weed-abatement/">Weed Abatement</a></nav></details>
 </div></header>'''
-def page_hero(crumbs, eyebrow, h1, lead, extra=''):
+def page_hero(crumbs, eyebrow, h1, lead, extra='', img=None):
     cr = ''.join(f'<li><a href="{p}">{esc(n)}</a></li>' if i < len(crumbs) - 1 else f'<li aria-current="page">{esc(n)}</li>' for i, (n, p) in enumerate(crumbs))
+    txt = f'''<nav class="crumbs" aria-label="Breadcrumb"><ol>{cr}</ol></nav>
+<span class="eyebrow">{eyebrow}</span><h1>{h1}</h1><p class="lead">{lead}</p>{btns()}{extra}'''
+    if img: return f'<section class="hero page-hero has-pic"><div class="wrap hero-split"><div>{txt}</div>{hero_pic(*img)}</div></section>'
     return f'''<section class="hero page-hero"><div class="wrap">
-<nav class="crumbs" aria-label="Breadcrumb"><ol>{cr}</ol></nav>
-<span class="eyebrow">{eyebrow}</span><h1>{h1}</h1><p class="lead">{lead}</p>{btns()}{extra}
+{txt}
 </div></section>'''
 def faq_html(faqs, title='Frequently asked questions'):
     items = ''.join(f'<details><summary>{q}</summary><div><p>{a}</p></div></details>' for q, a in faqs)
@@ -180,7 +200,7 @@ Hours: {BIZ["hours_text"]}</p>
 <div><h2>Services</h2><ul>{svc}</ul></div>
 <div><h2>Service areas</h2><ul>{areas}<li><a href="/location/">All service areas</a></li></ul></div>
 <div><h2>Help</h2><ul><li><a href="/guides/">Local guides</a></li><li><a href="/guides/big-bear-fire-abatement-letter/">Fire abatement letter guide</a></li><li><a href="/guides/big-bear-dump-transfer-station-guide/">Big Bear dump &amp; transfer station</a></li><li><a href="/contact/">Contact &amp; free quotes</a></li></ul></div>
-</div><p class="legal">© 2026 {BIZ["name"]}. {LICENSE_NOTE} We don't haul hazardous waste (paint, chemicals, oil, asbestos, propane tanks). Scenery photos: Unsplash (Joshua Chun, Dušan veverkolog). Some illustrative images are AI-generated general scenes, not photos of our jobs.</p></div></footer>
+</div><p class="legal">© 2026 {BIZ["name"]}. {LICENSE_NOTE} We don't haul hazardous waste (paint, chemicals, oil, asbestos, propane tanks). Scenery photos: Unsplash (Joshua Chun, Dušan veverkolog).</p></div></footer>
 <div class="callbar">{PH_TODO}<a class="c1" href="{BIZ["sms"]}">{ICONS["msg"]}Text photos</a><a class="c2" href="{BIZ["wa"]}" rel="noopener">{ICONS["wa"]}WhatsApp</a></div>'''
 def page(path, title, desc, body, schema, og_type='website', robots='index, follow', canonical=True):
     url = SITE + path
