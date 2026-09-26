@@ -18,8 +18,7 @@ python3 _build/build.py            # regenerates every page, sitemap.xml and llm
 | `_build/content_services.py` | Text for the service pages under `/services/…/` |
 | `_build/content_areas.py` | Text for the area pages under `/location/…/` |
 | `_build/content/guides.json` | The 5 guides (made by `_build/extract_guides.py` from the `main` version, with fixes) |
-| `_build/images.py` | Responsive WebP images, favicons, schema logo PNG and the social share image (needs Pillow). Sources in `_build/img-src/` |
-| `_build/logo.py` | Generates `images/logo.svg` and `images/logo-mark.svg` (needs fontTools) |
+| `_build/images.py` | Logo sizes (from Nicholas's original logo, `_build/img-src/logo-original.png`), responsive WebP images, favicons, schema logo PNG and the social share image (needs Pillow). Sources in `_build/img-src/` |
 | `style.css` | All styling, in one file |
 
 Edit the Python files and re-run the build. Don't hand-edit the generated HTML, because the next build overwrites it.

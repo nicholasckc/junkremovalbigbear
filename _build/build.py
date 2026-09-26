@@ -45,7 +45,7 @@ def home():
 <p class="lead">Junk hauled, cabins and garages cleared out, and weeds and pine needles cleared to fire-department standards — by a local crew that hauls it all away.</p>
 {btns()}
 <ul class="ticks"><li>Over 20 years in business</li><li>Free on-site quotes — or text us photos</li><li>Weed abatement letter? We clear it and haul it in one visit</li><li>Open {BIZ["hours_text"]}</li></ul>
-</div><img class="hero-badge" loading="lazy" decoding="async" src="/images/logo.svg" width="300" height="300" alt="Junk Removal Big Bear logo"></div></section>
+</div><img class="hero-badge" loading="lazy" decoding="async" src="/images/opt/logo-384.webp" srcset="/images/opt/logo-384.webp 384w, /images/opt/logo-600.webp 600w" sizes="300px" width="300" height="300" alt="Junk Removal Big Bear logo"></div></section>
 {photo_slot('real photo of Nicholas/crew or truck at work (no customer faces or house numbers)')}
 <section><div class="wrap"><h2>What we do</h2><p class="sec-intro">Everything except moving. Pick a service for details and local tips.</p>
 {svc_cards()}</div></section>

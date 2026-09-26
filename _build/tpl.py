@@ -125,7 +125,7 @@ def header(path):
         return ''.join(out)
     return f'''<a class="skip" href="#main">Skip to content</a>
 <header class="site-head"><div class="wrap head-in">
-<a class="brand" href="/"><img src="/images/logo-mark.svg" width="42" height="42" alt="">Junk Removal <span>Big Bear</span></a>
+<a class="brand" href="/"><img src="/images/opt/logo-96.webp" srcset="/images/opt/logo-96.webp 96w, /images/opt/logo-192.webp 192w" sizes="42px" width="42" height="42" alt="">Junk Removal <span>Big Bear</span></a>
 <nav class="desk-nav" aria-label="Main">{links()}</nav>
 <a class="btn btn-amber btn-sm head-call" href="{BIZ["sms"]}">{ICONS["msg"]}Text for a free quote</a>
 <details class="menu"><summary>Menu</summary><nav aria-label="Main (mobile)">{links()}<a href="/weed-abatement/">Weed Abatement</a></nav></details>
