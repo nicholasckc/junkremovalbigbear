@@ -59,7 +59,7 @@ TRUST = f'''<ul class="facts">
 </ul>'''
 HOME_FAQ = [
  ('What is Junk Removal Big Bear?', 'Junk Removal Big Bear is a local junk removal and weed clearing service for the Big Bear Valley in California, in business for over 20 years. It hauls furniture, appliances, hot tubs and yard debris, clears out cabins and estates, and clears weeds and pine needles to Big Bear Fire\'s defensible space checklist.'),
- ('How do I contact Junk Removal Big Bear?', f'Call or text {BIZ["phone"]}, 8 AM–10 PM, 7 days a week (WhatsApp works on the same number), or text {BIZ["phone2"]}. Text 2–3 photos and your neighborhood for a quick answer, or ask for a free on-site quote.'),
+ ('How do I contact Junk Removal Big Bear?', f'Call or text {BIZ["phone"]}, 8 AM–10 PM, 7 days a week (WhatsApp works on the same number), or text {BIZ["phone2"]}. Text 2–3 photos and your neighborhood for a quick answer, or ask for a free on-site quote.{(" You can also email " + BIZ["email"] + ".") if BIZ["email"] else ""}'),
  ('How much does junk removal or weed clearing cost?', 'Every mountain job is different, so we don\'t publish prices. We give free on-site quotes (or quotes from photos) and confirm the price before any work starts.'),
  ('Do you offer free on-site quotes?', 'Yes. We come to your property anywhere in the Big Bear Valley, look at the job and give you a firm price — free and with no obligation.'),
  ('Do you clear brush as well as weeds?', 'Yes. Weed and brush clearing is one of our main services: weeds, dry grass, pine needles, brush and low limbs are cleared and hauled away the same visit, so nothing is left piled on the lot. We quote it free on site.'),

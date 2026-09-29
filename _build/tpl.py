@@ -20,7 +20,7 @@ BIZ = {
     'wa': 'https://wa.me/' + _PH.lstrip('+'),
     'phone2': PHONE2_DISPLAY, 'tel2': PHONE2_E164, 'sms2': 'sms:' + PHONE2_E164,
     'years': 'over 20 years',  # confirmed by Nicholas (Sep 2026); don't claim more than this
-    'email': '',  # not provided yet (Sep 2026): every email line/link/schema field is hidden while this is empty
+    'email': 'junkremovalbigbear@gmail.com',  # approved for public use by Nicholas (Sep 30 2026); set '' to hide every email line/link/schema field
     'hours_text': '8:00 AM – 10:00 PM, 7 days a week',  # confirmed by Nicholas (Sep 2026)
     'opens': '08:00', 'closes': '22:00',
     'area_text': 'the Big Bear Valley and nearby mountain communities',
