@@ -1,7 +1,7 @@
 """Shared config, icons and page template for the Junk Removal Big Bear static site."""
 import json, html, os
 SITE = 'https://www.junkremovalbigbear.com'
-TODAY = '2026-09-26'
+TODAY = '2026-09-30'
 # ---------------------------------------------------------------------------
 # PHONE: confirmed by Nicholas (Sep 2026). Primary takes texts, WhatsApp and calls; every sms:/WhatsApp
 # link and the schema telephone use it. The secondary number also takes texts and is shown only as an
@@ -15,6 +15,7 @@ BIZ = {
     'name': 'Junk Removal Big Bear',
     'phone': PHONE_DISPLAY,
     'tel': PHONE_E164,
+    'tel_link': 'tel:' + PHONE_E164,  # customers mostly text or call (Nicholas, Sep 30 2026)
     'sms': 'sms:' + _PH,
     'wa': 'https://wa.me/' + _PH.lstrip('+'),
     'phone2': PHONE2_DISPLAY, 'tel2': PHONE2_E164, 'sms2': 'sms:' + PHONE2_E164,
@@ -95,13 +96,14 @@ def business_ld():
         'sameAs': [BIZ['gbp_cid'], BIZ['yelp']],
         'hasMap': BIZ['gbp_cid'],
         **({'email': BIZ['email']} if BIZ['email'] else {}),
-        'knowsAbout': ['Junk removal', 'Weed abatement', 'Defensible space clearing', 'Cabin cleanouts', 'Estate cleanouts', 'Hot tub removal',
-                       'Appliance and e-waste removal', 'Furniture and mattress removal', 'Vacation rental turnovers', 'Big Bear Valley disposal rules'],
+        'knowsAbout': ['Junk removal', 'Weed abatement', 'Weed and brush clearing', 'Defensible space clearing', 'Cabin cleanouts', 'Estate cleanouts', 'Hot tub removal',
+                       'Appliance and e-waste removal', 'Furniture and mattress removal', 'Vacation rental turnovers', 'Light demolition (minor jobs)', 'Painting (minor jobs)', 'Big Bear Valley disposal rules'],
         'hasOfferCatalog': {'@type': 'OfferCatalog', 'name': 'Services', 'itemListElement': [
             {'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': n, 'url': SITE + p}} for p, n, _, _ in SERVICES_ALL]},
     }
     if BIZ['tel2']: d['contactPoint'] = [
-        {'@type': 'ContactPoint', 'contactType': 'customer service', 'telephone': BIZ['tel'], 'areaServed': 'US', 'availableLanguage': 'English'},
+        {'@type': 'ContactPoint', 'contactType': 'customer service', 'telephone': BIZ['tel'], 'areaServed': 'US', 'availableLanguage': 'English',
+         'description': 'Call or text', 'hoursAvailable': {'@type': 'OpeningHoursSpecification', 'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], 'opens': BIZ['opens'], 'closes': BIZ['closes']}},
         {'@type': 'ContactPoint', 'contactType': 'customer service', 'telephone': BIZ['tel2'], 'areaServed': 'US', 'availableLanguage': 'English', 'description': 'Secondary number, also takes texts'}]
     return d
 def crumbs_ld(items):
@@ -120,7 +122,8 @@ def service_ld(name, desc, path, area_names=None, stype=None):
 def btns(dark=True):
     sec = 'btn-ghost' if dark else 'btn-line'
     return (f'<div class="cta-row">{PH_TODO}<a class="btn btn-amber" href="{BIZ["sms"]}">{ICONS["msg"]}Text photos for a free quote</a>'
-            f'<a class="btn {sec}" href="{BIZ["wa"]}" rel="noopener">{ICONS["wa"]}WhatsApp us</a></div>')
+            f'<a class="btn {sec}" href="{BIZ["tel_link"]}">{ICONS["phone"]}Call {BIZ["phone"]}</a></div>'
+            f'<p class="cta-alt small">Prefer WhatsApp? <a href="{BIZ["wa"]}" rel="noopener">Message us on WhatsApp</a></p>')
 def btns_light(): return btns(False)
 PHOTOS = {  # name: (master width, master height) after the 4:3 crop - photos from the old site, see _build/images.py
     'junk-removal-crew-loading-truck': (1024, 768), 'junk-removal-crew-armchair-truck': (1024, 768), 'mattress-removal-crew': (1024, 768),
@@ -179,14 +182,15 @@ def page_hero(crumbs, eyebrow, h1, lead, extra='', img=None):
 def faq_html(faqs, title='Frequently asked questions'):
     items = ''.join(f'<details><summary>{q}</summary><div><p>{a}</p></div></details>' for q, a in faqs)
     return f'<section class="alt" id="faq"><div class="wrap narrow"><h2>{title}</h2><div class="faq">{items}</div></div></section>'
-def cta_band(h='Book your free on-site quote', p='Text or WhatsApp a few photos, or ask us to come out and look. Free, no obligation.'):
+def cta_band(h='Book your free on-site quote', p='Text us a few photos or give us a call, and we\'ll come out and look. Free, no obligation.'):
     return f'<section class="cta-band"><div class="wrap"><h2>{h}</h2><p>{p}</p>{btns()}</div></section>'
 def EMAIL_LINE():
     return f'Email: <a href="mailto:{BIZ["email"]}">{BIZ["email"]}</a><br>' if BIZ['email'] else ''
 def contact_box():
     return f'''<aside class="box sticky"><h2 style="font-size:1.15rem">Free on-site quote</h2>
-<p class="muted small">Text or WhatsApp 2–3 photos and your neighborhood, or ask us to come out and quote it in person — free, no obligation.</p>
+<p class="muted small">Text 2–3 photos and your neighborhood, or call and ask us to come out and quote it in person — free, no obligation.</p>
 {PH_TODO}<p><a class="btn btn-amber" style="width:100%" href="{BIZ["sms"]}">{ICONS["msg"]}Text photos</a></p>
+<p><a class="btn btn-line" style="width:100%" href="{BIZ["tel_link"]}">{ICONS["phone"]}Call {BIZ["phone"]}</a></p>
 <p><a class="btn btn-line" style="width:100%" href="{BIZ["wa"]}" rel="noopener">{ICONS["wa"]}WhatsApp us</a></p>
 <p class="small muted">{EMAIL_LINE()}Hours: {BIZ["hours_text"]}</p></aside>'''
 def footer():
@@ -195,7 +199,7 @@ def footer():
     return f'''<footer class="site-foot"><div class="wrap"><div class="foot-grid">
 <div><h2>{BIZ["name"]}</h2>
 <p>Serving {BIZ["area_text"]}. We come to you.</p>
-<p>Text / WhatsApp: <a href="{BIZ["sms"]}">{BIZ["phone"]}</a> · <a href="{BIZ["wa"]}" rel="noopener">WhatsApp</a><br>
+<p>Call or text: <a href="{BIZ["tel_link"]}">{BIZ["phone"]}</a> · <a href="{BIZ["sms"]}">Text</a> · <a href="{BIZ["wa"]}" rel="noopener">WhatsApp</a><br>
 Or text: <a href="{BIZ["sms2"]}">{BIZ["phone2"]}</a><br>
 {EMAIL_LINE()}Hours: {BIZ["hours_text"]}</p>
 <p><a href="{BIZ["gbp"]}" rel="noopener">Find us on Google Maps</a></p></div>
@@ -203,7 +207,7 @@ Or text: <a href="{BIZ["sms2"]}">{BIZ["phone2"]}</a><br>
 <div><h2>Service areas</h2><ul>{areas}<li><a href="/location/">All service areas</a></li></ul></div>
 <div><h2>Help</h2><ul><li><a href="/guides/">Local guides</a></li><li><a href="/guides/big-bear-fire-abatement-letter/">Fire abatement letter guide</a></li><li><a href="/guides/big-bear-dump-transfer-station-guide/">Big Bear dump &amp; transfer station</a></li><li><a href="/contact/">Contact &amp; free quotes</a></li></ul></div>
 </div><p class="legal">© 2026 {BIZ["name"]}. {LICENSE_NOTE} We don't haul hazardous waste (paint, chemicals, oil, asbestos, propane tanks). Scenery photos: Unsplash (Joshua Chun, Dušan veverkolog).</p></div></footer>
-<div class="callbar">{PH_TODO}<a class="c1" href="{BIZ["sms"]}">{ICONS["msg"]}Text photos</a><a class="c2" href="{BIZ["wa"]}" rel="noopener">{ICONS["wa"]}WhatsApp</a></div>'''
+<div class="callbar">{PH_TODO}<a class="c1" href="{BIZ["sms"]}">{ICONS["msg"]}Text photos</a><a class="c2" href="{BIZ["tel_link"]}">{ICONS["phone"]}Call</a></div>'''
 def page(path, title, desc, body, schema, og_type='website', robots='index, follow', canonical=True):
     url = SITE + path
     schemas = ''.join(ld(s) for s in schema)

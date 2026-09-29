@@ -63,7 +63,7 @@ AREAS_CONTENT = {
  faqs=[
   ('Does Big Bear City have free bulky item pickup?', 'The Big Bear City CSD collects bulky items curbside for a per-item fee and holds periodic free community clean-up days. Call the CSD at (909) 585-2565 for current details.'),
   ('Where is the dump near Big Bear City?', 'The Big Bear Transfer Station is at 38550 Holcomb Valley Road, off Highway 18. It is normally open Monday–Saturday, 8 AM–4:30 PM. Call (909) 381-2404 to confirm.'),
-  ('Can you empty my garage in Big Bear City?', f'Yes. Text or WhatsApp photos for a quote, or book a free on-site quote.'),
+  ('Can you empty my garage in Big Bear City?', f'Yes. Text photos or call for a quote, or book a free on-site quote.'),
  ],
  sources=['csd', 'county_dup', 'county_str', 'bbfd', 'caltrans']),
 'moonridge': dict(
@@ -127,7 +127,7 @@ AREAS_CONTENT = {
  faqs=[
   ('Who does weed abatement inspections in Fawnskin?', 'San Bernardino County Fire handles weed abatement and AB 38 defensible-space inspections in Fawnskin, not Big Bear Fire.'),
   ('Can Fawnskin residents use the Clean Bear Sites?', 'No. Clean Bear Sites are only for residents and visitors staying in the City of Big Bear Lake. Fawnskin properties use curbside service or the Big Bear Transfer Station.'),
-  ('Do you serve Fawnskin?', f'Yes. Text or WhatsApp photos, or book a free on-site quote.'),
+  ('Do you serve Fawnskin?', f'Yes. Text photos or call, or book a free on-site quote.'),
  ],
  sources=['bbfd_insp', 'county_str', 'county_dup', 'cabb', 'cabb_trash', 'caltrans']),
 'erwin-lake-baldwin-lake': dict(

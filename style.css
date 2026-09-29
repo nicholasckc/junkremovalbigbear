@@ -49,6 +49,7 @@ li{margin-bottom:.35em}
 .btn-sm{padding:9px 14px;font-size:.92rem;border-radius:10px}
 .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 @media(max-width:520px){.cta-row .btn{flex:1 1 100%}}
+.cta-alt{margin:10px 0 0}.cta-alt a{color:inherit;text-decoration:underline;text-underline-offset:2px}.cta-band .cta-alt{text-align:center}
 /* hero */
 .hero{background:var(--pine);color:#fff;position:relative;overflow:hidden;padding:34px 0 60px}
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:70px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 70' preserveAspectRatio='none'%3E%3Cpath d='M0 70 L0 40 L140 12 L260 44 L420 6 L560 40 L700 18 L860 46 L1000 10 L1200 42 L1200 70Z' fill='%23142a21'/%3E%3Cpath d='M0 70 L0 58 L200 34 L380 60 L560 36 L760 62 L940 38 L1200 60 L1200 70Z' fill='%23f8f5ee'/%3E%3C/svg%3E") bottom/100% 100% no-repeat}

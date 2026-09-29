@@ -24,7 +24,7 @@ SERVICES_CONTENT = {
  ],
  faqs=[
   ('Who removes furniture and mattresses in Big Bear?', 'Junk Removal Big Bear carries out and hauls away sofas, beds, mattresses, dressers and patio sets across the Big Bear Valley, including from lofts and decks. Single items are fine.'),
-  ('Can you take a mattress by itself?', f'Yes. Single items are fine — text or WhatsApp a photo for a quote.'),
+  ('Can you take a mattress by itself?', f'Yes. Single items are fine — text a photo or call for a quote.'),
   ('Do I need to move the furniture outside first?', 'No. We carry items out from inside the home, including lofts, basements and stairs.'),
   ('Can you take furniture if I am not in Big Bear?', 'Yes. Send photos, arrange access (lockbox, garage code or a neighbor), and we send before-and-after photos when the job is done.'),
   ('How is furniture removal priced?', 'By how much space the items take up in the truck. We give a free quote from photos or on-site, and confirm the price before we start.'),
@@ -129,7 +129,7 @@ SERVICES_CONTENT = {
   ('For vacation-rental owners', '''<p>A broken hot tub hurts bookings. We can schedule removal between guest stays and coordinate access with your property manager. See <a href="/vacation-rental-turnovers/">vacation rental cleanouts</a>.</p>'''),
  ],
  faqs=[
-  ('Who removes hot tubs in Big Bear?', 'Junk Removal Big Bear removes and hauls away hot tubs and spas across the Big Bear Valley, including from upper decks and vacation rentals. Text or WhatsApp (425) 233-2945 with a photo for a free quote.'),
+  ('Who removes hot tubs in Big Bear?', 'Junk Removal Big Bear removes and hauls away hot tubs and spas across the Big Bear Valley, including from upper decks and vacation rentals. Call or text (425) 233-2945 for a free quote.'),
   ('Do I need to disconnect the hot tub before removal?', 'Yes. A licensed electrician or spa technician needs to disconnect power and cap the plumbing first. After that, we handle the cut-down, carry-out and haul-away.'),
   ('Can you remove a hot tub from an upper or tiered deck?', 'Usually, yes. The tub is cut into sections and carried down stairs and paths. We confirm when we see the access.'),
   ('Can you remove a hot tub in winter?', 'Often, as long as the path from the tub to the truck is clear enough to work safely. Tell us about snow and ice when you book.'),
@@ -183,7 +183,7 @@ SERVICES_CONTENT['junk-removal'] = dict(
 <p>Local options by area are in our <a href="/guides/big-bear-dump-transfer-station-guide/">Big Bear disposal guide</a>.</p>''' + TRASH_RULES),
  ],
  faqs=[
-  ('Who hauls away junk in Big Bear?', 'Junk Removal Big Bear hauls away single items and full loads across the Big Bear Valley, 8 AM–10 PM, 7 days a week. Text or WhatsApp (425) 233-2945 with 2–3 photos for a quick quote.'),
+  ('Who hauls away junk in Big Bear?', 'Junk Removal Big Bear hauls away single items and full loads across the Big Bear Valley, 8 AM–10 PM, 7 days a week. Call or text (425) 233-2945, or text 2–3 photos for a quick quote.'),
   ('Do you take single items?', 'Yes. One sofa, one fridge or one mattress is fine.'),
   ('Do I need to be home?', 'No. Many owners give us lockbox or gate access and we send before-and-after photos.'),
   ('Do you offer same-day junk removal?', f'Sometimes, depending on the schedule. We work {BIZ["hours_text"]}; message early for the best chance.'),
