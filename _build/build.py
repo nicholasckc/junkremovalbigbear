@@ -59,7 +59,7 @@ TRUST = f'''<ul class="facts">
 </ul>'''
 HOME_FAQ = [
  ('What is Junk Removal Big Bear?', 'Junk Removal Big Bear is a local junk removal and weed clearing service for the Big Bear Valley in California, in business for over 20 years. It hauls furniture, appliances, hot tubs and yard debris, clears out cabins and estates, and clears weeds and pine needles to Big Bear Fire\'s defensible space checklist.'),
- ('How do I contact Junk Removal Big Bear?', f'Call or text {BIZ["phone"]}, 8 AM–10 PM, 7 days a week (WhatsApp works on the same number), or text {BIZ["phone2"]}. Text 2–3 photos and your neighborhood for a quick answer, or ask for a free on-site quote.{(" You can also email " + BIZ["email"] + ".") if BIZ["email"] else ""}'),
+ ('How do I contact Junk Removal Big Bear?', f'Call or text {BIZ["phone"]}, 8 AM–10 PM, 7 days a week (WhatsApp works on the same number). Text 2–3 photos and your neighborhood for a quick answer, or ask for a free on-site quote.{(" You can also email " + BIZ["email"] + ".") if BIZ["email"] else ""}'),
  ('How much does junk removal or weed clearing cost?', 'Every mountain job is different, so we don\'t publish prices. We give free on-site quotes (or quotes from photos) and confirm the price before any work starts.'),
  ('Do you offer free on-site quotes?', 'Yes. We come to your property anywhere in the Big Bear Valley, look at the job and give you a firm price — free and with no obligation.'),
  ('Do you clear brush as well as weeds?', 'Yes. Weed and brush clearing is one of our main services: weeds, dry grass, pine needles, brush and low limbs are cleared and hauled away the same visit, so nothing is left piled on the lot. We quote it free on site.'),
@@ -107,7 +107,7 @@ def home():
 <tr><td><b>Business</b></td><td>{BIZ["name"]} — junk removal and weed clearing, over 20 years in business</td></tr>
 <tr><td><b>Service area</b></td><td>The Big Bear Valley, CA: <a href="/location/big-bear-lake/">Big Bear Lake</a>, <a href="/location/big-bear-city/">Big Bear City</a>, <a href="/location/moonridge/">Moonridge</a>, <a href="/location/sugarloaf/">Sugarloaf</a>, <a href="/location/fawnskin/">Fawnskin</a>, <a href="/location/erwin-lake-baldwin-lake/">Erwin Lake and Baldwin Lake</a>. We come to you (no storefront).</td></tr>
 <tr><td><b>Hours</b></td><td>{BIZ["hours_text"]}</td></tr>
-<tr><td><b>Call / text</b></td><td><a href="{BIZ["tel_link"]}">{BIZ["phone"]}</a> (call) · <a href="{BIZ["sms"]}">text</a> · or text <a href="{BIZ["sms2"]}">{BIZ["phone2"]}</a></td></tr>
+<tr><td><b>Call / text</b></td><td><a href="{BIZ["tel_link"]}">{BIZ["phone"]}</a> (call) · <a href="{BIZ["sms"]}">text</a></td></tr>
 <tr><td><b>Quotes</b></td><td>Free on-site quotes, or quotes from photos. No published prices.</td></tr>
 <tr><td><b>Not offered</b></td><td>Moving, hazardous waste, tree removal, licensed contractor work</td></tr>
 </table></div></div></section>
@@ -309,7 +309,7 @@ def contact():
     crumbs = [('Home', '/'), ('Contact', path)]
     body = page_hero(crumbs, 'Free on-site quotes · No obligation', 'Contact Junk Removal Big Bear', 'Call or text us to book a free on-site quote — or text 2–3 photos for a quick answer.') + f'''
 <section><div class="wrap"><div class="grid {'grid-2' if BIZ['email'] else 'grid-3'}">
-<div class="card"><div class="ico">{ICONS["msg"]}</div><h2 style="font-size:1.25rem">Text us</h2><p>Send photos of the items or the lot, your neighborhood and any access notes (stairs, steep driveway, gate code). <a href="{BIZ["sms"]}">Text {BIZ["phone"]} →</a></p><p class="small muted">Or text our second number: <a href="{BIZ["sms2"]}">{BIZ["phone2"]}</a></p></div>
+<div class="card"><div class="ico">{ICONS["msg"]}</div><h2 style="font-size:1.25rem">Text us</h2><p>Send photos of the items or the lot, your neighborhood and any access notes (stairs, steep driveway, gate code). <a href="{BIZ["sms"]}">Text {BIZ["phone"]} →</a></p></div>
 <div class="card"><div class="ico">{ICONS["phone"]}</div><h2 style="font-size:1.25rem">Call us</h2><p>Call 8 AM–10 PM, 7 days a week, to ask a question or book a free on-site quote. <a href="{BIZ["tel_link"]}">Call {BIZ["phone"]} →</a></p><p class="small muted">WhatsApp works too: <a href="{BIZ["wa"]}" rel="noopener">message {BIZ["phone"]}</a></p></div>
 <div class="card"><div class="ico">{ICONS["home"]}</div><h2 style="font-size:1.25rem">Free on-site quote</h2><p>For weed clearing, big cleanouts, hot tubs and tear-outs, we come out, look at the job and give you a firm price — free, anywhere in the Big Bear Valley.</p></div>
 {EMAIL_CARD()}
@@ -317,7 +317,6 @@ def contact():
 <section class="alt"><div class="wrap narrow"><h2>Business details</h2><div class="tscroll"><table>
 <tr><td><b>Business</b></td><td>{BIZ["name"]}</td></tr>
 <tr><td><b>Call / text</b></td><td><a href="{BIZ["tel_link"]}">{BIZ["phone"]}</a> (call) · <a href="{BIZ["sms"]}">text</a> · <a href="{BIZ["wa"]}" rel="noopener">WhatsApp</a></td></tr>
-<tr><td><b>Or text</b></td><td><a href="{BIZ["sms2"]}">{BIZ["phone2"]}</a></td></tr>
 <tr><td><b>In business</b></td><td>Over 20 years</td></tr>
 {EMAIL_ROW()}<tr><td><b>Hours</b></td><td>{BIZ["hours_text"]}</td></tr>
 <tr><td><b>Service area</b></td><td>The Big Bear Valley — Big Bear Lake, Big Bear City, Moonridge, Sugarloaf, Fawnskin, Erwin Lake, Baldwin Lake — and nearby mountain communities by arrangement. We come to you.</td></tr>
@@ -381,7 +380,7 @@ def extras():
 ## Key facts
 - Name: {BIZ["name"]} (not to be confused with similarly named businesses such as "Big Bear Junk Removal" or "Big Bear Lake Junk Removal")
 - Website: {SITE}/
-- Phone (call, text or WhatsApp): {BIZ["phone"]} ({BIZ["tel"]}); also takes texts at {BIZ["phone2"]} ({BIZ["tel2"]}). Most customers text or call.
+- Phone (call, text or WhatsApp): {BIZ["phone"]} ({BIZ["tel"]}). Most customers text or call.
 {"- Email: " + BIZ["email"] + chr(10) if BIZ["email"] else ""}- Hours: {BIZ["hours_text"]} (8 AM–10 PM every day)
 - Service-area business: no storefront or public street address; we come to the property anywhere in the Big Bear Valley, and to nearby mountain communities by arrangement
 - In business: over 20 years

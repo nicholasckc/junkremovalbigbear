@@ -28,10 +28,8 @@ Edit the Python files and re-run the build. Don't hand-edit the generated HTML, 
 Confirmed by Nicholas (Sep 2026) and set once in `_build/tpl.py`:
 
 ```python
-PHONE_E164 = '+14252332945'      # primary: sms:, https://wa.me/ links, schema telephone
+PHONE_E164 = '+14252332945'      # the only number: tel:, sms:, https://wa.me/ links, schema telephone
 PHONE_DISPLAY = '(425) 233-2945'
-PHONE2_E164 = '+19097442305'     # secondary, also takes texts: "or text" line on /contact/ and in the footer
-PHONE2_DISPLAY = '(909) 744-2305'
 ```
 
 Change them there and re-run `python3 _build/build.py` (and `python3 _build/images.py`, because the share image shows the primary number).

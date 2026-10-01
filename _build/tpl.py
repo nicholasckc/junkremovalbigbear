@@ -3,13 +3,10 @@ import json, html, os
 SITE = 'https://www.junkremovalbigbear.com'
 TODAY = '2026-10-01'
 # ---------------------------------------------------------------------------
-# PHONE: confirmed by Nicholas (Sep 2026). Primary takes texts, WhatsApp and calls; every sms:/WhatsApp
-# link and the schema telephone use it. The secondary number also takes texts and is shown only as an
-# "or text" line on the contact page and in the footer.
+# PHONE: confirmed by Nicholas (Sep 2026). The only number on the site: takes texts, WhatsApp and calls;
+# every tel:/sms:/WhatsApp link and the schema telephone use it. No second number (Nicholas, Oct 1 2026).
 PHONE_E164 = '+14252332945'
 PHONE_DISPLAY = '(425) 233-2945'
-PHONE2_E164 = '+19097442305'
-PHONE2_DISPLAY = '(909) 744-2305'
 _PH = PHONE_E164
 BIZ = {
     'name': 'Junk Removal Big Bear',
@@ -18,7 +15,6 @@ BIZ = {
     'tel_link': 'tel:' + PHONE_E164,  # customers mostly text or call (Nicholas, Sep 30 2026)
     'sms': 'sms:' + _PH,
     'wa': 'https://wa.me/' + _PH.lstrip('+'),
-    'phone2': PHONE2_DISPLAY, 'tel2': PHONE2_E164, 'sms2': 'sms:' + PHONE2_E164,
     'years': 'over 20 years',  # confirmed by Nicholas (Sep 2026); don't claim more than this
     'email': 'junkremovalbigbear@gmail.com',  # approved for public use by Nicholas (Sep 30 2026); set '' to hide every email line/link/schema field
     'hours_text': '8:00 AM – 10:00 PM, 7 days a week',  # confirmed by Nicholas (Sep 2026)
@@ -101,10 +97,9 @@ def business_ld():
         'hasOfferCatalog': {'@type': 'OfferCatalog', 'name': 'Services', 'itemListElement': [
             {'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': n, 'url': SITE + p}} for p, n, _, _ in SERVICES_ALL]},
     }
-    if BIZ['tel2']: d['contactPoint'] = [
+    d['contactPoint'] = [
         {'@type': 'ContactPoint', 'contactType': 'customer service', 'telephone': BIZ['tel'], 'areaServed': 'US', 'availableLanguage': 'English',
-         'description': 'Call or text', 'hoursAvailable': {'@type': 'OpeningHoursSpecification', 'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], 'opens': BIZ['opens'], 'closes': BIZ['closes']}},
-        {'@type': 'ContactPoint', 'contactType': 'customer service', 'telephone': BIZ['tel2'], 'areaServed': 'US', 'availableLanguage': 'English', 'description': 'Secondary number, also takes texts'}]
+         'description': 'Call or text', 'hoursAvailable': {'@type': 'OpeningHoursSpecification', 'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], 'opens': BIZ['opens'], 'closes': BIZ['closes']}}]
     return d
 def crumbs_ld(items):
     return {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
@@ -200,7 +195,6 @@ def footer():
 <div><h2>{BIZ["name"]}</h2>
 <p>Serving {BIZ["area_text"]}. We come to you.</p>
 <p>Call or text: <a href="{BIZ["tel_link"]}">{BIZ["phone"]}</a> · <a href="{BIZ["sms"]}">Text</a> · <a href="{BIZ["wa"]}" rel="noopener">WhatsApp</a><br>
-Or text: <a href="{BIZ["sms2"]}">{BIZ["phone2"]}</a><br>
 {EMAIL_LINE()}Hours: {BIZ["hours_text"]}</p>
 <p><a href="{BIZ["gbp"]}" rel="noopener">Find us on Google Maps</a></p></div>
 <div><h2>Services</h2><ul>{svc}</ul></div>

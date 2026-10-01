@@ -76,7 +76,7 @@ Your domain is registered with Wix, so DNS is edited in Wix. Nameservers **canno
 
 **C3.** In Search Console: **Sitemaps** (left menu) → enter `sitemap.xml` → **Submit**.
 
-**C4.** Claim your **Google Business Profile** at business.google.com: business name "Junk Removal Big Bear", category **Junk removal service**, phone **(909) 744-2305**, website `https://www.junkremovalbigbear.com`, service areas Big Bear Lake / Big Bear City / Moonridge / Sugarloaf / Fawnskin. This is the single biggest factor for appearing in Google Maps.
+**C4.** Claim your **Google Business Profile** at business.google.com: business name "Junk Removal Big Bear", category **Junk removal service**, phone **(425) 233-2945**, website `https://www.junkremovalbigbear.com`, service areas Big Bear Lake / Big Bear City / Moonridge / Sugarloaf / Fawnskin. This is the single biggest factor for appearing in Google Maps.
 
 ---
 
@@ -118,7 +118,7 @@ bash localize-images.sh
 - [ ] https://www.junkremovalbigbear.com loads with padlock (HTTPS)
 - [ ] Bare `junkremovalbigbear.com` redirects to www
 - [ ] All 5 pages + every photo load, on desktop AND your phone
-- [ ] Phone buttons dial **(909) 744-2305** · WhatsApp button opens chat to **+1 (425) 233-2945**
+- [ ] Call, text and WhatsApp buttons all go to **+1 (425) 233-2945**
 - [ ] Bear logo shows in the browser tab (favicon)
 - [ ] Search Console verified + sitemap submitted
 - [ ] Google Business Profile claimed
