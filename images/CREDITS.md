@@ -15,6 +15,6 @@ Photos from the old site (all 12 restored at Nicholas's request, Sep 2026; resiz
   `opt/shrub-trimming-ladder-fuel-*.webp`, `opt/weed-clearing-crew-*.webp`, `opt/wildfire-dry-brush-*.webp`,
   `opt/appliances-electronics-pile-*.webp`, `opt/mountain-cabin-pines-*.webp`, `opt/yard-junk-pile-*.webp`
 
-Masters are in `_build/img-src/old/` (not published). The original files also stay at their old-site URLs in `images/` so old links keep working. Selection notes: `bigbear-audit/restored-images.md`.
+Masters are in `_build/img-src/old/` (not published). The unused old-site originals that used to sit in `images/` were removed on Oct 1, 2026 (still in git history). Selection notes: `bigbear-audit/restored-images.md`.
 
 Logo: Nicholas's original logo from the old site ("BIG BEAR JUNK REMOVAL / BIG BEAR CITY"), artwork unchanged; master in `_build/img-src/logo-original.png`, optimized sizes in `opt/logo-*.webp`, `opt/logo-512.png` and the favicons.

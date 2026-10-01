@@ -1,7 +1,7 @@
 """Shared config, icons and page template for the Junk Removal Big Bear static site."""
 import json, html, os
 SITE = 'https://www.junkremovalbigbear.com'
-TODAY = '2026-09-30'
+TODAY = '2026-10-01'
 # ---------------------------------------------------------------------------
 # PHONE: confirmed by Nicholas (Sep 2026). Primary takes texts, WhatsApp and calls; every sms:/WhatsApp
 # link and the schema telephone use it. The secondary number also takes texts and is shown only as an

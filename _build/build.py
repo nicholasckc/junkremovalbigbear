@@ -47,7 +47,7 @@ TAKE = '''<div class="grid grid-2"><div class="card"><h3>We take</h3><ul>
 <li>Furniture and mattresses</li><li>Appliances and electronics</li><li>Hot tubs and spas</li><li>Garage, shed, attic and storage-unit contents</li>
 <li>Exercise equipment</li><li>Yard waste, branches and storm debris</li><li>Light construction and tear-out debris — lumber, drywall, fencing, carpet</li><li>Whole-home and estate contents</li></ul></div>
 <div class="card"><h3>We can't take</h3><ul><li>Paint and chemicals</li><li>Motor oil and fuels</li><li>Asbestos</li><li>Propane tanks</li></ul>
-<p class="small">For these, use San Bernardino County Fire's household hazardous waste program — the Big Bear drop-off is at 42040 Garstin Dr (check current hours before you go).</p></div></div>'''
+<p class="small">For these, use the <a href="https://sbcfire.org/hhw/" rel="noopener">San Bernardino County Fire household hazardous waste (HHW) program</a>. Its Big Bear collection site is a government facility (the City of Big Bear Lake Public Works Yard on Garstin Dr), not our office; check the county's current HHW hours before you go.</p></div></div>'''
 TRUST = f'''<ul class="facts">
 <li><b>Over 20 years in business.</b> Hauling, cleanouts and yard clearing, done by people who know mountain properties.</li>
 <li><b>Free on-site quotes.</b> We come out, look at the job and give you a firm price — free, no obligation. Photos by text work too, or just call.</li>
@@ -118,7 +118,7 @@ def home():
 <a class="card" href="/guides/hot-tub-removal-big-bear/"><div class="ico">{ICONS["tub"]}</div><h3>Hot tub removal, explained</h3><p>Getting a dead spa off a mountain deck.</p></a></div></div></section>
 {cta_band('Book your free on-site quote')}'''
     emit('/', page('/', 'Junk Removal Big Bear, CA | Junk Hauling, Cleanouts & Weed Clearing',
-        f'Local junk removal and weed clearing for the Big Bear Valley: hauling, cabin and estate cleanouts, hot tub removal. Free on-site quotes, 8 AM–10 PM daily. Text {BIZ["phone"]}.',
+        f'Junk removal and weed clearing in the Big Bear Valley: hauling, cabin and estate cleanouts, hot tubs. Free on-site quotes, 8 AM–10 PM. Text {BIZ["phone"]}.',
         body, [business_ld(), {'@context': 'https://schema.org', '@type': 'WebSite', '@id': SITE + '/#website', 'name': BIZ['name'], 'url': SITE + '/', 'publisher': {'@id': SITE + '/#business'}}, faq_ld(HOME_FAQ, '/')]), '1.0')
 
 def services_hub():
@@ -127,7 +127,7 @@ def services_hub():
     body = page_hero(crumbs, 'Services', 'Junk Removal, Cleanouts &amp; Weed Clearing Services in Big Bear', 'One local crew for hauling, cleanouts, weed clearing and minor tear-outs across the Big Bear Valley. Everything except moving.') + \
         f'<section><div class="wrap">{svc_cards(SERVICES_ALL)}<p class="small muted" style="margin-top:16px">{LICENSE_NOTE}</p></div></section><section class="alt"><div class="wrap"><h2>What we take (and what we can\'t)</h2>{TAKE}</div></section>{cta_band()}'
     emit('/services/', page('/services/', 'Big Bear Property Services | Hauling, Cleanouts, Hot Tub Removal & Weed Clearing',
-        'Junk removal, weed clearing, cabin, estate and vacation-rental cleanouts, appliance and e-waste removal, hot tub removal, light demolition and minor interior and exterior painting in Big Bear.',
+        'Big Bear junk removal, weed clearing, cabin, estate and rental cleanouts, appliance and hot tub removal, light demolition and minor painting. Free quotes.',
         body, [business_ld(), crumbs_ld(crumbs)]), '0.8')
 
 def service_pages():
@@ -223,7 +223,7 @@ def weed():
 <h2>Big Bear Fire's defensible space checklist</h2>
 <p>These are the Priority Defensible Space requirements Big Bear Fire applies from 0 to 100 feet around every structure, or up to your property line:</p>
 <div class="tscroll"><table><tr><th>Where</th><th>Requirement (summary)</th><th>What we do</th></tr>{rows}</table></div>
-<p class="small muted">Summarized from <a href="https://www.bigbearfire.org/office-of-the-fire-marshal/defensible-space" rel="noopener">Big Bear Fire — Defensible Space</a> (checked September 2026). Always check the current checklist; Big Bear Fire (909) 866-7566.</p>
+<p class="small muted">Summarized from <a href="https://www.bigbearfire.org/office-of-the-fire-marshal/defensible-space" rel="noopener">Big Bear Fire — Defensible Space</a> (checked September 2026). Always check the current checklist on <a href="https://www.bigbearfire.org/office-of-the-fire-marshal/weed-abatement-notice-faqs" rel="noopener">Big Bear Fire's website</a>.</p>
 <h2>Got the letter? What happens next</h2>
 <ol>
 <li><b>The letter is your warning.</b> Big Bear Fire says a notice of violation isn't guaranteed before a citation, so treat the letter as your deadline.</li>
@@ -246,7 +246,7 @@ def weed():
 <section><div class="wrap"><h2>Related</h2>{svc_cards([x for x in SERVICES if x[0] in ('/services/junk-removal/', '/services/cabin-cleanouts/', '/vacation-rental-turnovers/')])}</div></section>
 {cta_band("Don't wait for the inspection", 'Book a free on-site quote for clearing and haul-away — call, or text us a few photos of the lot.')}'''
     emit(path, page(path, 'Weed Abatement Big Bear | Defensible Space & Weed Clearing',
-        'Weed abatement letter from Big Bear Fire? We clear weeds, pine needles, brush and low limbs to the defensible space checklist and haul it away the same visit. Free on-site quotes.',
+        'Weed abatement letter from Big Bear Fire? We clear weeds, pine needles, brush and low limbs to the defensible space checklist and haul it off. Free quotes.',
         body, [business_ld(), service_ld('Weed clearing and fire abatement', 'Weed, pine needle, brush and low-limb clearing to Big Bear Fire defensible space requirements, with same-visit haul-away.', path, stype='Weed abatement'), faq_ld(WEED_FAQ, path), crumbs_ld(crumbs)]), '0.9')
 LOC_FAQ = [
  ('What areas do you serve?', 'The Big Bear Valley: Big Bear Lake (including Boulder Bay, Fox Farm and the Village), Big Bear City, Moonridge, Sugarloaf, Fawnskin, Erwin Lake and Baldwin Lake.'),
@@ -271,11 +271,11 @@ def location_hub():
 <section><div class="wrap">{cards}</div></section>
 <section class="alt"><div class="wrap"><h2>Who handles what, by area</h2><p class="sec-intro">Trash service and rental rules change depending on whether you're inside the City of Big Bear Lake or in unincorporated San Bernardino County.</p>
 <div class="tscroll"><table><tr><th>Area</th><th>Curbside trash / bulky items</th><th>Short-term rentals</th></tr>{rows}</table></div>
-<p class="small muted">Everyone can self-haul to the Big Bear Transfer Station, 38550 Holcomb Valley Rd (Mon–Sat 8 AM–4:30 PM; call (909) 381-2404 to confirm). Details and sources are on each area page.</p></div></section>
+<p class="small muted">Everyone can self-haul to the Big Bear Transfer Station, 38550 Holcomb Valley Rd (Mon–Sat 8 AM–4:30 PM; confirm on the <a href="https://dpw.sbcounty.gov/disposal-sites/" rel="noopener">county disposal sites page</a>). Details and sources are on each area page.</p></div></section>
 <section><div class="wrap narrow"><h2>Nearby mountain communities</h2><p>We also take jobs in nearby mountain communities by arrangement — message us with the location and what needs to go.</p>{fig(*P('junk-hauling-box-truck'))}</div></section>
 {faq_html(LOC_FAQ, 'Service area questions')}{cta_band()}'''
     emit(path, page(path, 'Service Areas | Junk Removal Across the Big Bear Valley',
-        'Junk removal and weed clearing in Big Bear Lake, Big Bear City, Moonridge, Sugarloaf, Fawnskin, Erwin Lake & Baldwin Lake — with local trash and dump rules for each area.',
+        'Junk removal and weed clearing in Big Bear Lake, Big Bear City, Moonridge, Sugarloaf, Fawnskin, Erwin & Baldwin Lake, with local trash rules for each.',
         body, [business_ld(), faq_ld(LOC_FAQ, path), crumbs_ld(crumbs)]), '0.8')
 def area_pages():
     for slug, c in AREAS_CONTENT.items():

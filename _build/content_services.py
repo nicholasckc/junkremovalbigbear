@@ -1,16 +1,16 @@
 from tpl import BIZ, LICENSE_NOTE
 P = BIZ['phone']
 TRASH_RULES = '''<ul>
-<li><b>City of Big Bear Lake (92315, incl. part of Moonridge):</b> Big Bear Disposal gives each residence one free curbside bulky-item pickup per year — up to 3 cubic yards or 4 large items. Extra pickups cost a fee. Call (909) 866-3942.</li>
-<li><b>Big Bear City, Sugarloaf, Erwin Lake:</b> the Big Bear City CSD picks up standard household bulky items curbside for a per-item fee and runs periodic free community clean-up days. Call (909) 585-2565.</li>
+<li><b>City of Big Bear Lake (92315, incl. part of Moonridge):</b> Big Bear Disposal gives each residence one free curbside bulky-item pickup per year — up to 3 cubic yards or 4 large items. Extra pickups cost a fee. Details: <a href="https://bigbeardisposal.com/services/residential-services/" rel="noopener">Big Bear Disposal</a>.</li>
+<li><b>Big Bear City, Sugarloaf, Erwin Lake:</b> the Big Bear City CSD picks up standard household bulky items curbside for a per-item fee and runs periodic free community clean-up days. Details: <a href="https://www.bbccsd.org/index.php/solid-waste/residential-collection" rel="noopener">Big Bear City CSD</a>.</li>
 <li><b>Clean Bear drop-off sites</b> don't take bulky items, construction debris or contractor loads, and are only for residents and visitors staying in the City of Big Bear Lake.</li>
-<li><b>Big Bear Transfer Station</b>, 38550 Holcomb Valley Rd, takes self-haul loads Monday–Saturday, 8 AM–4:30 PM (call (909) 381-2404 to confirm hours and fees).</li>
+<li><b>Big Bear Transfer Station</b>, 38550 Holcomb Valley Rd, takes self-haul loads Monday–Saturday, 8 AM–4:30 PM (confirm hours and fees on the <a href="https://dpw.sbcounty.gov/disposal-sites/" rel="noopener">county disposal sites page</a>).</li>
 </ul>'''
 SERVICES_CONTENT = {
 'furniture-removal': dict(
  name='Furniture & Mattress Removal', stype='Furniture removal',
  title='Furniture & Mattress Removal in Big Bear, CA | Sofas, Beds & Mattresses',
- desc=f'Furniture and mattress removal in Big Bear: sofas, beds, mattresses, dressers and patio sets carried out of lofts, stairs and decks and hauled away. Free quotes; text {BIZ["phone"]}.',
+ desc=f'Furniture and mattress removal in Big Bear: sofas, beds, dressers and patio sets carried out and hauled away. Free quotes; text {BIZ["phone"]}.',
  h1='Furniture &amp; Mattress Removal in Big Bear',
  lead='Sofas, sectionals, recliners, beds, mattresses, dressers, dining sets, desks and patio furniture — carried out from inside, down the stairs and off the property.',
  sections=[
@@ -33,7 +33,7 @@ SERVICES_CONTENT = {
 'appliance-e-waste-removal': dict(
  name='Appliance & E-Waste Removal', stype='Appliance and electronic waste removal',
  title='Appliance Removal & E-Waste Pickup in Big Bear, CA | Fridges, Washers, TVs',
- desc=f'Appliance removal and e-waste pickup in Big Bear: refrigerators, freezers, washers, dryers, stoves, TVs and computers carried out and hauled away. Free quotes; text {BIZ["phone"]}.',
+ desc=f'Appliance and e-waste removal in Big Bear: fridges, freezers, washers, dryers, stoves, TVs and computers hauled away. Free quotes; text {BIZ["phone"]}.',
  h1='Appliance Removal &amp; E-Waste Pickup in Big Bear',
  lead='Dead fridge in the garage? Old TV in the basement? We haul away appliances and electronics from homes, cabins and rentals across the Valley.',
  sections=[
@@ -43,9 +43,9 @@ SERVICES_CONTENT = {
 <p class="note small">Please have gas, water and hard-wired electrical connections shut off and disconnected by a qualified person before pickup. <!-- TODO(Nicholas): confirm whether your crew disconnects anything (e.g. washer hoses) --></p>'''),
   ('Why electronics and appliances need special handling', '''<p>In California, TVs, monitors, computers and many other electronics are not allowed in household trash, and appliances that contain refrigerant (fridges, freezers, AC units) have to go to facilities set up to handle them. In the Big Bear Valley that means:</p>
 <ul>
-<li><b>Big Bear City CSD</b> does not accept TVs, computers or other electronics in curbside carts; it collects e-waste at periodic free community clean-up days at its Paradise Maintenance Yard. Call (909) 585-2565 for dates.</li>
-<li><b>City of Big Bear Lake</b> customers can ask Big Bear Disposal (909) 866-3942 about appliance and e-waste options; one free bulky-item pickup per year is included.</li>
-<li><b>Big Bear Transfer Station</b> (38550 Holcomb Valley Rd) — call the County at (909) 381-2404 about which appliances and electronics are accepted and at what fee.</li>
+<li><b>Big Bear City CSD</b> does not accept TVs, computers or other electronics in curbside carts; it collects e-waste at periodic free community clean-up days at its Paradise Maintenance Yard. Dates are posted by the <a href="https://www.bbccsd.org/index.php/solid-waste/residential-collection" rel="noopener">CSD</a>.</li>
+<li><b>City of Big Bear Lake</b> customers can ask <a href="https://bigbeardisposal.com/services/residential-services/" rel="noopener">Big Bear Disposal</a> about appliance and e-waste options; one free bulky-item pickup per year is included.</li>
+<li><b>Big Bear Transfer Station</b> (38550 Holcomb Valley Rd) — see the <a href="https://dpw.sbcounty.gov/disposal-sites/" rel="noopener">county disposal sites page</a> for which appliances and electronics are accepted and at what fee.</li>
 </ul>
 <p>If you'd rather not load a fridge into a pickup truck yourself, text us a photo and we'll quote it.</p>'''),
  ],
@@ -60,7 +60,7 @@ SERVICES_CONTENT = {
 'cabin-cleanouts': dict(
  name='Cabin & Garage Cleanouts', stype='Cleanout service',
  title='Cabin Cleanouts in Big Bear, CA | Garage, Attic, Shed & Whole-Cabin Clear-Outs',
- desc=f'Cabin cleanouts in Big Bear: garages, attics, crawl spaces, sheds, storage units and whole cabins cleared and hauled away, even while you are off the mountain. Free on-site quotes.',
+ desc=f'Cabin cleanouts in Big Bear: garages, attics, sheds, storage units and whole cabins cleared and hauled away, even while you\'re away. Free quotes.',
  h1='Cabin Cleanouts in Big Bear: Garages, Attics, Sheds &amp; Whole Cabins',
  lead='From one packed garage to a whole cabin full of decades of stuff — we load it, haul it and leave the space swept.',
  sections=[
@@ -76,7 +76,7 @@ SERVICES_CONTENT = {
 <li><b>Access.</b> Steep driveways, loft ladders and narrow stairs are normal here. Tell us about access when you book so we bring the right crew.</li>
 <li><b>Absentee owners.</b> Many cabins are second homes. We can quote from photos, work with a lockbox or garage code, and send before-and-after photos.</li>
 <li><b>Trash rules.</b> In the City of Big Bear Lake, cans can't stay at the curb more than 24 hours; in CSD areas carts can go out no more than 12 hours before pickup. Big cleanouts rarely fit either system.</li></ul>'''),
-  ('Doing some of it yourself?', '''<p>Residential property owners in unincorporated areas (92314, 92386, 92333) may be eligible for a San Bernardino County Disposal Use Permit for self-haul loads to the Big Bear Transfer Station — call County Solid Waste at (909) 386-8701. For everything that doesn't fit in your truck, call us.</p>'''),
+  ('Doing some of it yourself?', '''<p>Residential property owners in unincorporated areas (92314, 92386, 92333) may be eligible for a San Bernardino County Disposal Use Permit for self-haul loads to the Big Bear Transfer Station — see the <a href="https://dpw.sbcounty.gov/solid-waste-management/disposal-use-permit/" rel="noopener">county Disposal Use Permit page</a>. For everything that doesn't fit in your truck, call us.</p>'''),
  ],
  faqs=[
   ('Who does cabin cleanouts in Big Bear?', 'Junk Removal Big Bear clears out cabins, garages, attics, crawl spaces and sheds across the Big Bear Valley and hauls everything away. Owners who live off the mountain can arrange it by text, with lockbox or gate access.'),
@@ -89,7 +89,7 @@ SERVICES_CONTENT = {
 'estate-cleanouts': dict(
  name='Estate Cleanouts', stype='Estate cleanout',
  title='Estate Cleanouts in Big Bear, CA | Inherited Cabin & Home Clear-Outs',
- desc=f'Estate cleanouts in Big Bear: organized, respectful clear-outs of inherited cabins and homes, coordinated remotely for families off the mountain. Free walkthrough quotes.',
+ desc=f'Estate cleanouts in Big Bear: respectful clear-outs of inherited cabins and homes, coordinated remotely for families off the mountain. Free quotes.',
  h1='Estate Cleanouts in Big Bear',
  lead='Clearing a parent\'s or grandparent\'s cabin is hard. We make the physical part simple, and we can coordinate it with you, your realtor or executor from off the mountain.',
  sections=[
@@ -114,7 +114,7 @@ SERVICES_CONTENT = {
 'hot-tub-removal': dict(
  name='Hot Tub & Spa Removal', stype='Hot tub removal',
  title='Hot Tub Removal in Big Bear, CA | Spa Removal & Disposal',
- desc=f'Hot tub removal in Big Bear: we drain, cut down, carry out and haul away dead spas from decks, patios and vacation rentals. Free on-site quotes; text {BIZ["phone"]}.',
+ desc=f'Hot tub removal in Big Bear: we drain, cut down and haul away dead spas from decks, patios and vacation rentals. Free on-site quotes; text {BIZ["phone"]}.',
  h1='Hot Tub &amp; Spa Removal in Big Bear',
  lead='Freeze damage, a failed heater or just time for a new one — we take old spas off decks and patios, including tight and tiered mountain decks.',
  sections=[
@@ -139,7 +139,7 @@ SERVICES_CONTENT = {
 'light-demolition': dict(
  name='Light Demolition', stype='Light demolition and debris removal',
  title='Light Demolition in Big Bear, CA | Shed, Deck & Fence Tear-Outs (Minor Jobs)',
- desc='Light demolition in Big Bear: minor, non-structural tear-outs of small sheds, deck boards, fencing, cabinets and carpet, with the debris hauled away. Free on-site quotes.',
+ desc='Light demolition in Big Bear: minor, non-structural tear-outs of small sheds, deck boards, fencing, cabinets and carpet, debris hauled away. Free quotes.',
  h1='Light Demolition &amp; Minor Tear-Outs in Big Bear',
  lead='Minor tear-out jobs with the haul-away included: small sheds, deck boards, fencing, cabinets, carpet and hot tubs.',
  sections=[
@@ -164,7 +164,7 @@ SERVICES_CONTENT = {
 SERVICES_CONTENT['junk-removal'] = dict(
  name='Junk Hauling', stype='Junk removal',
  title='Junk Hauling in Big Bear, CA | Single Items to Full Loads',
- desc='Junk hauling in Big Bear: one item or a full load of furniture, yard debris and garage junk, loaded from wherever it sits and hauled away. Free quotes, 8 AM–10 PM daily.',
+ desc='Junk hauling in Big Bear: one item or a full load of furniture, yard debris and garage junk, loaded from wherever it sits and hauled away. Free quotes.',
  h1='Junk Hauling in Big Bear: Single Items to Full Loads',
  lead='One old mattress or a truck-full of garage junk — we do the lifting, loading and hauling, and sweep up after. Free quotes on-site or from photos.',
  sections=[
@@ -193,7 +193,7 @@ SERVICES_CONTENT['junk-removal'] = dict(
 SERVICES_CONTENT['painting'] = dict(
  name='Painting (Minor Jobs)', stype='Painting',
  title='Minor Interior & Exterior Painting in Big Bear, CA | Small Jobs Only',
- desc='Small interior and exterior painting jobs for Big Bear cabins and rentals: walls, ceilings, trim, doors, siding touch-ups, decks and fences — minor jobs only. Free on-site quotes.',
+ desc='Small interior and exterior painting for Big Bear cabins and rentals: walls, trim, doors, siding touch-ups, decks and fences. Minor jobs only. Free quotes.',
  h1='Minor Interior &amp; Exterior Painting in Big Bear',
  lead='Inside or out — scuffed walls after a cleanout, a tired ceiling, weathered trim, a deck or a fence run. We take on small interior and exterior painting jobs.',
  sections=[
