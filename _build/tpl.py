@@ -1,7 +1,7 @@
 """Shared config, icons and page template for the Junk Removal Big Bear static site."""
 import json, html, os
 SITE = 'https://www.junkremovalbigbear.com'
-TODAY = '2026-10-01'
+TODAY = '2026-10-05'
 # ---------------------------------------------------------------------------
 # PHONE: confirmed by Nicholas (Sep 2026). The only number on the site: takes texts, WhatsApp and calls;
 # every tel:/sms:/WhatsApp link and the schema telephone use it. No second number (Nicholas, Oct 1 2026).
@@ -116,9 +116,11 @@ def service_ld(name, desc, path, area_names=None, stype=None):
             'areaServed': area_served(area_names)}
 def btns(dark=True):
     sec = 'btn-ghost' if dark else 'btn-line'
-    return (f'<div class="cta-row">{PH_TODO}<a class="btn btn-amber" href="{BIZ["sms"]}">{ICONS["msg"]}Text photos for a free quote</a>'
-            f'<a class="btn {sec}" href="{BIZ["tel_link"]}">{ICONS["phone"]}Call {BIZ["phone"]}</a></div>'
-            f'<p class="cta-alt small">Prefer WhatsApp? <a href="{BIZ["wa"]}" rel="noopener">Message us on WhatsApp</a></p>')
+    # Text + WhatsApp are primary (equal weight). Call stays available but secondary — Big Bear gets texts/WhatsApp far more than calls.
+    return (f'<div class="cta-row">{PH_TODO}<a class="btn btn-amber" href="{BIZ["sms"]}">{ICONS["msg"]}Text {BIZ["phone"]}</a>'
+            f'<a class="btn btn-amber" href="{BIZ["wa"]}" rel="noopener">{ICONS["wa"]}WhatsApp {BIZ["phone"]}</a>'
+            f'<a class="btn {sec}" href="{BIZ["tel_link"]}">{ICONS["phone"]}Call</a></div>'
+            f'<p class="cta-alt small">Same number for text, WhatsApp and calls: <a href="{BIZ["sms"]}">{BIZ["phone"]}</a></p>')
 def btns_light(): return btns(False)
 PHOTOS = {  # name: (master width, master height) after the 4:3 crop - photos from the old site, see _build/images.py
     'junk-removal-crew-loading-truck': (1024, 768), 'junk-removal-crew-armchair-truck': (1024, 768), 'mattress-removal-crew': (1024, 768),
@@ -183,10 +185,10 @@ def EMAIL_LINE():
     return f'Email: <a href="mailto:{BIZ["email"]}">{BIZ["email"]}</a><br>' if BIZ['email'] else ''
 def contact_box():
     return f'''<aside class="box sticky"><h2 style="font-size:1.15rem">Free on-site quote</h2>
-<p class="muted small">Text 2–3 photos and your neighborhood, or call and ask us to come out and quote it in person — free, no obligation.</p>
-{PH_TODO}<p><a class="btn btn-amber" style="width:100%" href="{BIZ["sms"]}">{ICONS["msg"]}Text photos</a></p>
+<p class="muted small">Text or WhatsApp 2–3 photos and your neighborhood — or call and ask us to come out and quote it in person. Free, no obligation.</p>
+{PH_TODO}<p><a class="btn btn-amber" style="width:100%" href="{BIZ["sms"]}">{ICONS["msg"]}Text {BIZ["phone"]}</a></p>
+<p><a class="btn btn-amber" style="width:100%" href="{BIZ["wa"]}" rel="noopener">{ICONS["wa"]}WhatsApp {BIZ["phone"]}</a></p>
 <p><a class="btn btn-line" style="width:100%" href="{BIZ["tel_link"]}">{ICONS["phone"]}Call {BIZ["phone"]}</a></p>
-<p><a class="btn btn-line" style="width:100%" href="{BIZ["wa"]}" rel="noopener">{ICONS["wa"]}WhatsApp us</a></p>
 <p class="small muted">{EMAIL_LINE()}Hours: {BIZ["hours_text"]}</p></aside>'''
 def footer():
     svc = ''.join(f'<li><a href="{p}">{n}</a></li>' for p, n, _, _ in SERVICES_ALL)
@@ -194,14 +196,14 @@ def footer():
     return f'''<footer class="site-foot"><div class="wrap"><div class="foot-grid">
 <div><h2>{BIZ["name"]}</h2>
 <p>Serving {BIZ["area_text"]}. We come to you.</p>
-<p>Call or text: <a href="{BIZ["tel_link"]}">{BIZ["phone"]}</a> · <a href="{BIZ["sms"]}">Text</a> · <a href="{BIZ["wa"]}" rel="noopener">WhatsApp</a><br>
+<p>Text or WhatsApp: <a href="{BIZ["sms"]}">{BIZ["phone"]}</a> · <a href="{BIZ["sms"]}">Text</a> · <a href="{BIZ["wa"]}" rel="noopener">WhatsApp</a> · <a href="{BIZ["tel_link"]}">Call</a><br>
 {EMAIL_LINE()}Hours: {BIZ["hours_text"]}</p>
 <p><a href="{BIZ["gbp"]}" rel="noopener">Find us on Google Maps</a></p></div>
 <div><h2>Services</h2><ul>{svc}</ul></div>
 <div><h2>Service areas</h2><ul>{areas}<li><a href="/location/">All service areas</a></li></ul></div>
 <div><h2>Help</h2><ul><li><a href="/guides/">Local guides</a></li><li><a href="/guides/big-bear-fire-abatement-letter/">Fire abatement letter guide</a></li><li><a href="/guides/big-bear-dump-transfer-station-guide/">Big Bear dump &amp; transfer station</a></li><li><a href="/contact/">Contact &amp; free quotes</a></li></ul></div>
 </div><p class="legal">© 2026 {BIZ["name"]}. {LICENSE_NOTE} We don't haul hazardous waste (paint, chemicals, oil, asbestos, propane tanks). Scenery photos: Unsplash (Joshua Chun, Dušan veverkolog).</p></div></footer>
-<div class="callbar">{PH_TODO}<a class="c1" href="{BIZ["sms"]}">{ICONS["msg"]}Text photos</a><a class="c2" href="{BIZ["tel_link"]}">{ICONS["phone"]}Call</a></div>'''
+<div class="callbar">{PH_TODO}<a class="c1" href="{BIZ["sms"]}">{ICONS["msg"]}Text</a><a class="c2" href="{BIZ["wa"]}" rel="noopener">{ICONS["wa"]}WhatsApp</a></div>'''
 def page(path, title, desc, body, schema, og_type='website', robots='index, follow', canonical=True):
     url = SITE + path
     schemas = ''.join(ld(s) for s in schema)
