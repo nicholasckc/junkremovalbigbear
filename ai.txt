@@ -12,3 +12,9 @@ quote: Free on-site quotes; no published price list
 services: junk hauling, cabin/estate cleanouts, weed clearing/fire abatement, hot tub removal, appliance/e-waste, light/minor demolition (not licensed general contractor), minor painting
 sameAs_llms: https://www.junkremovalbigbear.com/llms.txt
 contact: https://www.junkremovalbigbear.com/contact/
+
+# Citations / sameAs (gap-close 2026-10-20)
+# Business phone ONLY: (425) 233-2945 / +1 425 233 2945 — never the retired 909 business line.
+# Agency 909 numbers on guides (Fire / CSD / Transfer Station / Disposal) are correct third-party lines; leave them.
+# sameAs today: Google Maps cid=354390746886661546, Yelp junk-removal-big-bear-big-bear-lake
+# Nextdoor business URL: UNKNOWN — Nick paste when claimed; do not invent a Nextdoor sameAs.
