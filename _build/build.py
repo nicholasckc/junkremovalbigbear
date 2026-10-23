@@ -244,6 +244,7 @@ def weed():
 </div>{contact_box()}</div></section>
 {faq_html(WEED_FAQ, 'Weed clearing &amp; abatement FAQ')}
 <section><div class="wrap"><h2>Related</h2>{svc_cards([x for x in SERVICES if x[0] in ('/services/junk-removal/', '/services/cabin-cleanouts/', '/vacation-rental-turnovers/')])}</div></section>
+<section><div class="wrap"><div class="note"><h2 style="font-size:1.15rem;margin-top:0">Big Bear weed &amp; fire help</h2><p style="margin:0">We clear lots for Big Bear Fire abatement letters, Priority Defensible Space and seasonal brush, then haul the green waste. Pair this page with our <a href="/guides/big-bear-fire-abatement-letter/">fire abatement letter guide</a> and <a href="/guides/hot-tub-removal-big-bear/">hot tub removal</a> when the same visit can cover more than weeds. Call or text <a href="tel:+14252332945">(425) 233-2945</a> for a free on-site quote.</p></div></div></section>
 {cta_band("Don't wait for the inspection", 'Book a free on-site quote for clearing and haul-away — call, or text us a few photos of the lot.')}'''
     emit(path, page(path, 'Weed Abatement Big Bear | Defensible Space & Weed Clearing',
         'Weed abatement letter from Big Bear Fire? We clear weeds, pine needles, brush and low limbs to the defensible space checklist and haul it off. Free quotes.',
@@ -321,7 +322,8 @@ def contact():
 {EMAIL_ROW()}<tr><td><b>Hours</b></td><td>{BIZ["hours_text"]}</td></tr>
 <tr><td><b>Service area</b></td><td>The Big Bear Valley — Big Bear Lake, Big Bear City, Moonridge, Sugarloaf, Fawnskin, Erwin Lake, Baldwin Lake — and nearby mountain communities by arrangement. We come to you.</td></tr>
 <tr><td><b>Google</b></td><td><a href="{BIZ["gbp"]}" rel="noopener">Google Business Profile</a></td></tr>
-</table></div></div></section>{cta_band()}'''
+</table></div></div></section>{cta_band()}
+<section class="cta-band" style="margin-top:1.5rem"><div class="wrap"><h2>Happy with the job?</h2><p>An honest Google review helps other Big Bear cabin and home owners find a hauler they can trust. We never pay for reviews.</p><div class="cta-row"><a class="btn btn-amber" href="https://g.page/r/Capl3bOBDOsEEBM/review" target="_blank" rel="noopener">Leave a Google review</a></div></div></section>'''
     emit(path, page(path, 'Contact Junk Removal Big Bear | Call or Text for a Free On-Site Quote',
         f'Call or text for a free junk removal or weed clearing quote in Big Bear, or text photos for a quick answer. Open {BIZ["hours_text"]}.', body, [business_ld(), crumbs_ld(crumbs)]), '0.8')
 GUIDE_IMG = {'big-bear-fire-abatement-letter': 'wildfire-dry-brush', 'big-bear-dump-transfer-station-guide': 'junk-hauling-box-truck',

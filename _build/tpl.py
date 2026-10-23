@@ -204,7 +204,30 @@ def footer():
 <div><h2>Help</h2><ul><li><a href="/guides/">Local guides</a></li><li><a href="/guides/big-bear-fire-abatement-letter/">Fire abatement letter guide</a></li><li><a href="/guides/big-bear-dump-transfer-station-guide/">Big Bear dump &amp; transfer station</a></li><li><a href="/contact/">Contact &amp; free quotes</a></li></ul></div>
 </div><p class="legal">© 2026 {BIZ["name"]}. {LICENSE_NOTE} We don't haul hazardous waste (paint, chemicals, oil, asbestos, propane tanks). Scenery photos: Unsplash (Joshua Chun, Dušan veverkolog).</p></div></footer>
 <div class="callbar">{PH_TODO}<a class="c1" href="{BIZ["sms"]}">{ICONS["msg"]}Text</a><a class="c2" href="{BIZ["wa"]}" rel="noopener">{ICONS["wa"]}WhatsApp</a></div>'''
+TITLE_FIX = {  # SEO QA 2026-10-24: keep <title> <= 60 chars
+    '/': 'Junk Removal Big Bear, CA | Hauling, Cleanouts & Weeds',
+    '/services/': 'Big Bear Junk Hauling, Cleanout & Hot Tub Removal Services',
+    '/services/furniture-removal/': 'Furniture & Mattress Removal in Big Bear, CA',
+    '/services/appliance-e-waste-removal/': 'Appliance & E-Waste Removal in Big Bear, CA',
+    '/services/cabin-cleanouts/': 'Cabin, Garage & Attic Cleanouts in Big Bear, CA',
+    '/services/estate-cleanouts/': 'Estate Cleanouts in Big Bear, CA | Inherited Cabins',
+    '/services/light-demolition/': 'Light Demolition in Big Bear, CA | Sheds, Decks, Fences',
+    '/services/painting/': 'Minor Interior & Exterior Painting in Big Bear, CA',
+    '/vacation-rental-turnovers/': 'Airbnb & Vacation Rental Junk Removal in Big Bear',
+    '/location/big-bear-lake/': 'Junk Removal Big Bear Lake, CA 92315 | Cleanouts',
+    '/location/big-bear-city/': 'Junk Removal Big Bear City, CA 92314 | Cleanouts',
+    '/location/moonridge/': 'Junk Removal in Moonridge, Big Bear | Cabin Cleanouts',
+    '/location/fawnskin/': 'Junk Removal Fawnskin, CA 92333 | North Shore',
+    '/location/erwin-lake-baldwin-lake/': 'Junk Removal Erwin Lake & Baldwin Lake, CA 92314',
+    '/contact/': 'Contact Junk Removal Big Bear | Free On-Site Quote',
+    '/guides/': 'Big Bear Cleanout, Dump & Fire Abatement Guides',
+    '/guides/hot-tub-removal-big-bear/': 'How to Get Rid of an Old Hot Tub in Big Bear',
+    '/guides/airbnb-turnover-checklist-big-bear/': 'Big Bear Airbnb Host Turnover Checklist',
+    '/guides/estate-cleanout-guide-big-bear/': 'Clearing an Inherited Cabin in Big Bear: Family Guide',
+}
+
 def page(path, title, desc, body, schema, og_type='website', robots='index, follow', canonical=True):
+    title = TITLE_FIX.get(path, title)
     url = SITE + path
     schemas = ''.join(ld(s) for s in schema)
     can = f'<link rel="canonical" href="{url}">' if canonical else ''

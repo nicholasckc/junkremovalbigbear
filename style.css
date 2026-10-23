@@ -166,3 +166,7 @@ figcaption{font-size:.85rem;color:var(--soft);padding:8px 2px}
 .gal img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
 .gal span{display:block;padding:10px 14px;font-weight:700}
 .gal:hover span{text-decoration:underline}
+
+/* QA 2026-10-24: no horizontal overflow at 360px */
+.two>*{min-width:0}
+td,th{overflow-wrap:anywhere}

@@ -3,7 +3,7 @@ P = BIZ['phone']
 SRC = {
  'bbd': ('Big Bear Disposal — residential services', 'https://bigbeardisposal.com/services/residential-services/'),
  'city_trash': ('City of Big Bear Lake — solid waste & recycling', 'https://www.citybigbearlake.com/index.php/en/services-main/recycling-programs'),
- 'city_vr': ('City of Big Bear Lake — vacation rental program', 'http://citybigbearlake.com/index.php/en/departments/city-manager/transient-private-home-rental-tphr-program'),
+ 'city_vr': ('City of Big Bear Lake — vacation rental program', 'https://www.citybigbearlake.com/index.php/en/departments/city-manager/transient-private-home-rental-tphr-program'),
  'csd': ('Big Bear City CSD — residential collection', 'https://www.bbccsd.org/index.php/solid-waste/residential-collection'),
  'county_str': ('San Bernardino County — short-term rentals', 'https://str.sbcounty.gov/'),
  'county_dup': ('San Bernardino County — Disposal Use Permit', 'https://dpw.sbcounty.gov/solid-waste-management/disposal-use-permit/'),
