@@ -128,7 +128,7 @@ PHOTOS = {  # name: (master width, master height) after the 4:3 crop - photos fr
     'shrub-trimming-ladder-fuel': (1024, 768), 'weed-clearing-crew': (1024, 768), 'wildfire-dry-brush': (1024, 768),
     'appliances-electronics-pile': (794, 596), 'mountain-cabin-pines': (1024, 768), 'yard-junk-pile': (1024, 768)}
 # Free-licensed stock photos (Pexels License, https://www.pexels.com/license/) used on the guides. Illustrative only:
-# always shown with a visible "Stock photo" credit, never captioned or described as our crew, truck, customers or jobs.
+# no visible credit (not required by the licence; sources logged in _build/IMAGE-SOURCES.md), never captioned or described as our crew, truck, customers or jobs.
 STOCK = {
     'cabin-room-clutter': {'by': 'Wendelin Jacober', 'url': 'https://www.pexels.com/photo/old-messy-room-4146262/', 'pos': .5, 'size': (1244, 933), 'q': 60,
                            'alt': 'Wood-paneled cabin room crowded with an old armchair, a sofa, framed pictures and a full bookshelf'},
@@ -153,10 +153,10 @@ STOCK = {
 }
 for _n, _s in STOCK.items(): PHOTOS[_n] = _s['size']
 def stock_fig(name, cap='', maxw=620):
-    """Stock photo figure with a visible photographer credit. Never captioned as one of our jobs."""
-    s = STOCK[name]; c = (cap + ' ' if cap else '')
+    """Licensed photo figure (no visible credit; Pexels License needs none). Optional neutral caption; never captioned as one of our jobs."""
+    s = STOCK[name]
     return (f'<figure class="photo nat" style="max-width:{maxw}px">' + _img(name, s['alt'], f'(min-width: {maxw + 36}px) {maxw}px, calc(100vw - 36px)')
-            + f'<figcaption>{c}<span class="credit">Stock photo: <a href="{s["url"]}" rel="noopener">{s["by"]} / Pexels</a></span></figcaption></figure>')
+            + (f'<figcaption>{cap}</figcaption>' if cap else '') + '</figure>')
 def photo_widths(W):
     """480/768/1024 variants, never upscaled; the master width is added only if it is well above the largest variant."""
     ws = [w for w in (480, 768, 1024) if w <= W]
@@ -174,7 +174,7 @@ def fig(name, alt, cap='', maxw=620):
             + _img(name, alt, f'(min-width: {maxw + 36}px) {maxw}px, calc(100vw - 36px)') + f'{fc}</figure>')
 def hero_pic(name, alt):
     """Photo in the right column of a page hero (below the buttons on mobile). Not lazy: it can be the LCP element."""
-    cr = f'<figcaption class="hero-credit">Stock photo: <a href="{STOCK[name]["url"]}" rel="noopener">{STOCK[name]["by"]} / Pexels</a></figcaption>' if name in STOCK else ''
+    cr = ''  # no visible credit lines (Pexels/Unsplash licences need none); sources in _build/IMAGE-SOURCES.md
     return '<figure class="hero-pic">' + _img(name, alt, '(min-width: 1120px) 420px, (min-width: 900px) 38vw, calc(100vw - 36px)', eager=True) + cr + '</figure>'
 def gallery(items):
     """Row of linked photos: items = [(name, alt, href, label)]."""
@@ -233,7 +233,7 @@ def footer():
 <div><h2>Services</h2><ul>{svc}</ul></div>
 <div><h2>Service areas</h2><ul>{areas}<li><a href="/location/">All service areas</a></li></ul></div>
 <div><h2>Help</h2><ul><li><a href="/guides/">Local guides</a></li><li><a href="/guides/big-bear-fire-abatement-letter/">Fire abatement letter guide</a></li><li><a href="/guides/big-bear-dump-transfer-station-guide/">Big Bear dump &amp; transfer station</a></li><li><a href="/guides/big-bear-cabin-cleanout-checklist/">Cabin cleanout checklist</a></li><li><a href="/guides/old-furniture-appliance-disposal-big-bear/">Furniture &amp; appliance disposal</a></li><li><a href="/contact/">Contact &amp; free quotes</a></li></ul></div>
-</div><p class="legal">© 2026 {BIZ["name"]}. {LICENSE_NOTE} We don't haul hazardous waste (paint, chemicals, oil, asbestos, propane tanks). Scenery and guide photos are free-licensed stock (Unsplash, Pexels), credited where shown; they are not photos of our jobs.</p></div></footer>
+</div><p class="legal">© 2026 {BIZ["name"]}. {LICENSE_NOTE} We don't haul hazardous waste (paint, chemicals, oil, asbestos, propane tanks). Scenery and guide photos are illustrative only; they are not photos of our jobs.</p></div></footer>
 <div class="callbar">{PH_TODO}<a class="c1" href="{BIZ["sms"]}">{ICONS["msg"]}Text</a><a class="c2" href="{BIZ["wa"]}" rel="noopener">{ICONS["wa"]}WhatsApp</a></div>'''
 TITLE_FIX = {  # SEO QA 2026-10-24: keep <title> <= 60 chars
     '/': 'Junk Removal Big Bear, CA | Hauling, Cleanouts & Weeds',

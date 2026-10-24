@@ -99,7 +99,7 @@ def home():
 <p>We clear it to the checklist and haul everything away on the same visit, and we can do it while you're off the mountain.</p>
 <p><a class="btn btn-amber" href="/weed-abatement/">{ICONS["leaf"]}Weed clearing &amp; abatement</a></p>
 <p><a href="/guides/big-bear-fire-abatement-letter/">Read: what to do when you get the letter →</a></p></div>
-<figure class="photo"><img loading="lazy" decoding="async" src="/images/opt/pine-cone-needles-800.webp" width="720" height="591" alt="Pine needles and pine cones"><figcaption>Pine needles and cones pile up fast under Big Bear's pines. (Stock photo)</figcaption></figure>
+<figure class="photo"><img loading="lazy" decoding="async" src="/images/opt/pine-cone-needles-800.webp" width="720" height="591" alt="Pine needles and pine cones"><figcaption>Pine needles and cones pile up fast under Big Bear's pines.</figcaption></figure>
 </div></section>
 <section><div class="wrap"><h2>How it works</h2>
 <ol class="steps"><li><b>Book a free on-site quote</b>Text or call us, or text 2–3 photos for a quick answer.</li>
@@ -246,7 +246,7 @@ def weed():
 <li><b>Winter:</b> storm debris and downed limbs when access is safe.</li></ul>
 <h2>Where we clear</h2><p>Weed abatement and defensible space clearing across the whole valley:</p>{area_chips('Weed clearing in {n}')}
 <h2>Off the mountain?</h2><p>Send us the letter and a few photos, approve the quote remotely, and give us gate or lot access. We send before-and-after photos when the work is done.</p>
-<figure class="photo" style="margin-top:18px"><img loading="lazy" decoding="async" src="/images/opt/pine-cone-needles-800.webp" width="720" height="591" alt="Pine needles and pine cones"><figcaption>Stock photo. <!-- PHOTO-SLOT: replace with a real photo of a cleared Big Bear lot --></figcaption></figure>
+<figure class="photo" style="margin-top:18px"><img loading="lazy" decoding="async" src="/images/opt/pine-cone-needles-800.webp" width="720" height="591" alt="Pine needles and pine cones"><!-- PHOTO-SLOT: replace with a real photo of a cleared Big Bear lot --></figure>
 <p class="small muted">{LICENSE_NOTE} We don't remove trees.</p>
 </div>{contact_box()}</div></section>
 {faq_html(WEED_FAQ, 'Weed clearing &amp; abatement FAQ')}

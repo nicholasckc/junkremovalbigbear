@@ -1,13 +1,13 @@
 # Image credits
 
-Stock photos (free to use under the Unsplash License, https://unsplash.com/license — attribution not required but given):
+Stock photos (free to use under the Unsplash License, https://unsplash.com/license — attribution not required; no visible credit shown on the site):
 
 - `opt/big-bear-lake-pines-*.webp` — "Green trees near body of water", Big Bear Lake, CA, by Joshua Chun — https://unsplash.com/photos/Yit5O99yaQo
 - `opt/pine-cone-needles-800.webp` — "Brown pinecones", by Dušan veverkolog — https://unsplash.com/photos/Nd90_wSTazo
 - `opt/big-bear-cabin-snow-800.webp` — "Cabin in Big Bear, California", by Josh Duke — https://unsplash.com/photos/KWuHXxOY_QA (currently not used on any page)
 
 
-Guide photos (free to use under the Pexels License, https://www.pexels.com/license/ — attribution not required but given on every page that shows them). Masters in `_build/img-src/stock/`, crops built by `_build/stock.py`. Generic stock, never captioned as our job:
+Guide photos (free to use under the Pexels License, https://www.pexels.com/license/ — attribution not required; no visible credit shown on the site — see `_build/IMAGE-SOURCES.md`). Masters in `_build/img-src/stock/`, crops built by `_build/stock.py`. Generic stock, never captioned as our job:
 
 - `opt/cabin-room-clutter-*.webp` — by Wendelin Jacober — https://www.pexels.com/photo/old-messy-room-4146262/
 - `opt/old-armchair-*.webp` — by Cz Jen — https://www.pexels.com/photo/antique-chair-in-a-studio-25747109/

@@ -4,3 +4,4 @@ exclude:
   - README.md
   - LAUNCH-GUIDE.md
   - localize-images.sh
+  - IMAGE-SOURCES.md

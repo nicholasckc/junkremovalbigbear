@@ -1,7 +1,7 @@
 """Free-licensed stock photos (Pexels License) -> 4:3 responsive WebP (480/768/1024/1400w).
 Run from repo root:  python3 _build/stock.py   (needs Pillow). Masters: _build/img-src/stock/ (not published).
 These are illustrative stock photos. They are never captioned or presented as Junk Removal Big Bear's crew, truck or jobs;
-every use carries a visible 'Stock photo: <photographer> / Pexels' credit (see STOCK in tpl.py and _build/img-src/CREDITS.md)."""
+no visible credit is shown (the Pexels License does not require one); sources are logged privately in _build/IMAGE-SOURCES.md."""
 from PIL import Image
 import os, sys
 sys.path.insert(0, os.path.dirname(__file__))
