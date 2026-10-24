@@ -19,6 +19,7 @@ python3 _build/build.py            # regenerates every page, sitemap.xml and llm
 | `_build/content_areas.py` | Text for the area pages under `/location/…/` |
 | `_build/content/guides.json` | The 5 guides (made by `_build/extract_guides.py` from the `main` version, with fixes) |
 | `_build/images.py` | Logo sizes (from Nicholas's original logo, `_build/img-src/logo-original.png`), responsive WebP images, favicons, schema logo PNG and the social share image (needs Pillow). Sources in `_build/img-src/` |
+| `_build/stock.py` | Guide stock photos (Pexels, masters in `_build/img-src/stock/`): 4:3 WebP crops at 480/768/1024/max px. Registry, credits and alt text in `STOCK` in `_build/tpl.py`. Guide content lives in `_build/content/guides.json` (placeholders `{{HOWTO}}`, `{{STOCK:name\|caption}}`, `{{FIG:name}}`, `{{CTA}}`). |
 | `style.css` | All styling, in one file |
 
 Edit the Python files and re-run the build. Don't hand-edit the generated HTML, because the next build overwrites it.
@@ -45,7 +46,7 @@ Search for `TODO(Nicholas)` to find facts that still need confirming (email, don
 - **No star ratings, review counts, testimonials or review schema** until they are verified and allowed.
 - **Not a licensed contractor.** Painting and demolition stay "minor"/"light", and the licence disclosure (`LICENSE_NOTE`) must stay on those pages (Calif. B&P §7027.2).
 - **No moving services.**
-- **Old-site photos:** Nicholas decided (Sep 26, 2026) to bring back all 12 photos from the old site (they are AI-generated; several show crew in "Big Bear Junk Removal" shirts, a competitor's name, which he accepted) and to show them with no captions/labels and no footer note. Alt text stays neutral and descriptive; never write copy claiming a photo shows our own crew, truck or job. The old AI map is not used (garbled place names). Stock photos are Unsplash-licensed. All listed in `images/CREDITS.md`; placements in `_build/content_services.py` (`ALT`) and `_build/build.py`.
+- **Old-site photos:** Nicholas decided (Sep 26, 2026) to bring back all 12 photos from the old site (they are AI-generated; several show crew in "Big Bear Junk Removal" shirts, a competitor's name, which he accepted) and to show them with no captions/labels and no footer note. Alt text stays neutral and descriptive; never write copy claiming a photo shows our own crew, truck or job. The old AI map is not used (garbled place names). Stock photos are Unsplash- or Pexels-licensed and always carry a visible "Stock photo" credit; never caption one as our job. All listed in `images/CREDITS.md`; placements in `_build/content_services.py` (`ALT`) and `_build/build.py`.
 
 ## Deploy
 

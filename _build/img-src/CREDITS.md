@@ -6,7 +6,21 @@ Stock photos (free to use under the Unsplash License, https://unsplash.com/licen
 - `opt/pine-cone-needles-800.webp` — "Brown pinecones", by Dušan veverkolog — https://unsplash.com/photos/Nd90_wSTazo
 - `opt/big-bear-cabin-snow-800.webp` — "Cabin in Big Bear, California", by Josh Duke — https://unsplash.com/photos/KWuHXxOY_QA (currently not used on any page)
 
-These are scenery only. They do not show Junk Removal Big Bear's crew, truck, customers or jobs.
+
+Guide photos (free to use under the Pexels License, https://www.pexels.com/license/ — attribution not required but given on every page that shows them). Masters in `_build/img-src/stock/`, crops built by `_build/stock.py`. Generic stock, never captioned as our job:
+
+- `opt/cabin-room-clutter-*.webp` — by Wendelin Jacober — https://www.pexels.com/photo/old-messy-room-4146262/
+- `opt/old-armchair-*.webp` — by Cz Jen — https://www.pexels.com/photo/antique-chair-in-a-studio-25747109/
+- `opt/old-washing-machines-*.webp` — by Boys in Bristol Photography — https://www.pexels.com/photo/old-washing-machines-by-the-wall-19493018/
+- `opt/cabin-living-room-*.webp` — by Erik Mclean — https://www.pexels.com/photo/living-room-in-wooden-house-9899840/
+- `opt/packing-donation-boxes-*.webp` — by cottonbro studio — https://www.pexels.com/photo/a-person-packing-clothes-in-a-cardboard-box-6612087/
+- `opt/labeling-boxes-*.webp` — by SHVETS production — https://www.pexels.com/photo/woman-in-white-t-shirt-holding-brown-cardboard-box-7203967/
+- `opt/old-wooden-shed-*.webp` — by Erik Mclean — https://www.pexels.com/photo/old-wooden-shed-9899865/
+- `opt/storm-fallen-tree-*.webp` — by April Yang — https://www.pexels.com/photo/uprooted-tree-after-severe-storm-in-urban-area-32394146/
+- `opt/snowy-pine-branches-*.webp` — by Ali Eren Akkaya — https://www.pexels.com/photo/snow-covered-pine-branches-in-winter-forest-35192281/
+- `opt/fallen-branches-snow-*.webp` — by alexander ermakov — https://www.pexels.com/photo/tree-branches-on-snow-covered-riverside-12083857/
+
+These stock photos are scenery or generic illustrations only. They do not show Junk Removal Big Bear's crew, truck, customers or jobs.
 
 Photos from the old site (all 12 restored at Nicholas's request, Sep 2026; resized to 4:3 WebP at 480/768/1024 px):
 

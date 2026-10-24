@@ -22,57 +22,210 @@
     "Yes — clearing and haul-away happen in the same visit, so no brush piles are left at the curb. Free on-site quotes."
    ]
   ],
-  "published": "2026-07-27"
+  "published": "2026-07-27",
+  "order": 8
  },
  {
   "slug": "big-bear-dump-transfer-station-guide",
+  "order": 6,
+  "published": "2026-07-27",
+  "reviewed": "October 2026",
   "title": "Where to Take Junk in Big Bear: Dump, Transfer Station & Pickup Options",
-  "desc": "Big Bear Transfer Station location and hours, curbside bulky-item pickup, bear-safe trash rules, and when a haul-away service beats a dump run.",
+  "desc": "Big Bear Transfer Station location, hours, accepted and banned items and county fees, plus bulky pickup, Clean Bear, HHW and e-waste options by area.",
   "h1": "Where to Take Junk in Big Bear: The Complete Local Disposal Guide",
-  "eyebrow": "Local Disposal Guide",
+  "eyebrow": "Local disposal guide",
+  "about": "Big Bear Transfer Station and junk disposal options in the Big Bear Valley, California",
   "answer_q": "Where is the dump in Big Bear?",
-  "answer": "The Big Bear Transfer Station at 38550 Holcomb Valley Road (about 1.5 miles north of Baldwin Lake off Highway 18) accepts household waste, construction debris, yard waste, and tires — typically Monday–Saturday 8 AM–4:30 PM; confirm hours and fees on San Bernardino County's disposal sites page. For heavy or bulky loads, Junk Removal Big Bear offers pickup with free on-site quotes.",
-  "body": "<h2>Option 1: The Big Bear Transfer Station</h2>\n<p>The Valley's public drop-off is the <b>Big Bear Transfer Station, 38550 Holcomb Valley Road</b> — about 1.5 miles north of Baldwin Lake at Highway 18. It generally operates <b>Monday–Saturday, 8 AM to 4:30 PM</b> (closed Sunday) and accepts municipal solid waste, construction and demolition debris, yard waste, and auto tires. Hours, fees, and accepted materials change, so check the <a href=\"https://dpw.sbcounty.gov/disposal-sites/\" rel=\"noopener\">county disposal sites page</a> before loading the truck.</p>\n<p>What a dump run really costs: a vehicle that can haul it, tie-downs, disposal fees, and the round trip up Holcomb Valley Road — plus your Saturday. For one load of loose bags, fine. For a couch, a fridge, and half a garage? Do the math first.</p>\n\n<h2>Option 2: Curbside programs</h2>\n<p>Curbside options depend on where the property is:</p>\n<ul>\n<li><b>City of Big Bear Lake (92315):</b> Big Bear Disposal gives each residence <b>one free curbside bulky-item pickup per year</b> (up to 3 cubic yards or 4 large items); extra pickups cost a fee. Schedule through <a href=\"https://bigbeardisposal.com/services/residential-services/\" rel=\"noopener\">Big Bear Disposal</a>. Bear-resistant carts are available for a one-time fee.</li>\n<li><b>Big Bear City, Sugarloaf and Erwin Lake:</b> the Big Bear City Community Services District (CSD) collects standard household bulky items curbside for a per-item fee, rents dumpsters, and holds periodic free community clean-up days. Details: <a href=\"https://www.bbccsd.org/index.php/solid-waste/residential-collection\" rel=\"noopener\">Big Bear City CSD</a>.</li>\n<li><b>Clean Bear drop-off sites</b> (41790 Garstin Dr and 39690 Big Bear Blvd) are only for residents and visitors staying in the City of Big Bear Lake, and only for bagged household trash and recycling — no bulky items, construction debris, or contractor loads.</li>\n</ul>\n<p>Cart timing rules differ too: the City of Big Bear Lake prohibits leaving cans at the curb more than 24 hours, and the CSD allows carts out no more than 12 hours before collection and requires them back within 24 hours after.</p>\n\n<h2>Option 3: We come to you</h2>\n<p>For anything the free pickup won't cover — multiple items, heavy pieces, estate cleanouts, or the classic \"the pile grew all summer\" situation — a haul-away crew often makes more sense than people expect once dump fees, truck time, and a lost weekend are counted. Everything is loaded from wherever it sits (garage, deck, basement), and taken to a facility that accepts it. <!-- TODO(Nicholas): confirm whether you want to mention donation/recycling at all (neutral wording only) --></p>\n\n<h2>What can't go in any of the above</h2>\n<p>Hazardous materials — paint, chemicals, motor oil, asbestos, propane tanks — can't go in curbside carts, our trucks, or regular transfer-station loads. San Bernardino County Fire runs household hazardous waste (HHW) collection; its Big Bear collection site is a government facility at the City of Big Bear Lake Public Works Yard (not a business address), normally open Saturdays. Hours and temporary closures change, so check with San Bernardino County Fire's HHW program before you go.</p>",
+  "answer": "The Big Bear Transfer Station is at 38550 Holcomb Valley Road, Big Bear City, CA 92314, open Monday–Saturday 8 AM–4:30 PM (closed Sunday). San Bernardino County runs it. County fees are weight-based, at $13.71 for a residential load up to 300 lb and $61.49 per ton prorated above that (pricing effective July 1, 2023). Uncovered loads pay double. It doesn't take paint, hazardous waste, liquids, items over 4 feet long or treated wood. For bulky items, check your area's curbside program first, or have it hauled.",
+  "howto": {
+   "name": "How to do a dump run to the Big Bear Transfer Station",
+   "steps": [
+    [
+     "Check whether a free or curbside option fits first",
+     "<p>City of Big Bear Lake addresses get one free curbside bulky pickup a year from Big Bear Disposal. Big Bear City CSD areas get curbside bulky pickup for a per-item fee. If your load is a couch and a mattress, that may be all you need.</p>"
+    ],
+    [
+     "Pull out everything the station won't take",
+     "<p>Paint, chemicals, fuels, propane cylinders, batteries, fluorescent tubes, liquids, sealed containers, hot ashes and medical waste go elsewhere (mostly HHW). So do treated wood (Mid-Valley and Victorville only) and electronics. Fridges and freezers must have the Freon removed first.</p>"
+    ],
+    [
+     "Cut long items down to under 4 feet",
+     "<p>County transfer stations don't accept items over 4 feet long. Cut lumber, fencing, carpet rolls and pipe to length at home, where you have room and tools.</p>"
+    ],
+    [
+     "Load heavy items low and forward, then tarp and strap",
+     "<p>Put appliances and dense loads against the cab, lighter bulky items on top, and cover the whole load with a tarp tied at every corner. The county charges double for uncovered or unsecured loads, and loose debris on Highway 18 or Big Bear Blvd is dangerous.</p>"
+    ],
+    [
+     "Go early in the week, not at closing",
+     "<p>The station is open Monday–Saturday, 8 AM–4:30 PM. Arrive with time to unload before closing, and check the county page for holiday closures and weather closures before you drive.</p>"
+    ],
+    [
+     "Weigh in, unload where directed, keep the receipt",
+     "<p>Follow the attendant's directions for where each material goes. Fees are based on the load. Keep your receipt if you're clearing a rental, an estate or a property you manage.</p>"
+    ]
+   ]
+  },
+  "body": "<p>Every Big Bear cleanout ends with the same question: where does all this actually go? The answer depends on <b>what</b> it is and <b>where the property is</b>, because the City of Big Bear Lake and the unincorporated areas (Big Bear City, Sugarloaf, Erwin Lake, Baldwin Lake, Fawnskin) use different providers. Below is everything in one place, checked against the official pages listed at the end.</p>\n<h2>Quick answer: which option fits</h2>\n<div class=\"tscroll\"><table>\n<tr><th>You have…</th><th>Best first option</th></tr>\n<tr><td>A few bulky items, City of Big Bear Lake address</td><td>The free annual curbside bulky pickup from Big Bear Disposal (up to 3 cubic yards or 4 large items)</td></tr>\n<tr><td>A few bulky items in Big Bear City, Sugarloaf, Erwin Lake or Baldwin Lake</td><td>Big Bear City CSD curbside bulky pickup (per-item fee)</td></tr>\n<tr><td>A truckload of mixed junk you can load yourself</td><td>The Big Bear Transfer Station</td></tr>\n<tr><td>Bagged household trash and recycling while visiting a city property</td><td>The Clean Bear Site, 41970 Garstin Dr (proof of eligibility required)</td></tr>\n<tr><td>Paint, chemicals, propane, batteries</td><td>San Bernardino County Fire HHW</td></tr>\n<tr><td>Heavy, upstairs, a whole cabin, or no truck</td><td>A haul-away service</td></tr>\n</table></div>\n<h2>The Big Bear Transfer Station</h2>\n{{FIG:junk-hauling-box-truck}}\n<p>The valley's public drop-off is the <b>Big Bear Transfer Station, 38550 Holcomb Valley Road, Big Bear City, CA 92314</b>, north of Baldwin Lake off Highway 18. It's open <b>Monday–Saturday, 8 AM to 4:30 PM</b> and closed Sunday. San Bernardino County Public Works runs it, and county-wide rules apply.</p>\n<h3>Accepted, with conditions</h3>\n<ul>\n<li>Household junk, furniture and construction debris (cut to under 4 feet)</li>\n<li>Green waste. Big Bear City CSD customers can self-haul it with their Disposal Use Permit at no extra cost</li>\n<li>Tires: up to 9, off the rim, for a per-tire fee</li>\n<li>Refrigerators and freezers: <b>only once the Freon has been removed</b></li>\n</ul>\n<h3>Not accepted</h3>\n<ul>\n<li>Paint, hazardous waste, liquids and sealed containers</li>\n<li>Hot ashes, mercury- and lead-containing items, medical waste and sharps</li>\n<li>Items over 4 feet long (county landfills take up to 10 feet)</li>\n<li>Treated wood (only the county's Mid-Valley and Victorville sites take it)</li>\n<li>CRT TVs and monitors at sites without a scale house; use the county's free TV and monitor drop-off instead</li>\n<li>Waste from outside San Bernardino County</li>\n<li>Asbestos: demolition waste from structures built before 1984 needs certification, and friable asbestos goes only to specific out-of-county landfills</li>\n</ul>\n<h2>What a dump run costs: county fees</h2>\n<div class=\"tscroll\"><table>\n<tr><th>County charge at transfer stations (residential)</th><th>Listed fee</th></tr>\n<tr><td>Load up to 300 lb</td><td>$13.71</td></tr>\n<tr><td>Loads of 301 lb or more</td><td>$61.49 per ton, prorated</td></tr>\n<tr><td>Passenger and light-truck tires (up to 9, off the rim)</td><td>$5.31 each</td></tr>\n<tr><td>Hard-to-handle and special-handling items</td><td>Added $53.14 per ton ($26.57 minimum)</td></tr>\n<tr><td>Uncovered or unsecured load</td><td>Fee is doubled</td></tr>\n</table></div>\n<p class=\"small muted\">Source: <a href=\"https://dpw.sbcounty.gov/solid-waste-management/fees/\" rel=\"noopener\">San Bernardino County Public Works fee schedule</a>, labeled \"Pricing Effective July 1, 2023\", checked October 24, 2026. These are the county's fees, not ours. Check the current schedule before you go.</p>\n<p>Add your own costs: a truck or trailer, a tarp and straps, fuel for the round trip, and your time. For one load of loose bags, the transfer station is hard to beat. For a sofa, a fridge and half a garage, compare a haul-away quote first.</p>\n<h2>Step-by-step: doing a dump run</h2>\n{{HOWTO}}\n{{CTA:Rather skip the dump run?|Text photos of the pile and where it sits. We load it from the garage, deck or loft and take it to a facility that accepts it, at a price confirmed before we start.}}\n<h2>Curbside and bulky pickup, by area</h2>\n{{STOCK:old-washing-machines|Appliances are the most common surprise at the scale: fridges and freezers must have the Freon removed first.}}\n<ul>\n<li><b>City of Big Bear Lake (92315):</b> Big Bear Disposal gives each residence <b>one free curbside bulky-item pickup per year</b> (up to 3 cubic yards or 4 large items); extra pickups cost a fee. They also offer a free 96-gallon green cart and a 4-yard Rent-a-Bin. See <a href=\"https://bigbeardisposal.com/services/residential-services/\" rel=\"noopener\">Big Bear Disposal residential services</a>.</li>\n<li><b>Big Bear City, Sugarloaf, Erwin Lake, Baldwin Lake:</b> the Big Bear City CSD collects household bulky items curbside for a per-item fee. Construction debris, tires, electronics, carpet and metal aren't accepted curbside. Carts can go out no more than 12 hours before collection and must be back within 24 hours after. See the <a href=\"https://www.bbccsd.org/index.php/solid-waste/residential-collection\" rel=\"noopener\">CSD residential collection page</a>.</li>\n<li><b>Community clean-up days (CSD):</b> the 2026 clean-up days (April 25, August 1 and October 10, at the Paradise Maintenance Yard, 417 Grenfall Ln) have passed. The CSD lists a <b>green-waste-only drop-off day on Saturday, November 14, 2026, 9 AM–2 PM</b>.</li>\n<li><b>Fawnskin and other unincorporated areas:</b> residential service in Fawnskin is optional through Big Bear Disposal; check with your provider.</li>\n</ul>\n<h2>The Clean Bear Site (City of Big Bear Lake)</h2>\n<p>The City and Big Bear Disposal run one drop-off: <b>Clean Bear Site #1, 41970 Garstin Drive</b>, open <b>7 AM–8 PM daily</b>. It's for City of Big Bear Lake residents who can't use weekly curbside service, and for visitors staying at a city address. Bring proof of eligibility: photo ID, a property document, a utility bill, car registration, or (for visitors) a rental contract for a city address. It has bins for household trash, recycling, green waste, e-waste, universal waste and ashes (soaked for at least 48 hours). <b>Clean Bear Site #2 on Big Bear Blvd closed on August 2, 2026.</b> There's no bulky-item bin, and contractor green waste isn't allowed.</p>\n<h2>Hazardous waste, e-waste and the \"can't go anywhere\" list</h2>\n<p>California bans these from the trash: electronics (TVs, monitors, laptops, microwaves, phones), batteries, fluorescent tubes, paint, propane cylinders, treated wood and asbestos. San Bernardino County Fire runs the household hazardous waste (HHW) program. Its Big Bear collection site is at the <b>City of Big Bear Lake Public Works Yard, 42040 Garstin Dr</b>, normally <b>Saturdays 9 AM–2 PM</b>. Check the HHW page for closures. Our trucks don't take hazardous waste either.</p>\n<h2>Bear country and cart rules</h2>\n<ul>\n<li>Keep trash inside or in a bear-resistant container until collection day. Big Bear Disposal offers bear-resistant carts for a one-time fee.</li>\n<li>Follow cart timing: the CSD allows carts out no more than 12 hours before collection and back in within 24 hours after, and the City prohibits leaving cans at the curb for more than 24 hours.</li>\n<li>Vacation rentals: guests overflow bins fast on holiday weekends. Read the <a href=\"/guides/airbnb-turnover-checklist-big-bear/\">Big Bear turnover checklist</a>.</li>\n</ul>\n<h2>When a haul-away beats a dump run</h2>\n<p>If the job includes heavy furniture, appliances, stairs, a whole room or more, or items the station won't take as-is (long lumber, a fridge with Freon), the real cost of doing it yourself goes up fast. You're paying for a truck, fees and a lost day. We load from wherever it sits and deliver to a facility that accepts it, with the price confirmed before we start. Related guides: <a href=\"/guides/old-furniture-appliance-disposal-big-bear/\">furniture and appliance disposal</a>, <a href=\"/guides/big-bear-cabin-cleanout-checklist/\">cabin cleanout checklist</a> and <a href=\"/guides/post-winter-storm-debris-cleanup-big-bear/\">storm debris cleanup</a>.</p>\n",
   "faq": [
    [
     "Is the Big Bear dump open on Sunday?",
-    "The Big Bear Transfer Station is typically closed Sundays, operating Monday–Saturday 8 AM–4:30 PM — confirm current hours on San Bernardino County's disposal sites page before you go."
+    "No. The Big Bear Transfer Station, 38550 Holcomb Valley Rd, is open Monday–Saturday 8 AM–4:30 PM and closed Sunday. Check San Bernardino County's disposal sites page for holiday or weather closures."
+   ],
+   [
+    "How much does the Big Bear dump cost?",
+    "San Bernardino County lists $13.71 for a residential load up to 300 lb and $61.49 per ton, prorated, for 301 lb or more, plus $5.31 per tire (up to 9). Uncovered or unsecured loads pay double. This is pricing effective July 1, 2023; check the county's current fee schedule before you go."
    ],
    [
     "Does Big Bear have free bulky item pickup?",
-    "In the City of Big Bear Lake, Big Bear Disposal gives each residence one free curbside bulky-item pickup per year (up to 3 cubic yards or 4 large items) — see Big Bear Disposal's website. In Big Bear City, Sugarloaf and Erwin Lake, the Big Bear City CSD picks up bulky items for a per-item fee — see the CSD's website."
+    "In the City of Big Bear Lake, Big Bear Disposal gives each residence one free curbside bulky-item pickup per year (up to 3 cubic yards or 4 large items). In Big Bear City, Sugarloaf and Erwin Lake, the Big Bear City CSD picks up bulky items for a per-item fee."
+   ],
+   [
+    "Can I take a fridge to the Big Bear Transfer Station?",
+    "Only once the Freon has been removed. San Bernardino County sites don't accept refrigerators that still contain refrigerant."
+   ],
+   [
+    "Can I take pressure-treated wood to the Big Bear dump?",
+    "No. San Bernardino County accepts treated wood only at its Mid-Valley and Victorville sites."
+   ],
+   [
+    "Where do I take paint and propane tanks in Big Bear?",
+    "To the San Bernardino County Fire household hazardous waste program. Its Big Bear collection site is at the City of Big Bear Lake Public Works Yard, 42040 Garstin Dr, normally Saturdays 9 AM–2 PM. Check the HHW page for current hours."
    ],
    [
     "Should I do a dump run or hire junk removal?",
-    "For single small loads, the transfer station is cheapest. For bulky, heavy, or multi-item loads, full-service pickup is often comparable once disposal fees, truck rental, and time are counted — and the free on-site quote makes it easy to compare before deciding."
+    "For a single small load you can lift, the transfer station is cheapest. For heavy, bulky or multi-item loads, stairs, or items with special rules, a haul-away is often comparable once fees, a truck and your time are counted. A free quote makes it easy to compare."
    ]
   ],
-  "published": "2026-07-27"
+  "sources": [
+   [
+    "San Bernardino County Public Works: disposal sites and hours",
+    "https://dpw.sbcounty.gov/disposal-sites/"
+   ],
+   [
+    "San Bernardino County Public Works: accepted and prohibited waste at county sites",
+    "https://dpw.sbcounty.gov/solid-waste-management/accepted-waste/"
+   ],
+   [
+    "San Bernardino County Public Works: disposal fees (pricing effective July 1, 2023)",
+    "https://dpw.sbcounty.gov/solid-waste-management/fees/"
+   ],
+   [
+    "Big Bear Disposal: residential services (bulky pickup, green carts, Rent-a-Bin)",
+    "https://bigbeardisposal.com/services/residential-services/"
+   ],
+   [
+    "Big Bear City Community Services District: residential collection and bulky items",
+    "https://www.bbccsd.org/index.php/solid-waste/residential-collection"
+   ],
+   [
+    "Big Bear City CSD: green waste rules",
+    "https://bbccsd.org/index.php/solid-waste/green-waste"
+   ],
+   [
+    "Big Bear City CSD: community clean-up days",
+    "https://www.bbccsd.org/index.php/solid-waste/community-clean-up"
+   ],
+   [
+    "City of Big Bear Lake: public trash sites (Clean Bear)",
+    "https://www.bigbearlake.gov/index.php/en/community-main/public-trash-sites-clean-bear"
+   ],
+   [
+    "San Bernardino County Fire: household hazardous waste (HHW) program",
+    "https://sbcfire.org/hhw/"
+   ],
+   [
+    "CalRecycle: household hazardous and universal waste that can't go in the trash",
+    "https://calrecycle.ca.gov/homehazwaste/info/"
+   ]
+  ]
  },
  {
   "slug": "hot-tub-removal-big-bear",
+  "order": 7,
+  "published": "2026-07-27",
+  "reviewed": "October 2026",
   "title": "Hot Tub Removal in Big Bear: Process, Mountain Access & Cost Factors",
-  "desc": "How hot tub and spa removal works on Big Bear's mountain lots: disconnection, cut-down, tight-deck access, and what affects the price. Free on-site quotes.",
-  "h1": "Hot Tub Removal in Big Bear: What It Takes to Get a Dead Spa Off a Mountain Deck",
-  "eyebrow": "Spa & Hot Tub Guide",
+  "desc": "How to get rid of an old hot tub in Big Bear: disconnecting, draining, cut-down, tight deck access, county disposal rules and cost factors.",
+  "h1": "How to Get Rid of an Old Hot Tub in Big Bear",
+  "eyebrow": "Spa & hot tub guide",
+  "about": "Removing and disposing of an old hot tub or spa in Big Bear, California",
   "answer_q": "How does hot tub removal work in Big Bear?",
-  "answer": "After a technician disconnects power and plumbing, the spa is drained, cut into sections, carried off the deck, and hauled for disposal — typically a half-day job on Big Bear's tiered decks and tight lots. Cost depends on spa size, deck access, and cut-down complexity, which is why Junk Removal Big Bear quotes every tub with a free on-site visit.",
-  "body": "<h2>Why Big Bear kills hot tubs</h2>\n<p>At 6,750+ feet, spas work harder than they do down the hill: hard freezes crack plumbing that wasn't winterized, snow loads stress covers and cabinets, and vacation-rental tubs run near-continuously through peak season. When one finally gives out, it becomes the heaviest piece of furniture on the property — 400 to 900 pounds dry — sitting on a deck that was built around it.</p>\n\n<h2>The removal process, step by step</h2>\n<ul class=\"svc\">\n<li><b>1. Disconnect:</b> your electrician or spa tech kills the power (usually a 220V circuit) and caps the plumbing — required before any removal</li>\n<li><b>2. Drain:</b> fully drained and left open to dry if possible</li>\n<li><b>3. Cut-down:</b> most mountain tubs can't leave the way they arrived — decks got railed in, gates narrowed, trees grew — so we cut the shell into carryable sections</li>\n<li><b>4. Carry-out:</b> sections and equipment pack are carried down stairs and switchback paths to the truck</li>\n<li><b>5. Haul &amp; dispose:</b> shell, cabinet, cover and pack are hauled the same visit</li>\n<li><b>6. Deck sweep:</b> the footprint is swept clean — ready for a new spa or your new deck furniture</li>\n</ul>\n\n<h2>What affects the price</h2>\n<p>Three things, mostly: <b>size</b> (a 2-person tub is a different job than an 8-person swim spa), <b>access</b> (ground-level patio vs. a third-tier deck above a slope), and <b>cut-down complexity</b> (acrylic shells cut fast; older wood-cabinet and jetted concrete-adjacent installs take longer). Because these vary so much lot to lot in Big Bear, phone estimates for hot tubs are guesses — an on-site look isn't.</p>\n\n<h2>For vacation rental owners</h2>\n<p>A dead hot tub on an active STR listing costs bookings every week it sits there. We schedule tear-outs between guest stays, coordinate access through your property manager or lockbox, and send photos when the deck is clear — most tubs are gone within a day or two of the quote. Replacing rather than removing? We can also haul the old one the same day your new spa is delivered.</p>",
+  "answer": "First an electrician or spa technician disconnects the power and plumbing. Then the spa is drained, cut into sections, carried off the deck and hauled for disposal. On Big Bear's tiered decks and tight lots, cut-down is usually how a spa gets out. County disposal rules matter: liquids aren't accepted, pieces over 4 feet long aren't accepted at transfer stations, and treated-wood surrounds can only go to the county's Mid-Valley and Victorville sites. Cost depends on spa size, deck access and cut-down complexity, so we quote each tub with a free on-site look.",
+  "howto": {
+   "name": "How to remove an old hot tub in Big Bear",
+   "steps": [
+    [
+     "Have the power and plumbing disconnected",
+     "<p>A hot tub usually runs on a dedicated high-amperage circuit. A qualified electrician or spa technician should shut it off at the breaker, disconnect the spa and make the wiring safe. Any hard-plumbed fill line gets shut off and capped. This comes before everything else.</p>"
+    ],
+    [
+     "Drain it completely",
+     "<p>Pump or siphon the water out and leave the cover open so the shell dries. County disposal sites don't accept liquids, and a spa with water in the footwell and plumbing is far heavier. Ask your water or sewer provider where treated spa water can go. Don't run it toward the lake, a storm drain or a neighbor's lot.</p>"
+    ],
+    [
+     "Check the route out",
+     "<p>Measure gates, stair widths and railings, and look at the slope. Most mountain decks were built around the spa, so it rarely leaves the way it came in. Clear snow and ice from the whole route, because a tub removal is not a storm-day job.</p>"
+    ],
+    [
+     "Remove the cover, steps and surround",
+     "<p>The cover, steps and any skirting or surround come off first. Wood surrounds and deck framing are often pressure-treated. Keep that lumber separate, because the Big Bear Transfer Station won't take it.</p>"
+    ],
+    [
+     "Cut the shell and cabinet into sections",
+     "<p>The cabinet frame and shell are cut into pieces two people can carry. For self-haul to a county transfer station, pieces must be under 4 feet long. The pump and heater pack come out as one unit.</p>"
+    ],
+    [
+     "Carry out, haul and sort",
+     "<p>Sections go down the stairs or path to the truck. The shell and cabinet go as bulky waste, metal parts and the equipment pack as metal or e-waste, and treated lumber to a site that accepts it.</p>"
+    ],
+    [
+     "Inspect the deck and finish the site",
+     "<p>With the tub gone, check the deck boards and framing under the footprint. Years of splash and snowmelt rot wood there first. Sweep the area and cap or label the disconnected circuit for the next owner or spa.</p>"
+    ]
+   ]
+  },
+  "body": "<p>Big Bear is hard on spas. Hard freezes crack plumbing that wasn't winterized, snow loads stress covers and cabinets, and vacation-rental tubs run almost nonstop through peak season. When one finally gives out, it's the heaviest thing on the property, usually sitting on a deck that was built around it. This guide covers how removal works, what the county rules mean for a spa, and what drives the cost.</p>\n<h2>Step-by-step: hot tub removal</h2>\n{{HOWTO}}\n{{CTA:Want the tub gone without the heavy lifting?|Text a photo of the tub and the path to the street (stairs, gate, deck height). We\\'ll confirm whether it can be cut down and carried out, and send a firm price.}}\n{{STOCK:snowy-pine-branches|Snow load and hard freezes are what finish off most Big Bear spas: cracked plumbing, crushed covers, swollen cabinets.}}\n<h2>Disposal rules for a spa in San Bernardino County</h2>\n<ul>\n<li><b>No liquids:</b> county sites don't accept liquids. Drain fully and let it dry.</li>\n<li><b>Under 4 feet:</b> transfer stations don't accept items over 4 feet long (landfills take up to 10 feet). A whole spa isn't going into the Big Bear Transfer Station.</li>\n<li><b>Treated wood:</b> accepted only at the county's Mid-Valley and Victorville sites, and treated wood can't go in the trash in California.</li>\n<li><b>Chemicals:</b> leftover chlorine, bromine and pH chemicals are household hazardous waste. Take them to the county HHW program.</li>\n<li><b>Uncovered loads:</b> double fee at county sites, so tarp and strap.</li>\n</ul>\n<p>Details and addresses are in the <a href=\"/guides/big-bear-dump-transfer-station-guide/\">Big Bear dump and transfer station guide</a>.</p>\n<h2>What affects the price</h2>\n<p>We don't publish prices, and phone estimates for hot tubs are guesses. These are the factors we look at on-site:</p>\n<ul>\n<li><b>Size:</b> a 2-person tub is a different job from an 8-person spa or a swim spa.</li>\n<li><b>Access:</b> a ground-level patio vs. a third-tier deck above a slope, gate widths, stair count and the distance to where the truck can park.</li>\n<li><b>Cut-down complexity:</b> acrylic shells cut quickly. Older wood-cabinet tubs and spas set into a deck take longer.</li>\n<li><b>Surrounds and decking:</b> a built-in surround or deck section adds tear-out and treated-wood disposal. See <a href=\"/guides/shed-removal-big-bear/\">shed and deck tear-outs</a>.</li>\n<li><b>Season:</b> snow and ice on the route add time; spring through fall is easier.</li>\n<li><b>Disposal fees:</b> county fees are weight-based (see the <a href=\"/guides/big-bear-dump-transfer-station-guide/#what-a-dump-run-costs-county-fees\">county fee table</a>).</li>\n</ul>\n<h2>For vacation rental owners</h2>\n<p>A dead hot tub on an active listing costs bookings every week it sits there. We schedule tear-outs between guest stays, coordinate access through your property manager or lockbox, and send photos when the deck is clear. Replacing rather than removing? We can haul the old one the same day the new spa is delivered. Pair it with the <a href=\"/guides/airbnb-turnover-checklist-big-bear/\">turnover checklist</a> to reset the whole deck.</p>\n<h2>After the tub: the deck and the lot</h2>\n<p>The footprint under a spa is usually the worst wood on the deck. If boards are soft, plan repairs before you set anything heavy there again. If you're clearing the deck and yard for fire season or a sale, see <a href=\"/guides/declutter-cabin-before-selling-or-renting-big-bear/\">decluttering before you sell or rent</a> and <a href=\"/weed-abatement/\">weed abatement</a>.</p>\n",
   "faq": [
    [
     "Do I need to disconnect the hot tub before removal?",
-    "Yes — a licensed electrician or spa technician should disconnect the power and cap the plumbing first. After that, Junk Removal Big Bear handles draining, cut-down, carry-out, and disposal."
+    "Yes. A qualified electrician or spa technician should disconnect the power and cap any plumbing first. After that, Junk Removal Big Bear handles the cut-down, carry-out and disposal."
+   ],
+   [
+    "Can I take a hot tub to the Big Bear dump?",
+    "Not whole. San Bernardino County transfer stations don't accept items over 4 feet long or liquids, so a spa must be drained and cut into sections first. Treated-wood surrounds can only go to the county's Mid-Valley and Victorville sites."
    ],
    [
     "Can you remove a hot tub from a second-story or tiered deck?",
-    "Yes. Tight-access removals are standard in Big Bear: the tub is cut into sections and hand-carried down stairs and narrow paths — no crane needed for most lots."
+    "Yes. Tight-access removals are normal in Big Bear. The tub is cut into sections and hand-carried down stairs and narrow paths, with no crane for most lots."
    ],
    [
     "How much does hot tub removal cost in Big Bear?",
-    "It depends on spa size, deck access, and cut-down complexity, so quotes are given free on-site: we look at the tub, quote a firm all-inclusive price, and can often start immediately. Text or WhatsApp us for one."
+    "It depends on spa size, deck access, cut-down complexity and any surround or decking that comes out with it. We give a free on-site quote with a firm price, or a quick answer from photos by text."
+   ],
+   [
+    "What do I do with leftover spa chemicals?",
+    "Chlorine, bromine and other spa chemicals are household hazardous waste. Take them to the San Bernardino County Fire HHW program, not the trash or a drain. We don't haul chemicals."
    ]
   ],
-  "published": "2026-07-27"
+  "sources": [
+   [
+    "San Bernardino County Public Works: accepted and prohibited waste at county sites",
+    "https://dpw.sbcounty.gov/solid-waste-management/accepted-waste/"
+   ],
+   [
+    "San Bernardino County Public Works: disposal fees (pricing effective July 1, 2023)",
+    "https://dpw.sbcounty.gov/solid-waste-management/fees/"
+   ],
+   [
+    "CalRecycle: household hazardous and universal waste that can't go in the trash",
+    "https://calrecycle.ca.gov/homehazwaste/info/"
+   ],
+   [
+    "San Bernardino County Fire: household hazardous waste (HHW) program",
+    "https://sbcfire.org/hhw/"
+   ]
+  ]
  },
  {
   "slug": "airbnb-turnover-checklist-big-bear",
@@ -97,7 +250,8 @@
     "Yes. Management firms and co-hosts get priority scheduling and a single contact for all properties, with quotes approved remotely and documentation on every job."
    ]
   ],
-  "published": "2026-07-27"
+  "published": "2026-07-27",
+  "order": 9
  },
  {
   "slug": "estate-cleanout-guide-big-bear",
@@ -122,6 +276,555 @@
     "By volume, quoted as a firm written price after a free on-site walkthrough — multi-load cabins included. Text or WhatsApp us to schedule one."
    ]
   ],
-  "published": "2026-07-27"
+  "published": "2026-07-27",
+  "order": 10
+ },
+ {
+  "slug": "big-bear-cabin-cleanout-checklist",
+  "order": 1,
+  "published": "2026-10-24",
+  "reviewed": "October 2026",
+  "photo": "cabin-room-clutter",
+  "title": "Big Bear Cabin Cleanout Checklist: Room by Room",
+  "desc": "A room-by-room Big Bear cabin cleanout checklist: sorting, bear-safe staging, hazardous items, where each pile goes under local rules, and cost factors.",
+  "h1": "Big Bear Cabin Cleanout Checklist: A Room-by-Room Plan",
+  "eyebrow": "Cleanout checklist",
+  "about": "Cleaning out a cabin in Big Bear, California",
+  "answer_q": "How do you clean out a Big Bear cabin?",
+  "answer": "Pick a deadline and check winter access first, then work one room at a time into six piles: keep, sell, donate, recycle, hazardous and haul. Hazardous items go to the county HHW site, not the trash. Everything else goes through your area's curbside program (Big Bear Disposal in the City of Big Bear Lake, the Big Bear City CSD elsewhere), the Big Bear Transfer Station, or a haul-away crew. Stage bags inside, not outside, because of bears.",
+  "howto": {
+   "name": "How to clean out a cabin in Big Bear",
+   "steps": [
+    [
+     "Set the scope, the deadline and who decides",
+     "<p>Write down what \"done\" means: empty for a sale, ready for renters, or just the garage and loft. Agree on who has the final say on keepsakes before anyone starts sorting. Sorting stalls far more often over decisions than over effort.</p>"
+    ],
+    [
+     "Check access before you book anything",
+     "<p>Mountain access decides how long everything takes. Note the driveway grade, the number of steps to the door, where a truck can park on narrow streets, and whether snow or ice will be on the path. From November to March, plan around storms and plowing, and keep a shovel and ice melt by the door.</p>"
+    ],
+    [
+     "Set up six sorting zones",
+     "<p>Use tape or signs to set up <b>Keep, Sell, Donate, Recycle, Hazardous</b> and <b>Haul</b>. Put the haul zone nearest the exit. Put hazardous items on a tarp in a garage or shed, away from kids and pets, and never next to the woodstove.</p>"
+    ],
+    [
+     "Work room by room, top to bottom",
+     "<p>Start with the room that frees up the most space (usually the garage or a spare bedroom). Clear high shelves and lofts first so debris falls onto areas you haven't cleaned yet. Use the room checklist below so nothing gets missed.</p>"
+    ],
+    [
+     "Pull hazardous items out early",
+     "<p>Paint, propane cylinders, fuel, pesticides, pool and spa chemicals, batteries and fluorescent tubes can't go in a trash cart or a regular transfer-station load. Box them separately for the county HHW program (details below).</p>"
+    ],
+    [
+     "Keep food waste and trash bear-safe",
+     "<p>Big Bear is bear country. Empty the fridge and pantry last, the day before a trash collection, and keep bagged trash inside or in a bear-resistant container until the truck comes. Never leave open bags on a deck or at the curb overnight.</p>"
+    ],
+    [
+     "Route each pile to the right place",
+     "<p>Book your free or low-cost options first: the annual bulky pickup in the City of Big Bear Lake, per-item bulky pickup from the Big Bear City CSD, or a run to the Big Bear Transfer Station. Use a haul-away service for what's left, especially heavy furniture, appliances and anything stuck upstairs.</p>"
+    ],
+    [
+     "Do the final sweep and take photos",
+     "<p>Check under beds, behind the water heater, in the crawlspace and the attic hatch. Take dated photos of every room for the family, the agent or the property manager. If you're selling, now is a good time to clear the lot for defensible space too.</p>"
+    ]
+   ]
+  },
+  "body": "<p>Big Bear cabins fill up in a particular way. There are decades of board games and bunk-bed mattresses, a garage of skis and propane bottles, and a deck stacked with snow-worn furniture. On top of that, the property may have changed hands three times, with each owner adding a layer. This checklist is the order we'd work in. It's written so you can do it yourself, call us in for just the heavy part, or hand the whole job over.</p>\n<h2>Step-by-step: how to clean out a cabin</h2>\n{{HOWTO}}\n{{CTA:Short on time or muscle?|Text 2–3 photos of the rooms and the driveway. We can quote just the heavy items or the whole cabin, free and on-site if you prefer.}}\n<h2>Room-by-room checklist</h2>\n<p>Print this or keep it open on your phone. Tick each line off as the room clears.</p>\n<h3>Kitchen and pantry</h3>\n<ul class=\"checklist\">\n<li>Food: donate sealed, in-date items; bag the rest and keep it indoors until collection day (bears)</li>\n<li>Fridge and freezer: empty, wipe and leave the doors propped open to air out. Moving or disposing of the appliance has rules; see <a href=\"/guides/old-furniture-appliance-disposal-big-bear/\">furniture and appliance disposal</a></li>\n<li>Small appliances: microwaves, toasters and coffee makers. Microwaves count as electronic waste in California, so they go to e-waste, not the trash</li>\n<li>Duplicate cookware, mismatched mugs, old cleaning products (any that are hazardous go in the HHW box)</li>\n</ul>\n<h3>Living room and bedrooms</h3>\n<ul class=\"checklist\">\n<li>Sofas, recliners, bunk beds and mattresses: decide early, because these drive the size of the haul</li>\n<li>Bedding and linens: donate clean sets; worn ones are trash</li>\n<li>TVs, DVD players, old stereos and cables: e-waste</li>\n<li>Papers: shred anything with account numbers, tax info or signatures; keep deeds, titles and warranties in one box</li>\n</ul>\n{{STOCK:labeling-boxes|Label every box with a room and a pile (Keep, Donate, Haul) as you go.}}\n<h3>Bathrooms</h3>\n<ul class=\"checklist\">\n<li>Expired medicines and sharps: never in the trash. Ask the county HHW program or a pharmacy take-back</li>\n<li>Half-used aerosols and cleaners: HHW box</li>\n<li>Towels, bath mats and shower curtains: trash or textile donation</li>\n</ul>\n<h3>Garage, shed and under-cabin storage</h3>\n<ul class=\"checklist\">\n<li>Propane cylinders, gas cans, motor oil, paint, stains and pesticides: HHW, not trash and not a haul-away truck</li>\n<li>Old skis, sleds, bikes and fishing gear: sell or donate if usable</li>\n<li>Scrap lumber and broken furniture: pieces over 4 feet long aren't accepted at county transfer stations, so cut them down or have them hauled</li>\n<li>Tires: county sites take up to 9 per trip, off the rim, for a per-tire fee</li>\n<li>The shed itself? See <a href=\"/guides/shed-removal-big-bear/\">shed removal in Big Bear</a></li>\n</ul>\n<h3>Deck, yard and lot</h3>\n<ul class=\"checklist\">\n<li>Snow-cracked patio furniture, rusted grills (empty and disconnect the propane first), dead planters</li>\n<li>A hot tub that no longer works: see <a href=\"/guides/hot-tub-removal-big-bear/\">how to get rid of an old hot tub</a></li>\n<li>Pine needles, branches and firewood stacked against the cabin: a fire risk, and Big Bear Fire inspects for it. See <a href=\"/weed-abatement/\">weed abatement and defensible space</a></li>\n</ul>\n<h2>Where each pile goes in Big Bear</h2>\n<div class=\"tscroll\"><table>\n<tr><th>Pile</th><th>Where it goes</th></tr>\n<tr><td><b>Household trash</b></td><td>Your trash cart. In the City of Big Bear Lake, residents and visitors with proof of eligibility can also use the Clean Bear Site at 41970 Garstin Dr (7 AM–8 PM daily). The second site on Big Bear Blvd closed on August 2, 2026.</td></tr>\n<tr><td><b>Bulky items</b> (sofas, mattresses, appliances)</td><td>City of Big Bear Lake: one free curbside bulky pickup a year from Big Bear Disposal (up to 3 cubic yards or 4 large items). Big Bear City, Sugarloaf, Erwin Lake and nearby areas: Big Bear City CSD curbside pickup for a per-item fee. Anywhere: the Big Bear Transfer Station, or a haul-away service.</td></tr>\n<tr><td><b>E-waste and universal waste</b> (TVs, computers, microwaves, batteries, fluorescent tubes)</td><td>Not the trash. The Clean Bear Site has e-waste and universal-waste bins for eligible city residents. Otherwise, use the county HHW program, which also runs free TV and monitor drop-off.</td></tr>\n<tr><td><b>Hazardous waste</b> (paint, fuel, propane, chemicals)</td><td>San Bernardino County Fire HHW. Its Big Bear collection site is at the City of Big Bear Lake Public Works Yard on Garstin Dr and is normally open on Saturdays. Check current hours before you go.</td></tr>\n<tr><td><b>Green waste</b> (needles, branches)</td><td>Green carts. Big Bear City CSD customers can also self-haul green waste to the transfer station with their Disposal Use Permit at no extra cost. Limits and dates are in the <a href=\"/guides/post-winter-storm-debris-cleanup-big-bear/\">storm debris guide</a>.</td></tr>\n<tr><td><b>Cans and bottles</b></td><td>The Recycling/Buy-Back Center at 41970 Garstin Dr (Tue–Sat, closed for lunch). Hours are on the city's Clean Bear page.</td></tr>\n</table></div>\n<p>The full rules, with addresses and what each site refuses, are in our <a href=\"/guides/big-bear-dump-transfer-station-guide/\">Big Bear dump and transfer station guide</a>.</p>\n<h2>Before and after: what \"clean\" looks like</h2>\n{{STOCK:cabin-living-room|The goal: clear surfaces and a walkable floor plan. Buyers, renters and guests should be able to picture their own weekend here.}}\n<p>For a sale or a new listing, aim for <b>clear floors and surfaces, one piece of furniture per purpose, and empty closets</b> that show their size. For a family cabin you're keeping, the goal is simpler: nothing broken, nothing expired, and nothing stored against the walls where it can hide mice or hold moisture. If the cabin is going on the market, read <a href=\"/guides/declutter-cabin-before-selling-or-renting-big-bear/\">how to declutter a cabin before selling or renting</a>.</p>\n<h2>What a cabin cleanout costs: the real factors</h2>\n<p>We don't publish flat prices, because two cabins with the same square footage can be completely different jobs. These are the things that move the cost up or down, whether you do it yourself or hire it out:</p>\n<ul>\n<li><b>Volume and weight.</b> County transfer stations charge by weight: a flat fee up to 300 lb, then a per-ton rate (see the table in our <a href=\"/guides/big-bear-dump-transfer-station-guide/#what-a-dump-run-costs-county-fees\">dump guide</a>). Appliances, tile, wet carpet and books weigh more than they look.</li>\n<li><b>Item types.</b> Tires, refrigerators, e-waste and hazardous items each have their own rules and fees, and some have to go to a different place.</li>\n<li><b>Access.</b> Stairs, a steep or icy driveway, a long carry from the street, or a loft ladder all add labor time.</li>\n<li><b>Free programs you can still use.</b> Use the annual free bulky pickup (City of Big Bear Lake) if you haven't already this year. Check the Big Bear City CSD community clean-up days too. The 2026 general clean-up days have passed, but the CSD lists a green-waste-only drop-off day on November 14, 2026.</li>\n<li><b>Your time and vehicle.</b> A pickup, tie-downs and a tarp (uncovered loads pay double at county sites), plus round trips to Holcomb Valley Road.</li>\n</ul>\n<p>With us, the price is confirmed before any work starts, after a free on-site look or from photos you text us.</p>\n<h2>Owners who live off the mountain</h2>\n<p>Many Big Bear cabins are second homes. If you're driving up from Orange County or Los Angeles for a weekend, do the deciding remotely. Walk the cabin on a video call with family, tag items with colored stickers, and have the heavy part scheduled for a weekday. We work with lockboxes and gate codes and send before-and-after photos when we finish.</p>\n",
+  "faq": [
+   [
+    "How long does a cabin cleanout take?",
+    "It depends on how full the cabin is and how quickly decisions get made. Sorting usually takes longer than hauling. A single garage can take an afternoon; a fully furnished multi-level cabin can take a few days of sorting before the haul. Making keep-or-go decisions in advance (photos, colored stickers) is the biggest time saver."
+   ],
+   [
+    "Can I put furniture at the Clean Bear Site?",
+    "No. The City of Big Bear Lake Clean Bear Site (41970 Garstin Dr) has bins for household trash, recycling, green waste, e-waste, universal waste and soaked ashes. There is no bulky-item bin. Use the annual Big Bear Disposal bulky pickup, the Big Bear Transfer Station, or a haul-away service for furniture."
+   ],
+   [
+    "What can't go in the trash during a cleanout?",
+    "In California, electronics (TVs, monitors, computers, microwaves, phones), batteries, fluorescent tubes, paint, propane cylinders, treated wood and asbestos can't go in the trash. Take them to the San Bernardino County Fire HHW program or the right e-waste option."
+   ],
+   [
+    "Do you take hazardous items like paint and propane?",
+    "No. We don't haul paint, chemicals, motor oil, fuels, asbestos or propane tanks. Box them separately and take them to the county HHW collection site. We take almost everything else, from furniture and appliances to garage contents and deck debris."
+   ],
+   [
+    "Do I need to be there for the cleanout?",
+    "No. Many of our customers own Big Bear cabins but live off the mountain. We can work from a lockbox or gate code, follow a list or colored stickers, and send before-and-after photos when we finish."
+   ],
+   [
+    "How do I get a quote for a cabin cleanout?",
+    "Text or WhatsApp 2–3 photos of the rooms and the driveway, plus the neighborhood, to (425) 233-2945, or ask for a free on-site quote. The price is confirmed before any work starts."
+   ]
+  ],
+  "sources": [
+   [
+    "City of Big Bear Lake: public trash sites (Clean Bear)",
+    "https://www.bigbearlake.gov/index.php/en/community-main/public-trash-sites-clean-bear"
+   ],
+   [
+    "Big Bear Disposal: residential services (bulky pickup, green carts, Rent-a-Bin)",
+    "https://bigbeardisposal.com/services/residential-services/"
+   ],
+   [
+    "Big Bear City Community Services District: residential collection and bulky items",
+    "https://www.bbccsd.org/index.php/solid-waste/residential-collection"
+   ],
+   [
+    "Big Bear City CSD: community clean-up days",
+    "https://www.bbccsd.org/index.php/solid-waste/community-clean-up"
+   ],
+   [
+    "San Bernardino County Public Works: accepted and prohibited waste at county sites",
+    "https://dpw.sbcounty.gov/solid-waste-management/accepted-waste/"
+   ],
+   [
+    "San Bernardino County Public Works: disposal fees (pricing effective July 1, 2023)",
+    "https://dpw.sbcounty.gov/solid-waste-management/fees/"
+   ],
+   [
+    "San Bernardino County Fire: household hazardous waste (HHW) program",
+    "https://sbcfire.org/hhw/"
+   ],
+   [
+    "CalRecycle: household hazardous and universal waste that can't go in the trash",
+    "https://calrecycle.ca.gov/homehazwaste/info/"
+   ]
+  ]
+ },
+ {
+  "slug": "old-furniture-appliance-disposal-big-bear",
+  "order": 2,
+  "published": "2026-10-24",
+  "reviewed": "October 2026",
+  "photo": "old-armchair",
+  "title": "Old Furniture & Appliance Disposal in Big Bear",
+  "desc": "Where old couches, mattresses, fridges, washers and TVs can go in Big Bear and the San Bernardino Mountains: pickup programs, county rules, Freon and e-waste.",
+  "h1": "What to Do With Old Furniture and Appliances in Big Bear",
+  "eyebrow": "Disposal guide · San Bernardino Mountains",
+  "about": "Disposing of old furniture and appliances in Big Bear and the San Bernardino Mountains",
+  "answer_q": "How do I get rid of an old couch or fridge in Big Bear?",
+  "answer": "Start with the free and low-cost programs. In the City of Big Bear Lake, Big Bear Disposal gives each residence one free curbside bulky pickup a year (up to 3 cubic yards or 4 large items). In Big Bear City, Sugarloaf and Erwin Lake, the Big Bear City CSD picks up bulky items for a per-item fee. Refrigerators and freezers are only accepted at county sites once the Freon is out. TVs, monitors and microwaves are e-waste and can't go in the trash. For heavy items, stairs or several pieces at once, a haul-away crew is usually simpler.",
+  "howto": {
+   "name": "How to dispose of old furniture and appliances in Big Bear",
+   "steps": [
+    [
+     "List every item and what it's made of",
+     "<p>Write down each piece: sofa, sleeper sofa (they contain a heavy steel frame), mattress and box spring, dresser, fridge, washer, dryer, range, microwave, TV. The item type decides where it can legally go, so sort by type before you think about logistics.</p>"
+    ],
+    [
+     "Try sell, donate or give away first",
+     "<p>Solid wood furniture, working appliances and clean mattresses still have value. Post them locally with clear photos and a pickup-only note. Most charities won't take stained upholstery, mattresses or appliances that don't work, so call before you load up.</p>"
+    ],
+    [
+     "Ask about retailer take-back",
+     "<p>Buying a replacement? California requires retailers that deliver a new mattress to offer to take back the old one (see Bye Bye Mattress). Many appliance stores offer haul-away at delivery too. Ask when you order, because adding it later is harder.</p>"
+    ],
+    [
+     "Book your area's bulky pickup",
+     "<p><b>City of Big Bear Lake (92315):</b> schedule the free annual bulky pickup with Big Bear Disposal; extra pickups cost a fee. <b>Big Bear City, Sugarloaf, Erwin Lake and Baldwin Lake:</b> book Big Bear City CSD curbside bulky pickup (per-item fee). Read the list of what each program won't take before you drag anything to the curb.</p>"
+    ],
+    [
+     "Prepare appliances properly",
+     "<p>Unplug and empty fridges and freezers; defrost and dry them, and tape the doors shut for transport. A fridge or freezer can only go to a county site once the refrigerant (Freon) has been removed. Disconnect washers and dryers at the valves, drain the hoses, and leave gas appliances to a qualified technician to disconnect and cap.</p>"
+    ],
+    [
+     "Separate the e-waste",
+     "<p>TVs, monitors, computers, microwaves and anything with a battery or circuit board are e-waste or universal waste in California and can't go in the trash. Old CRT tube TVs are heavy and aren't accepted at county sites without a scale house. Use the county HHW program's free TV and monitor drop-off, or the Clean Bear Site's e-waste bin if you're an eligible City of Big Bear Lake resident.</p>"
+    ],
+    [
+     "Self-haul to the transfer station, or have it hauled",
+     "<p>The Big Bear Transfer Station is at 38550 Holcomb Valley Rd, Big Bear City, open Monday–Saturday 8 AM–4:30 PM. Tarp and tie down the load (uncovered loads pay double), and expect weight-based fees. If the pieces are upstairs, oversized or more than one trip, a haul-away service saves the lifting and the round trips.</p>"
+    ]
+   ]
+  },
+  "body": "<p>Big Bear has more heavy furniture per square foot than most places. There are log-frame bunk beds, sleeper sofas hauled up decades ago, and fridges in the garage that have outlived three owners. Getting rid of them is mostly about knowing which program fits your address and which rules apply to each item type. This guide covers the whole Big Bear Valley and the nearby San Bernardino Mountains communities that use the Big Bear Transfer Station.</p>\n<h2>Step-by-step: getting rid of furniture and appliances</h2>\n{{HOWTO}}\n{{CTA:Heavy, upstairs or more than one item?|Text a photo of each item and where it sits (stairs, deck, garage). We'll send a firm price, and we carry it out from wherever it is.}}\n<h2>Your options by address</h2>\n<div class=\"tscroll\"><table>\n<tr><th>Where the property is</th><th>Bulky-item program</th><th>Notes</th></tr>\n<tr><td><b>City of Big Bear Lake</b> (Village, Boulder Bay, Fox Farm, Moonridge)</td><td>Big Bear Disposal: <b>one free curbside bulky pickup per year</b>, up to 3 cubic yards or 4 large items. Extra pickups cost a fee.</td><td>The Clean Bear Site (41970 Garstin Dr) has no bulky bin, so furniture and appliances can't go there.</td></tr>\n<tr><td><b>Big Bear City, Sugarloaf, Erwin Lake, Baldwin Lake</b></td><td>Big Bear City CSD: curbside bulky items for a <b>per-item fee</b>. The CSD also holds community clean-up days.</td><td>The CSD doesn't take construction debris, tires, electronics, carpet or metal curbside. 2026 clean-up days (April 25, August 1, October 10) have passed.</td></tr>\n<tr><td><b>Fawnskin and other unincorporated areas</b></td><td>Check with your trash provider; residential service in Fawnskin is optional through Big Bear Disposal.</td><td>Not eligible for the City's Clean Bear Site.</td></tr>\n<tr><td><b>Anywhere in the valley</b></td><td>Self-haul to the Big Bear Transfer Station, 38550 Holcomb Valley Rd (Mon–Sat 8 AM–4:30 PM).</td><td>County rules apply: refrigerators must be Freon-free; items over 4 feet long aren't accepted at transfer stations.</td></tr>\n</table></div>\n<h2>Item by item: what's allowed where</h2>\n{{STOCK:old-washing-machines|Washers, dryers and fridges are the items people most often get stuck with. Each has its own rule.}}\n<h3>Sofas, recliners, sleeper sofas and sectionals</h3>\n<p>These are all bulky items, eligible for the curbside programs above. Sleeper sofas and power recliners are far heavier than they look because of the steel mechanism. If you're taking one apart to fit it in a truck, remember that county transfer stations don't accept items over 4 feet long. Strap everything down: loose cushions blowing off a truck on Highway 18 are a hazard, and county sites charge double for uncovered or unsecured loads.</p>\n<h3>Mattresses and box springs</h3>\n<p>California runs a statewide mattress recycling program (Bye Bye Mattress). Retailers delivering a new mattress have to offer to take back the old one, so ask at purchase. Otherwise, mattresses count as bulky items for curbside pickup. During a cabin turnover, wrap mattresses in plastic before carrying them through the cabin, especially if bedbugs are a concern.</p>\n<h3>Dressers, tables, bunk beds and bed frames</h3>\n<p>Solid wood sells or donates well. Take out drawers and unbolt bunk beds before you move them, because a full dresser is a two-person carry on stairs. Particleboard pieces that are already broken are trash or bulky waste; they rarely survive a second move.</p>\n<h3>Refrigerators, freezers, wine fridges and AC units</h3>\n<p>These hold refrigerant. San Bernardino County sites accept refrigerators <b>only once the Freon has been removed</b>. California also treats appliances as containing \"materials that require special handling\", which have to be removed before the appliance is crushed or recycled. Don't cut refrigerant lines yourself. A bulky pickup program, an appliance retailer's haul-away or a hauler that delivers to a facility that processes appliances is the practical route.</p>\n<h3>Washers, dryers, ranges and dishwashers</h3>\n<p>These are metal appliances, accepted as bulky items. Disconnect water at the valves and drain the hoses into a bucket first. A gas dryer or range must be disconnected and capped by someone qualified. Never leave an open gas line.</p>\n<h3>TVs, monitors, microwaves and electronics</h3>\n<p>California bans electronics from the trash, including TVs, monitors, laptops, microwaves and phones. County sites without a scale house don't accept old CRT tube TVs or monitors. The county's HHW program offers free TV and monitor drop-off. Eligible City of Big Bear Lake residents can use the e-waste bin at the Clean Bear Site.</p>\n<h3>Water heaters, propane grills and anything with fuel</h3>\n<p>Drain water heaters fully. For grills, disconnect and remove the propane cylinder; cylinders are hazardous waste and go to HHW. We don't haul propane tanks, fuel or chemicals.</p>\n<h2>Bear country and snow: local logistics</h2>\n<ul>\n<li><b>Don't leave a fridge at the curb with food smells.</b> Clean it out and air it inside. A curbside fridge with residue is an invitation to bears.</li>\n<li><b>Snow and ice.</b> From late fall to spring, carry routes over decks and outdoor stairs can be icy. Clear and salt the path before moving day, and don't plan a two-person stair carry on a storm day.</li>\n<li><b>Narrow streets.</b> Many Big Bear streets have no shoulder. Leave room for plows and emergency vehicles when you stage items for pickup, and follow your provider's timing rules for when carts and items can go out.</li>\n</ul>\n<h2>Costs: what you'll actually pay</h2>\n<p>We don't publish prices, and we won't make up an \"average cost\". These are the real cost inputs, with official figures where there are any:</p>\n<ul>\n<li><b>Free:</b> the City of Big Bear Lake's one free annual bulky pickup (up to 3 cubic yards or 4 large items), if you haven't used it this year. Retailer mattress take-back with a new delivery.</li>\n<li><b>Per-item fees:</b> Big Bear City CSD curbside bulky pickup charges per item; check their current fee list.</li>\n<li><b>Weight-based fees at the transfer station:</b> county fees are listed below.</li>\n<li><b>Labor and access:</b> stairs, lofts, long carries and appliances that have to be disconnected all add time if you hire help.</li>\n</ul>\n<div class=\"tscroll\"><table>\n<tr><th>County charge at transfer stations (residential)</th><th>Listed fee</th></tr>\n<tr><td>Load up to 300 lb</td><td>$13.71</td></tr>\n<tr><td>Loads of 301 lb or more</td><td>$61.49 per ton, prorated</td></tr>\n<tr><td>Passenger and light-truck tires (up to 9, off the rim)</td><td>$5.31 each</td></tr>\n<tr><td>Hard-to-handle and special-handling items</td><td>Added $53.14 per ton ($26.57 minimum)</td></tr>\n<tr><td>Uncovered or unsecured load</td><td>Fee is doubled</td></tr>\n</table></div>\n<p class=\"small muted\">Source: <a href=\"https://dpw.sbcounty.gov/solid-waste-management/fees/\" rel=\"noopener\">San Bernardino County Public Works fee schedule</a>, labeled \"Pricing Effective July 1, 2023\", checked October 24, 2026. These are the county's fees, not ours. Check the current schedule before you go.</p>\n<p>Hiring us? The price is confirmed before we start, from a free on-site look or from photos by text. One price covers loading from wherever the items sit and delivering them to a facility that accepts them.</p>\n",
+  "faq": [
+   [
+    "Does Big Bear have free furniture pickup?",
+    "Yes, in the City of Big Bear Lake. Big Bear Disposal gives each residence one free curbside bulky-item pickup per year, up to 3 cubic yards or 4 large items; extra pickups cost a fee. In Big Bear City, Sugarloaf and Erwin Lake, the Big Bear City CSD picks up bulky items for a per-item fee."
+   ],
+   [
+    "Can I take a refrigerator to the Big Bear dump?",
+    "San Bernardino County sites accept refrigerators only once the Freon has been removed. Have the refrigerant removed by a qualified service first, or use a bulky pickup program, retailer haul-away or a hauler that delivers to an appliance processor."
+   ],
+   [
+    "Where can I get rid of an old TV in Big Bear?",
+    "Not in the trash: California bans electronics from household trash. The San Bernardino County Fire HHW program offers free TV and monitor drop-off. Eligible City of Big Bear Lake residents can use the e-waste bin at the Clean Bear Site, 41970 Garstin Dr."
+   ],
+   [
+    "How do I get rid of a mattress in Big Bear?",
+    "If you're buying a new one, ask the retailer to take the old one back; California's mattress program requires delivering retailers to offer this. Otherwise, use your bulky pickup program, take it to the Big Bear Transfer Station, or have it hauled."
+   ],
+   [
+    "Can I leave furniture at the Clean Bear Site?",
+    "No. The Clean Bear Site has bins for household trash, recycling, green waste, e-waste, universal waste and soaked ashes only. Furniture and appliances need a bulky pickup, a transfer-station trip or a haul-away service."
+   ],
+   [
+    "Will you carry furniture down from a loft or upstairs bedroom?",
+    "Yes. Carrying items out from wherever they sit (lofts, upstairs bedrooms, decks, garages) is the normal job for us in Big Bear. Text a photo of the item and the stairs to (425) 233-2945 for a firm price."
+   ]
+  ],
+  "sources": [
+   [
+    "Big Bear Disposal: residential services (bulky pickup, green carts, Rent-a-Bin)",
+    "https://bigbeardisposal.com/services/residential-services/"
+   ],
+   [
+    "Big Bear City Community Services District: residential collection and bulky items",
+    "https://www.bbccsd.org/index.php/solid-waste/residential-collection"
+   ],
+   [
+    "Big Bear City CSD: community clean-up days",
+    "https://www.bbccsd.org/index.php/solid-waste/community-clean-up"
+   ],
+   [
+    "City of Big Bear Lake: public trash sites (Clean Bear)",
+    "https://www.bigbearlake.gov/index.php/en/community-main/public-trash-sites-clean-bear"
+   ],
+   [
+    "San Bernardino County Public Works: accepted and prohibited waste at county sites",
+    "https://dpw.sbcounty.gov/solid-waste-management/accepted-waste/"
+   ],
+   [
+    "San Bernardino County Public Works: disposal fees (pricing effective July 1, 2023)",
+    "https://dpw.sbcounty.gov/solid-waste-management/fees/"
+   ],
+   [
+    "San Bernardino County Fire: household hazardous waste (HHW) program",
+    "https://sbcfire.org/hhw/"
+   ],
+   [
+    "CalRecycle: household hazardous and universal waste that can't go in the trash",
+    "https://calrecycle.ca.gov/homehazwaste/info/"
+   ],
+   [
+    "Bye Bye Mattress (California mattress recycling program)",
+    "https://byebyemattress.com/california/"
+   ]
+  ]
+ },
+ {
+  "slug": "declutter-cabin-before-selling-or-renting-big-bear",
+  "order": 3,
+  "published": "2026-10-24",
+  "reviewed": "October 2026",
+  "photo": "packing-donation-boxes",
+  "title": "Declutter a Big Bear Cabin Before Selling or Renting",
+  "desc": "How to declutter a Big Bear cabin before listing it for sale or rent: a room plan, defensible space disclosure, vacation-rental trash rules and cost factors.",
+  "h1": "How to Declutter a Big Bear Cabin Before You Sell or Rent It",
+  "eyebrow": "Selling or renting guide",
+  "about": "Decluttering a cabin in Big Bear, California before selling or renting it",
+  "answer_q": "What should I clear out before listing a Big Bear cabin?",
+  "answer": "Clear everything that hides the cabin's size or condition: extra furniture, personal items, packed closets, garage and under-deck storage, broken deck furniture and dead appliances. Clear the lot too. In California, sellers of homes in High or Very High Fire Hazard Severity Zones must give buyers defensible-space documentation (Civil Code 1102.19), so plan the brush clearing and the decluttering together. For a vacation rental in the City of Big Bear Lake, make sure trash capacity and bear-safe storage are in place before the first guest.",
+  "howto": {
+   "name": "How to declutter a Big Bear cabin before selling or renting",
+   "steps": [
+    [
+     "Walk the cabin with your agent or property manager",
+     "<p>Ask them what buyers or guests in your price range expect to see, and which rooms photograph worst. Agree on a list of what stays as staging (a dining set, a sofa, beds) and what goes. Do this before you sort anything.</p>"
+    ],
+    [
+     "Set a date that works backward from the listing",
+     "<p>Count back from the photo day: sorting, donation pickups, bulky pickup scheduling, a haul, cleaning and then any touch-up painting. In winter, add slack for storms and plowing.</p>"
+    ],
+    [
+     "Pack personal items first",
+     "<p>Family photos, collections, kids' art, papers and anything with names on it go into labeled boxes. Store them off-site or in one closet you leave closed. Buyers need to picture their own cabin; renters need surfaces to put their things on.</p>"
+    ],
+    [
+     "Cut furniture to one piece per purpose",
+     "<p>Big Bear cabins tend to collect extra seating, side tables and bunks. Keep the pieces that show how each room is used, and remove the rest. Make sure walkways between the door, kitchen, deck and stairs are clear.</p>"
+    ],
+    [
+     "Empty closets, the garage and storage spaces",
+     "<p>Buyers open everything. Clear coat closets, linen closets, the garage, crawlspace storage and the shed so they show their real size. Hazardous leftovers (paint, propane cylinders, chemicals) go to the county HHW program, not the trash.</p>"
+    ],
+    [
+     "Clear the deck, yard and lot",
+     "<p>Remove snow-damaged patio furniture, old grills and dead planters. Clear pine needles, brush and firewood stacked against the cabin. A clean lot photographs better, and in fire zones it's part of the sale paperwork (see below).</p>"
+    ],
+    [
+     "Haul it all at once, then clean",
+     "<p>Use the annual free bulky pickup or the CSD per-item pickup where you can, then book one haul for what's left so the cabin is empty before the cleaners and photographer arrive. Take dated photos of every room for your records.</p>"
+    ]
+   ]
+  },
+  "body": "<p>A cluttered cabin sells and rents for less, because people can't see the space they're paying for. Decluttering is the cheapest prep there is, and in Big Bear it overlaps with two local requirements: <b>defensible space</b> around the cabin when you sell, and <b>trash and vacation-rental rules</b> when you rent. This guide covers both, in the order that keeps your listing date on track.</p>\n<h2>Step-by-step: decluttering for a listing</h2>\n{{HOWTO}}\n{{CTA:Listing date coming up?|Text photos of the rooms, garage and deck. We can clear everything that isn't staying in one visit and send before-and-after photos to you or your agent.}}\n<h2>Selling: the defensible-space disclosure</h2>\n<p>California Civil Code § 1102.19 applies to sales of homes in a <b>High or Very High Fire Hazard Severity Zone</b>, which covers much of the San Bernardino Mountains. The seller must give the buyer documentation that the property complies with defensible-space requirements. The documentation must be from an inspection done in the 6 months before the sale. If the seller can't provide it, the buyer and seller can sign an agreement that the buyer will get compliance within 1 year of the close of escrow. Ask your agent which applies to you and how local inspections are scheduled.</p>\n<p>In practice: <b>clear the lot before the inspection, not after.</b> Pine needles on the roof and decks, brush and ladder fuels, firewood against the walls and junk stored under decks are the usual problems. Our <a href=\"/guides/big-bear-fire-abatement-letter/\">fire abatement letter guide</a> explains the clearing standards, and our <a href=\"/weed-abatement/\">weed abatement service</a> clears and hauls in the same visit.</p>\n{{STOCK:cabin-room-clutter|Too much furniture, full walls and packed shelves make a cabin look smaller in listing photos.}}\n<h2>Renting: what short-term and long-term rentals need</h2>\n<ul>\n<li><b>Vacation rentals in the City of Big Bear Lake</b> need a City vacation rental license. Trash problems are a common operational violation; the City's fines escalate with repeat violations within 12 months. Make sure the property has enough trash capacity for a full house of guests, and bear-resistant storage.</li>\n<li><b>Guest-proof storage.</b> Lock one owner's closet and empty everything else. Guests shouldn't find a garage of old paint cans or a shed of broken furniture.</li>\n<li><b>Long-term rentals.</b> Leave the closets, cabinets and garage empty so tenants can use them, and remove anything you don't want to be responsible for (old appliances, exercise equipment, a hot tub that doesn't work).</li>\n<li><b>Turnover routine.</b> Once it's listed, see our <a href=\"/guides/airbnb-turnover-checklist-big-bear/\">Big Bear Airbnb turnover checklist</a> for the between-guest routine.</li>\n</ul>\n<h2>Room-by-room: what to keep and what goes</h2>\n<div class=\"tscroll\"><table>\n<tr><th>Room</th><th>Keep for staging or renting</th><th>Clear out</th></tr>\n<tr><td>Living room</td><td>One sofa set, a coffee table, a rug and a lamp or two</td><td>Extra chairs, dated electronics and cables, stacked games and DVDs, wall-to-wall décor</td></tr>\n<tr><td>Kitchen</td><td>Clear counters, one set of dishes (rentals: a full matching set)</td><td>Duplicate cookware, small appliances, old food (bag it indoors; bears)</td></tr>\n<tr><td>Bedrooms</td><td>Beds with clean bedding, one nightstand each</td><td>Spare mattresses, extra dressers, worn bunk beds, overflowing closets</td></tr>\n<tr><td>Garage and shed</td><td>Only what transfers with the sale or the renter needs (a snow shovel)</td><td>Old tires, scrap lumber, broken sleds, paint and chemicals (HHW)</td></tr>\n<tr><td>Deck and yard</td><td>A clean seating set</td><td>Snow-cracked furniture, rusted grills, firewood against the walls, needles and brush</td></tr>\n</table></div>\n<h2>Where it all goes</h2>\n{{STOCK:labeling-boxes|Sort as you pack: Keep, Donate, Sell and Haul boxes, each labeled with a room.}}\n<ul>\n<li><b>Donations and resale:</b> working furniture, appliances and clean household goods. Call charities ahead; many won't take mattresses or worn upholstery.</li>\n<li><b>Bulky items:</b> City of Big Bear Lake addresses get one free curbside bulky pickup a year from Big Bear Disposal. Big Bear City CSD areas get per-item curbside pickup. Details are in our <a href=\"/guides/old-furniture-appliance-disposal-big-bear/\">furniture and appliance disposal guide</a>.</li>\n<li><b>Everything else:</b> the Big Bear Transfer Station, or one haul-away visit. See the <a href=\"/guides/big-bear-dump-transfer-station-guide/\">Big Bear dump guide</a> for rules and fees.</li>\n<li><b>Hazardous leftovers:</b> San Bernardino County Fire HHW. Its Big Bear site is at the City of Big Bear Lake Public Works Yard on Garstin Dr and is normally open Saturdays.</li>\n</ul>\n<h2>Cost factors: declutter, store or haul?</h2>\n<p>We won't give you a made-up average. These are the trade-offs that actually decide the cost:</p>\n<ul>\n<li><b>How much is leaving.</b> Haul and disposal cost scales with volume and weight. County transfer-station fees are weight-based (see the <a href=\"/guides/big-bear-dump-transfer-station-guide/#what-a-dump-run-costs-county-fees\">county fee table</a>).</li>\n<li><b>Storage vs. letting go.</b> A storage unit is a monthly cost on things you may never use again. Ask yourself whether you'd buy each piece again at today's price.</li>\n<li><b>Free programs first.</b> The annual free bulky pickup (City of Big Bear Lake) and donation pickups cost you nothing but scheduling time.</li>\n<li><b>Access and timing.</b> Stairs, lofts, icy decks and a tight listing date all add labor. Booking early lets the work fit around weather.</li>\n<li><b>Lot clearing.</b> Brush, needles and debris are priced by area, density and haul volume. It's usually cheaper done in one visit with the cleanout.</li>\n</ul>\n<p>With us, the price is confirmed before work starts, from a free on-site visit or from photos you text.</p>\n",
+  "faq": [
+   [
+    "Do I need a defensible space inspection to sell a house in Big Bear?",
+    "If the home is in a High or Very High Fire Hazard Severity Zone, California Civil Code 1102.19 requires the seller to give the buyer documentation of defensible-space compliance from an inspection done in the 6 months before the sale. Otherwise, the parties can agree that the buyer will get compliance within 1 year of closing. Ask your agent how it applies to your property."
+   ],
+   [
+    "Should I remove furniture before selling my cabin?",
+    "Usually some, not all. Keep pieces that show how each room is used (a sofa set, beds, a dining table) and remove extra seating, spare beds, worn pieces and anything blocking walkways. Your agent can tell you what helps photos in your price range."
+   ],
+   [
+    "What should a Big Bear vacation rental have before the first guest?",
+    "Clear closets and storage guests can use, a locked owner's closet, enough trash capacity for a full house, bear-safe trash storage, and no hazardous leftovers in the garage or shed. Inside the City of Big Bear Lake, you also need the City's vacation rental license."
+   ],
+   [
+    "Can you clear the cabin and the lot in one visit?",
+    "Yes. We can haul the cleanout and clear pine needles, brush and weeds to defensible-space standards in the same visit, which helps before a sale inspection or a listing photo day."
+   ],
+   [
+    "Can you work with my real estate agent or property manager?",
+    "Yes. We regularly coordinate access by lockbox or gate code, follow a keep-or-go list or stickers, and send before-and-after photos to the owner and the agent or manager."
+   ]
+  ],
+  "sources": [
+   [
+    "California Civil Code § 1102.19 (defensible space disclosure when selling)",
+    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1102.19"
+   ],
+   [
+    "City of Big Bear Lake — vacation rental program",
+    "https://www.citybigbearlake.com/index.php/en/departments/city-manager/transient-private-home-rental-tphr-program"
+   ],
+   [
+    "Big Bear Disposal: residential services (bulky pickup, green carts, Rent-a-Bin)",
+    "https://bigbeardisposal.com/services/residential-services/"
+   ],
+   [
+    "Big Bear City Community Services District: residential collection and bulky items",
+    "https://www.bbccsd.org/index.php/solid-waste/residential-collection"
+   ],
+   [
+    "City of Big Bear Lake: public trash sites (Clean Bear)",
+    "https://www.bigbearlake.gov/index.php/en/community-main/public-trash-sites-clean-bear"
+   ],
+   [
+    "San Bernardino County Public Works: accepted and prohibited waste at county sites",
+    "https://dpw.sbcounty.gov/solid-waste-management/accepted-waste/"
+   ],
+   [
+    "San Bernardino County Public Works: disposal fees (pricing effective July 1, 2023)",
+    "https://dpw.sbcounty.gov/solid-waste-management/fees/"
+   ],
+   [
+    "San Bernardino County Fire: household hazardous waste (HHW) program",
+    "https://sbcfire.org/hhw/"
+   ]
+  ]
+ },
+ {
+  "slug": "shed-removal-big-bear",
+  "order": 4,
+  "published": "2026-10-24",
+  "reviewed": "October 2026",
+  "photo": "old-wooden-shed",
+  "title": "Shed Removal in Big Bear: Permits, Steps & Disposal",
+  "desc": "How to remove an old shed or small deck section in Big Bear: permit checks, asbestos and treated-wood rules, safe tear-down steps, disposal and cost factors.",
+  "h1": "How to Remove an Old Shed in Big Bear (and What the Rules Say)",
+  "eyebrow": "Shed & tear-out guide",
+  "about": "Removing an old shed or small deck section in Big Bear, California",
+  "answer_q": "Do I need a permit to tear down a shed in Big Bear?",
+  "answer": "It depends on the shed and where it is. In unincorporated San Bernardino County (Big Bear City, Sugarloaf, Fawnskin, Erwin Lake), a one-story shed up to 120 sq ft with no utilities can be built without a building permit. Demolishing a building that was permitted generally needs a demolition permit, and county disposal sites require asbestos certification for demolition waste from structures built before 1984. Inside the City of Big Bear Lake, check with the City. Always empty the shed of hazardous items first, cut debris to under 4 feet for the transfer station, and remember that treated wood can't go to the Big Bear Transfer Station.",
+  "howto": {
+   "name": "How to remove an old shed in Big Bear",
+   "steps": [
+    [
+     "Find out what you have",
+     "<p>Measure the footprint and note the construction: wood frame, metal kit or resin. Check whether it has power, water or a concrete slab, and roughly when it was built. A small kit shed and a 1970s shed with electrical service are very different jobs.</p>"
+    ],
+    [
+     "Check permits with the right office",
+     "<p>Unincorporated areas (Big Bear City, Sugarloaf, Fawnskin, Erwin Lake, Baldwin Lake) go through San Bernardino County Land Use Services Building &amp; Safety. Addresses in the City of Big Bear Lake go through the City. If the shed was built with a permit, or is bigger than the county's 120 sq ft no-permit limit, expect to need a demolition permit, and ask before you start.</p>"
+    ],
+    [
+     "Disconnect utilities first",
+     "<p>If there's any wiring, a qualified electrician should disconnect it at the source and make it safe. Shut off and cap any water line. Never tear into a wall that might have live wiring.</p>"
+    ],
+    [
+     "Empty it, and separate the hazardous items",
+     "<p>Sheds are where paint, stains, fuel, pesticides, pool chemicals and propane cylinders end up. All of those go to the San Bernardino County Fire HHW program, not into the debris pile. Tools, bikes and usable items get sold, donated or moved.</p>"
+    ],
+    [
+     "Check for asbestos on older sheds",
+     "<p>San Bernardino County disposal sites require asbestos certification for waste from demolished structures built before 1984, and always for burnt structures. Older roofing, siding and floor tiles are the usual suspects. If it's pre-1984, plan for testing before tear-down.</p>"
+    ],
+    [
+     "Take it down top to bottom",
+     "<p>Work from the roof down: roofing, then roof sheathing and rafters, then wall panels, then the frame and floor. Never stand on a weak or snow-loaded roof. Wear gloves, eye protection and boots, and pull or bend nails as you go. Metal kit sheds come apart in reverse of assembly; keep the panels flat because the edges are sharp.</p>"
+    ],
+    [
+     "Sort and cut debris to size",
+     "<p>Keep separate piles for clean lumber, treated lumber, metal, roofing and trash. County transfer stations don't accept items over 4 feet long, so cut long boards and panels down. Treated wood is only accepted at the county's Mid-Valley and Victorville sites, not Big Bear.</p>"
+    ],
+    [
+     "Haul, then finish the site",
+     "<p>Tarp and tie down every load, because the county doubles the fee for uncovered loads. Pick up nails with a magnet, fill post holes, and decide whether the concrete pad stays. Bare ground next to a cabin is a good chance to improve defensible space.</p>"
+    ]
+   ]
+  },
+  "body": "<p>Big Bear is hard on sheds. Snow load sags roofs, freeze-thaw cycles rot the floor framing, and pine needles pile up on the roof and against the walls. A lot of the sheds we see were built decades ago and have changed hands with the cabin. Before you pull one down, sort out three things: <b>who issues permits for your address, what the shed is made of, and where each kind of debris is allowed to go.</b> The same rules cover small deck sections and fencing.</p>\n<div class=\"note small\"><p style=\"margin:0\"><b>What we do and don't do.</b> Junk Removal Big Bear is not a licensed contractor. Painting, light demolition and similar work is limited to minor jobs under $1,000 total (labor and materials) that don't need a building permit, as California law allows. We take down and haul small, non-structural sheds, playsets, deck boards and short fence runs that qualify as minor work. Anything bigger, structural or permitted needs a licensed demolition contractor and, often, a permit.</p></div>\n<h2>Step-by-step: removing a shed safely</h2>\n{{HOWTO}}\n{{CTA:Want the shed gone, contents and all?|Text a photo of the shed, its contents and the path to the street. We'll tell you whether it fits our minor-work scope and send a firm price.}}\n<h2>Permits: county vs. City of Big Bear Lake</h2>\n<div class=\"tscroll\"><table>\n<tr><th>Where the property is</th><th>Who to ask</th><th>What the county page says</th></tr>\n<tr><td>Big Bear City, Sugarloaf, Fawnskin, Erwin Lake, Baldwin Lake (unincorporated)</td><td>San Bernardino County Land Use Services, Building &amp; Safety</td><td>A one-story accessory structure up to 120 sq ft, with no utilities, under 14 ft tall and within setbacks, doesn't need a building permit. Demolition is on the county's list of work that needs a permit, and a demolition permit is required to remove all or part of a permitted building.</td></tr>\n<tr><td>City of Big Bear Lake (92315)</td><td>City of Big Bear Lake Building &amp; Safety</td><td>The City sets its own rules; confirm before you start.</td></tr>\n</table></div>\n<p class=\"small muted\">We summarize the county pages linked in the sources below. We're not your permit authority, so ask Building &amp; Safety for your specific address.</p>\n<h2>Disposal rules that catch people out</h2>\n<ul>\n<li><b>Over 4 feet long:</b> not accepted at county transfer stations (landfills take up to 10 feet). Cut everything down before you load.</li>\n<li><b>Treated wood:</b> pressure-treated lumber (common in shed floors, deck framing and posts) is accepted only at the county's Mid-Valley and Victorville sites. California also lists treated wood as hazardous for household disposal, so it can't go in the trash.</li>\n<li><b>Asbestos:</b> demolition waste from structures built before 1984 needs asbestos certification at county sites. Friable asbestos goes to specific out-of-county landfills only. We don't handle asbestos.</li>\n<li><b>Paint, stains and chemicals:</b> HHW only. Dried-out empty cans are a different case; ask the HHW program.</li>\n<li><b>Uncovered loads:</b> double fee at county sites. Tarp and strap.</li>\n</ul>\n{{STOCK:snowy-pine-branches|Snow load and freeze-thaw are why so many Big Bear sheds sag. Never climb onto a weak or snow-loaded shed roof.}}\n<h2>Deck sections, fencing and hot tub surrounds</h2>\n<p>The same rules apply to rotted deck boards, small deck sections, short fence runs and the skirting around a hot tub: cut to under 4 feet, separate treated lumber, and check permits for anything structural. If the shed or deck project includes an old spa, read <a href=\"/guides/hot-tub-removal-big-bear/\">how to get rid of an old hot tub in Big Bear</a>, which covers disconnection and cut-down.</p>\n<h2>After the shed is gone: fire-safe ground</h2>\n<p>A shed close to a cabin is part of the defensible-space picture. Once it's gone, rake out the needles and debris that collected under and around it, and don't restack firewood or junk in the same spot against the cabin. Our <a href=\"/guides/big-bear-fire-abatement-letter/\">fire abatement letter guide</a> and <a href=\"/weed-abatement/\">weed clearing service</a> cover the standards.</p>\n<h2>What shed removal costs: the factors</h2>\n<p>We don't publish prices or invent averages. These are the inputs that set the cost:</p>\n<ul>\n<li><b>Size and construction:</b> a resin or metal kit shed comes apart quickly; a framed wood shed with a floor, shingles and a slab takes longer and weighs more.</li>\n<li><b>Contents:</b> a full shed is a cleanout and a tear-down in one job.</li>\n<li><b>Material mix:</b> treated wood has to go to a different county site; pre-1984 materials may need asbestos testing first.</li>\n<li><b>Permits and utilities:</b> permit fees, if any, are set by the City or county, and electrical disconnection is a separate trade.</li>\n<li><b>Access:</b> slope, snow, distance to the street and gate width.</li>\n<li><b>Disposal fees:</b> county transfer-station fees are by weight (see the <a href=\"/guides/big-bear-dump-transfer-station-guide/#what-a-dump-run-costs-county-fees\">county fee table</a>).</li>\n</ul>\n<p>With us, the price is confirmed before work starts, from a free on-site look or photos by text.</p>\n",
+  "faq": [
+   [
+    "Do I need a permit to remove a shed in Big Bear City?",
+    "Big Bear City is unincorporated, so San Bernardino County Land Use Services applies. The county requires a demolition permit to remove all or part of a permitted building, and lists demolition among the work that needs a permit. Sheds up to 120 sq ft with no utilities don't need a building permit to build. Ask county Building & Safety about your specific shed before you start."
+   ],
+   [
+    "Can I take shed wood to the Big Bear Transfer Station?",
+    "Untreated wood cut to under 4 feet, yes, with weight-based fees. Pressure-treated wood is accepted only at the county's Mid-Valley and Victorville sites, and demolition waste from pre-1984 structures needs asbestos certification."
+   ],
+   [
+    "How do I know if my shed has asbestos?",
+    "You can't tell by looking. San Bernardino County requires asbestos certification for demolition waste from structures built before 1984, so older sheds with original roofing, siding or floor tiles should be tested before tear-down."
+   ],
+   [
+    "Will you tear down and haul my shed?",
+    "For small, non-structural sheds that qualify as minor work (under $1,000 total, no building permit needed), yes, including emptying the contents and hauling everything away. Bigger, structural or permitted structures need a licensed demolition contractor."
+   ],
+   [
+    "What about the concrete slab?",
+    "A slab can usually stay, and it makes a handy base for a new shed or a firewood rack kept away from the cabin. Breaking out concrete is a separate, heavier job; ask about it when you get your quote."
+   ]
+  ],
+  "sources": [
+   [
+    "San Bernardino County Land Use Services: largest accessory structure without a permit",
+    "https://lus.sbcounty.gov/faqs/what-is-the-maximum-size-accessory-structure-i-can-build-without-a-permit/"
+   ],
+   [
+    "San Bernardino County Land Use Services: when you need a Building &amp; Safety permit",
+    "https://lus.sbcounty.gov/faqs/when-do-i-apply-for-a-building-and-safety-permit/"
+   ],
+   [
+    "San Bernardino County: demolition permits",
+    "https://wp.sbcounty.gov/ezop/permits/demolition/"
+   ],
+   [
+    "San Bernardino County Public Works: accepted and prohibited waste at county sites",
+    "https://dpw.sbcounty.gov/solid-waste-management/accepted-waste/"
+   ],
+   [
+    "San Bernardino County Public Works: disposal fees (pricing effective July 1, 2023)",
+    "https://dpw.sbcounty.gov/solid-waste-management/fees/"
+   ],
+   [
+    "CalRecycle: household hazardous and universal waste that can't go in the trash",
+    "https://calrecycle.ca.gov/homehazwaste/info/"
+   ],
+   [
+    "San Bernardino County Fire: household hazardous waste (HHW) program",
+    "https://sbcfire.org/hhw/"
+   ]
+  ]
+ },
+ {
+  "slug": "post-winter-storm-debris-cleanup-big-bear",
+  "order": 5,
+  "published": "2026-10-24",
+  "reviewed": "October 2026",
+  "photo": "fallen-branches-snow",
+  "title": "Big Bear Storm & Winter Debris Cleanup Guide",
+  "desc": "Cleaning up after a Big Bear storm or winter: safety, green waste limits, curbside and drop-off rules, the chipping program, fire prep and cost factors.",
+  "h1": "Post-Winter and Storm Debris Cleanup in Big Bear",
+  "eyebrow": "Storm & spring cleanup guide",
+  "about": "Cleaning up storm and winter debris in Big Bear, California",
+  "answer_q": "What do I do with fallen branches in Big Bear?",
+  "answer": "Stay clear of anything touching a power line and call the utility first. For curbside green waste with Big Bear Disposal (City of Big Bear Lake), cut limbs to under 4 feet long and under 3 inches thick; stumps, dirt, rocks and sod aren't accepted. Big Bear City CSD customers can self-haul green waste to the Big Bear Transfer Station with their Disposal Use Permit at no extra cost, and green carts are only emptied April 1 to October 31. Green waste can't go in the trash cart. Larger storm loads need a roll-off bin or a haul-away service.",
+  "howto": {
+   "name": "How to clean up storm and winter debris in Big Bear",
+   "steps": [
+    [
+     "Make it safe before you touch anything",
+     "<p>Stay at least a tree-length away from any limb on or near a power line, and report it to the electric utility (or 911 if it's sparking or blocking a road). Don't walk under hanging or cracked limbs. Standing hazard trees and anything that needs climbing or a chainsaw at height is a job for a tree service.</p>"
+    ],
+    [
+     "Photograph the damage",
+     "<p>Take wide and close-up photos of fallen limbs, crushed fencing, carports, decks and roofs before cleanup, with the date. Insurers and property managers ask for them, and they help any contractor quote accurately.</p>"
+    ],
+    [
+     "Clear access paths first",
+     "<p>Open the driveway, the path to the door and the area around utility meters and propane tanks. Leave the street clear for plows and emergency vehicles, and don't pile debris in the roadway.</p>"
+    ],
+    [
+     "Sort the debris as you go",
+     "<p>Keep four piles: <b>green waste</b> (needles, cones, branches), <b>wood debris</b> from structures (fence boards, deck pieces), <b>bulky items</b> (crushed patio furniture, a collapsed carport) and <b>trash</b>. Each pile has its own rules.</p>"
+    ],
+    [
+     "Cut green waste to curbside size",
+     "<p>For Big Bear Disposal curbside service, limbs must be under 4 feet long and under 3 inches in diameter. Bundle or bag what doesn't fit in the green cart according to your provider's rules, and leave stumps, dirt, rocks and sod out.</p>"
+    ],
+    [
+     "Use the right drop-off or program",
+     "<p>Big Bear City CSD customers: self-haul green waste to the Big Bear Transfer Station with your Disposal Use Permit at no extra cost, or watch for CSD green-waste drop-off days. City of Big Bear Lake residents with proof of eligibility can use the Clean Bear Site's green-waste bin (no contractor green waste). For big loads, ask Big Bear Disposal about a roll-off bin.</p>"
+    ],
+    [
+     "Turn the cleanup into fire prep",
+     "<p>Spring storm debris dries into fire fuel by summer. Once the big pieces are gone, rake needles off roofs, gutters and decks, move firewood away from the cabin, and clear to defensible-space standards before Big Bear Fire's inspection season.</p>"
+    ]
+   ]
+  },
+  "body": "<p>Big Bear winters leave the same mess every year: snapped pine limbs, piles of needles and cones, fences pushed over by plow berms, crushed patio furniture and carport frames, and sheds that finally gave up under the snow. Wind events in fall and spring add more. Here is how to clean it up safely, legally and in a way that also gets you ready for fire season.</p>\n<h2>Step-by-step: storm and winter cleanup</h2>\n{{HOWTO}}\n{{CTA:Too much to bag and drag?|Text photos of the debris and the lot. We haul downed branches, needles and storm-broken junk, and can clear the lot for fire season in the same visit.}}\n<h2>Green waste rules by area</h2>\n<div class=\"tscroll\"><table>\n<tr><th>Provider</th><th>What the rules say</th></tr>\n<tr><td><b>Big Bear Disposal</b> (City of Big Bear Lake and Big Bear Disposal customers)</td><td>Free 96-gallon green cart, plus up to 5 extra bags a week (15 bags if you don't have a cart). Limbs under 4 feet long and under 3 inches thick. No stumps, dirt, rocks or sod. Roll-off bins are available for storm cleanup. No contractor green waste at the Clean Bear Site.</td></tr>\n<tr><td><b>Big Bear City CSD</b> (Big Bear City, Sugarloaf, Erwin Lake, Baldwin Lake)</td><td>Green waste has been banned from the black trash cart since January 1, 2023, under California's SB 1383. Green carts are emptied April 1 to October 31 only. Customers can self-haul green waste to the Big Bear Transfer Station with their Disposal Use Permit (dump card) at no extra cost. The CSD lists a green-waste-only drop-off day on Saturday, November 14, 2026, 9 AM–2 PM.</td></tr>\n<tr><td><b>Big Bear Transfer Station</b> (38550 Holcomb Valley Rd)</td><td>Monday–Saturday, 8 AM–4:30 PM. County rules: items over 4 feet long aren't accepted at transfer stations, and uncovered or unsecured loads pay double.</td></tr>\n</table></div>\n{{STOCK:storm-fallen-tree|A whole uprooted tree is a tree-service job. We haul limbs and debris once they're on the ground and safe to handle.}}\n<h2>Free chipping: the curbside chipping program</h2>\n<p>The Mountain Rim Fire Safe Council runs a free curbside chipping program for the Big Bear area, promoted by the Big Bear Fire Department. <b>Registration for 2026 has closed, and the next program begins in June 2027.</b> Check the program page in spring for sign-up dates and stacking rules. Until then, use your green cart, the CSD self-haul option or a haul-away.</p>\n<h2>Snow-damaged structures and junk</h2>\n<ul>\n<li><b>Collapsed carports, gazebos and sheds:</b> treat these as debris piles. Cut pieces to under 4 feet for the transfer station and keep treated lumber separate (it only goes to the county's Mid-Valley and Victorville sites). For tear-downs of what's still standing, see <a href=\"/guides/shed-removal-big-bear/\">shed removal in Big Bear</a>.</li>\n<li><b>Broken fencing and deck boards:</b> the same 4-foot and treated-wood rules apply.</li>\n<li><b>Patio furniture, grills and hot tub covers:</b> bulky items for your provider's bulky pickup, the transfer station or a haul. Empty and remove propane cylinders first; cylinders go to HHW. A snow-cracked spa? See <a href=\"/guides/hot-tub-removal-big-bear/\">hot tub removal</a>.</li>\n<li><b>Ash from the woodstove:</b> soak it for at least 48 hours before disposal. The Clean Bear Site has an ash bin for eligible city residents.</li>\n</ul>\n<h2>Spring cleanup is fire season prep</h2>\n{{STOCK:snowy-pine-branches|Snow breaks branches all winter; by summer the same debris is dry fuel.}}\n<p>Everything that comes down over winter becomes dry fuel by June. Big Bear Fire inspects properties for defensible space, and a letter can come with a deadline. Clearing storm debris, needles and brush together saves a second trip. Read <a href=\"/guides/big-bear-fire-abatement-letter/\">what to do if you get a fire abatement letter</a>, or see our <a href=\"/weed-abatement/\">weed abatement and defensible space service</a>.</p>\n<h2>Costs: what storm cleanup really costs</h2>\n<p>We won't quote a fake average. The inputs are:</p>\n<ul>\n<li><b>Free capacity you already pay for:</b> your green cart and extra bags (Big Bear Disposal), CSD self-haul with your Disposal Use Permit, and the chipping program when it's running.</li>\n<li><b>Roll-off bins:</b> Big Bear Disposal offers roll-offs for storm cleanup and a 4-yard Rent-a-Bin; ask them for current rates.</li>\n<li><b>Transfer-station fees for non-green debris:</b> weight-based county fees apply (see the <a href=\"/guides/big-bear-dump-transfer-station-guide/#what-a-dump-run-costs-county-fees\">county fee table</a>).</li>\n<li><b>Volume, cutting and access:</b> how much is down, how much cutting it needs to meet size limits, and how far it is from the street (slopes, snow, gates).</li>\n<li><b>What a tree service has to do first:</b> hazard trees and hanging limbs are a separate trade and a separate price.</li>\n</ul>\n<p>With us, the price is confirmed before work starts, from photos or a free on-site look.</p>\n",
+  "faq": [
+   [
+    "Can I put branches in my trash cart in Big Bear?",
+    "No. Green waste is banned from the black trash cart in Big Bear City CSD areas (since January 1, 2023, under SB 1383) and goes in green carts or approved drop-offs elsewhere. Use your green cart, the allowed extra bags, a drop-off option or a haul-away."
+   ],
+   [
+    "How long can branches be for Big Bear Disposal green waste pickup?",
+    "Under 4 feet long and under 3 inches in diameter. Stumps, dirt, rocks and sod aren't accepted."
+   ],
+   [
+    "When are green carts collected in Big Bear City?",
+    "The Big Bear City CSD empties green carts from April 1 to October 31 only. Outside that window, CSD customers can self-haul green waste to the Big Bear Transfer Station with their Disposal Use Permit at no extra cost."
+   ],
+   [
+    "Is there free chipping in Big Bear?",
+    "The Mountain Rim Fire Safe Council runs a free curbside chipping program. 2026 registration has closed, and the next program begins in June 2027."
+   ],
+   [
+    "Do you remove fallen trees?",
+    "We haul downed branches, limbs and storm debris once they're on the ground and safe to handle. We don't fell, climb or remove standing trees; for hazard trees, hanging limbs or anything near power lines, call a tree service or the utility."
+   ],
+   [
+    "Can you clean up storm debris at a cabin I don't live in?",
+    "Yes. Many of our customers are off-mountain owners. We work from a lockbox or gate code and send before-and-after photos. Text photos of the damage to (425) 233-2945 for a quote."
+   ]
+  ],
+  "sources": [
+   [
+    "Big Bear Disposal: green waste do's and don'ts",
+    "https://bigbeardisposal.com/green-waste-in-big-bear-the-dos-and-donts-you-need-to-know/"
+   ],
+   [
+    "Big Bear Disposal: residential services (bulky pickup, green carts, Rent-a-Bin)",
+    "https://bigbeardisposal.com/services/residential-services/"
+   ],
+   [
+    "Big Bear City CSD: green waste rules",
+    "https://bbccsd.org/index.php/solid-waste/green-waste"
+   ],
+   [
+    "Big Bear City CSD: community clean-up days",
+    "https://www.bbccsd.org/index.php/solid-waste/community-clean-up"
+   ],
+   [
+    "City of Big Bear Lake: public trash sites (Clean Bear)",
+    "https://www.bigbearlake.gov/index.php/en/community-main/public-trash-sites-clean-bear"
+   ],
+   [
+    "San Bernardino County Public Works: accepted and prohibited waste at county sites",
+    "https://dpw.sbcounty.gov/solid-waste-management/accepted-waste/"
+   ],
+   [
+    "San Bernardino County Public Works: disposal fees (pricing effective July 1, 2023)",
+    "https://dpw.sbcounty.gov/solid-waste-management/fees/"
+   ],
+   [
+    "Mountain Rim Fire Safe Council: curbside chipping program",
+    "https://www.firesafenow.org/chipperdayprogram"
+   ],
+   [
+    "Big Bear Fire Department: curbside chipping program",
+    "https://www.bigbearfire.org/office-of-the-fire-marshal/curbside-chipping-program"
+   ],
+   [
+    "San Bernardino County Fire: household hazardous waste (HHW) program",
+    "https://sbcfire.org/hhw/"
+   ]
+  ]
  }
 ]

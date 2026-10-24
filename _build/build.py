@@ -3,6 +3,7 @@ Edits made directly to generated HTML will be overwritten on the next build — 
 import sys, os, json, html
 sys.path.insert(0, os.path.dirname(__file__))
 from tpl import *
+from tpl import _img
 from content_services import SERVICES_CONTENT, P
 from content_areas import AREAS_CONTENT, SRC
 PAGES = []  # (path, priority)
@@ -16,14 +17,14 @@ def area_chips(label='{n}'):
     return '<ul class="chips">' + ''.join(f'<li><a href="/location/{s}/">{label.format(n=n)}</a></li>' for s, n in AREAS) + '</ul>'
 # Internal-link maps (descriptive anchors). Guides <-> services <-> areas.
 SERVICE_GUIDES = {
-    'junk-removal': ['/guides/big-bear-dump-transfer-station-guide/'],
-    'furniture-removal': ['/guides/big-bear-dump-transfer-station-guide/', '/guides/airbnb-turnover-checklist-big-bear/'],
-    'appliance-e-waste-removal': ['/guides/big-bear-dump-transfer-station-guide/'],
-    'cabin-cleanouts': ['/guides/estate-cleanout-guide-big-bear/', '/guides/airbnb-turnover-checklist-big-bear/', '/guides/big-bear-dump-transfer-station-guide/'],
-    'estate-cleanouts': ['/guides/estate-cleanout-guide-big-bear/', '/guides/big-bear-dump-transfer-station-guide/'],
-    'hot-tub-removal': ['/guides/hot-tub-removal-big-bear/', '/guides/airbnb-turnover-checklist-big-bear/'],
-    'light-demolition': ['/guides/big-bear-dump-transfer-station-guide/', '/guides/big-bear-fire-abatement-letter/'],
-    'painting': ['/guides/airbnb-turnover-checklist-big-bear/'],
+    'junk-removal': ['/guides/big-bear-dump-transfer-station-guide/', '/guides/big-bear-cabin-cleanout-checklist/', '/guides/post-winter-storm-debris-cleanup-big-bear/'],
+    'furniture-removal': ['/guides/old-furniture-appliance-disposal-big-bear/', '/guides/big-bear-dump-transfer-station-guide/', '/guides/airbnb-turnover-checklist-big-bear/'],
+    'appliance-e-waste-removal': ['/guides/old-furniture-appliance-disposal-big-bear/', '/guides/big-bear-dump-transfer-station-guide/'],
+    'cabin-cleanouts': ['/guides/big-bear-cabin-cleanout-checklist/', '/guides/declutter-cabin-before-selling-or-renting-big-bear/', '/guides/estate-cleanout-guide-big-bear/', '/guides/big-bear-dump-transfer-station-guide/'],
+    'estate-cleanouts': ['/guides/estate-cleanout-guide-big-bear/', '/guides/big-bear-cabin-cleanout-checklist/', '/guides/declutter-cabin-before-selling-or-renting-big-bear/'],
+    'hot-tub-removal': ['/guides/hot-tub-removal-big-bear/', '/guides/shed-removal-big-bear/', '/guides/airbnb-turnover-checklist-big-bear/'],
+    'light-demolition': ['/guides/shed-removal-big-bear/', '/guides/hot-tub-removal-big-bear/', '/guides/big-bear-dump-transfer-station-guide/'],
+    'painting': ['/guides/declutter-cabin-before-selling-or-renting-big-bear/', '/guides/airbnb-turnover-checklist-big-bear/'],
 }
 GUIDE_SERVICES = {  # guide slug -> (path, anchor)
     'big-bear-fire-abatement-letter': [('/weed-abatement/', 'Weed abatement &amp; defensible space clearing in Big Bear'), ('/services/junk-removal/', 'Junk hauling (tires, lumber and junk on the property)'), ('/services/light-demolition/', 'Light demolition of old sheds and fencing')],
@@ -31,8 +32,16 @@ GUIDE_SERVICES = {  # guide slug -> (path, anchor)
     'hot-tub-removal-big-bear': [('/services/hot-tub-removal/', 'Hot tub removal in Big Bear'), ('/services/light-demolition/', 'Deck and light demolition tear-outs'), ('/vacation-rental-turnovers/', 'Vacation rental turnovers')],
     'airbnb-turnover-checklist-big-bear': [('/vacation-rental-turnovers/', 'Airbnb &amp; vacation rental junk removal'), ('/services/furniture-removal/', 'Furniture &amp; mattress removal'), ('/services/hot-tub-removal/', 'Hot tub removal'), ('/weed-abatement/', 'Weed clearing before fire season')],
     'estate-cleanout-guide-big-bear': [('/services/estate-cleanouts/', 'Estate cleanouts in Big Bear'), ('/services/cabin-cleanouts/', 'Cabin cleanouts'), ('/services/furniture-removal/', 'Furniture &amp; mattress removal')],
+    'big-bear-cabin-cleanout-checklist': [('/services/cabin-cleanouts/', 'Cabin, garage &amp; attic cleanouts in Big Bear'), ('/services/estate-cleanouts/', 'Estate cleanouts'), ('/services/furniture-removal/', 'Furniture &amp; mattress removal'), ('/vacation-rental-turnovers/', 'Vacation rental cleanouts')],
+    'old-furniture-appliance-disposal-big-bear': [('/services/furniture-removal/', 'Furniture &amp; mattress removal in Big Bear'), ('/services/appliance-e-waste-removal/', 'Appliance &amp; e-waste removal'), ('/services/junk-removal/', 'Junk hauling')],
+    'declutter-cabin-before-selling-or-renting-big-bear': [('/services/cabin-cleanouts/', 'Cabin cleanouts before a sale or listing'), ('/weed-abatement/', 'Defensible space clearing in Big Bear'), ('/vacation-rental-turnovers/', 'Vacation rental cleanouts'), ('/services/painting/', 'Minor touch-up painting')],
+    'shed-removal-big-bear': [('/services/light-demolition/', 'Light demolition: small sheds, decks and fences'), ('/services/hot-tub-removal/', 'Hot tub removal'), ('/services/cabin-cleanouts/', 'Garage and shed cleanouts')],
+    'post-winter-storm-debris-cleanup-big-bear': [('/weed-abatement/', 'Weed abatement &amp; brush clearing'), ('/services/junk-removal/', 'Junk and debris hauling'), ('/services/light-demolition/', 'Tear-outs of storm-damaged sheds and fencing')],
 }
-AREA_GUIDES = [('/guides/big-bear-dump-transfer-station-guide/', 'Where to take junk in Big Bear (transfer station, bulky pickup)'),
+AREA_GUIDES = [('/guides/big-bear-dump-transfer-station-guide/', 'Where to take junk in Big Bear (transfer station, bulky pickup, fees)'),
+               ('/guides/big-bear-cabin-cleanout-checklist/', 'Cabin cleanout checklist, room by room'),
+               ('/guides/old-furniture-appliance-disposal-big-bear/', 'What to do with old furniture and appliances'),
+               ('/guides/post-winter-storm-debris-cleanup-big-bear/', 'Storm and winter debris cleanup'),
                ('/guides/big-bear-fire-abatement-letter/', 'Got a fire abatement letter? What to do'),
                ('/guides/airbnb-turnover-checklist-big-bear/', 'Vacation rental turnover checklist'),
                ('/guides/hot-tub-removal-big-bear/', 'How to get rid of an old hot tub')]
@@ -103,7 +112,7 @@ def home():
 <section><div class="wrap two"><div><h2>Why we quote on-site, for free</h2>
 <p>Mountain jobs are all different — steep driveways, loft stairs, decks over a slope, snow. So we don't publish price lists. We come out, look at the job, and give you a firm quote before we touch anything. It costs you nothing, and there's no obligation.</p>{btns_light()}</div>
 {fig(*P('yard-junk-pile'))}</div></section>
-<section class="alt"><div class="wrap narrow"><h2>Junk Removal Big Bear at a glance</h2><div class="tscroll"><table>
+<section class="alt"><div class="wrap narrow"><h2>Junk Removal Big Bear at a glance</h2><div class="tscroll"><table class="glance">
 <tr><td><b>Business</b></td><td>{BIZ["name"]} — junk removal and weed clearing, over 20 years in business</td></tr>
 <tr><td><b>Service area</b></td><td>The Big Bear Valley, CA: <a href="/location/big-bear-lake/">Big Bear Lake</a>, <a href="/location/big-bear-city/">Big Bear City</a>, <a href="/location/moonridge/">Moonridge</a>, <a href="/location/sugarloaf/">Sugarloaf</a>, <a href="/location/fawnskin/">Fawnskin</a>, <a href="/location/erwin-lake-baldwin-lake/">Erwin Lake and Baldwin Lake</a>. We come to you (no storefront).</td></tr>
 <tr><td><b>Hours</b></td><td>{BIZ["hours_text"]}</td></tr>
@@ -112,10 +121,8 @@ def home():
 <tr><td><b>Not offered</b></td><td>Moving, hazardous waste, tree removal, licensed contractor work</td></tr>
 </table></div></div></section>
 {faq_html(HOME_FAQ)}
-<section class="alt"><div class="wrap"><h2>Local guides</h2><div class="grid grid-3">
-<a class="card" href="/guides/big-bear-fire-abatement-letter/"><div class="ico">{ICONS["leaf"]}</div><h3>Got a fire abatement letter?</h3><p>What it means and how to comply.</p></a>
-<a class="card" href="/guides/big-bear-dump-transfer-station-guide/"><div class="ico">{ICONS["pin"]}</div><h3>Where to take junk in Big Bear</h3><p>Transfer station, bulky pickup and drop-off rules by area.</p></a>
-<a class="card" href="/guides/hot-tub-removal-big-bear/"><div class="ico">{ICONS["tub"]}</div><h3>Hot tub removal, explained</h3><p>Getting a dead spa off a mountain deck.</p></a></div></div></section>
+<section class="alt"><div class="wrap"><h2>Local guides</h2><p class="lead-s">Step-by-step help for Big Bear owners, checked against county and city sources.</p><div class="grid grid-3 gcards">{''.join(guide_card(g) for g in GUIDES if g['slug'] in ('big-bear-cabin-cleanout-checklist', 'old-furniture-appliance-disposal-big-bear', 'post-winter-storm-debris-cleanup-big-bear'))}</div>
+<p style="margin-top:16px"><a href="/guides/big-bear-fire-abatement-letter/">Fire abatement letter</a> · <a href="/guides/big-bear-dump-transfer-station-guide/">Dump &amp; transfer station</a> · <a href="/guides/hot-tub-removal-big-bear/">Hot tub removal</a> · <a href="/guides/shed-removal-big-bear/">Shed removal</a> · <a href="/guides/"><b>All guides →</b></a></p></div></section>
 {cta_band('Book your free on-site quote')}'''
     emit('/', page('/', 'Junk Removal Big Bear, CA | Junk Hauling, Cleanouts & Weed Clearing',
         f'Junk removal and weed clearing in the Big Bear Valley: hauling, cabin and estate cleanouts, hot tubs. Free on-site quotes, 8 AM–10 PM. Text {BIZ["phone"]}.',
@@ -331,34 +338,97 @@ GUIDE_IMG = {'big-bear-fire-abatement-letter': 'wildfire-dry-brush', 'big-bear-d
              'estate-cleanout-guide-big-bear': 'mountain-cabin-pines'}
 GUIDES = json.load(open(os.path.join(os.path.dirname(__file__), 'content', 'guides.json')))
 for _g in GUIDES: _g.update(GUIDE_OVERRIDES.get(_g['slug'], {}))
+GUIDES.sort(key=lambda g: g.get('order', 99))
 GUIDE_TITLES = {f'/guides/{g["slug"]}/': strip_tags(g['h1']) for g in GUIDES}
+def guide_photo(g):
+    """Card/hero photo for a guide: its own stock photo if it has one, else the old-site photo in GUIDE_IMG."""
+    return g.get('photo') or GUIDE_IMG.get(g['slug'])
+def photo_alt(name): return STOCK[name]['alt'] if name in STOCK else P(name)[1]
+def photo_url(name, w=1024):
+    ws = photo_widths(PHOTOS[name][0]); w = max([x for x in ws if x <= w] or ws[:1])
+    return f'{SITE}/images/opt/{name}-{w}.webp'
+def slugify(t):
+    import re
+    return re.sub(r'[^a-z0-9]+', '-', html.unescape(strip_tags(t)).lower()).strip('-')[:60]
+def quote_cta(h='Want it gone without the dump run?', p='Text 2–3 photos and your neighborhood. We reply with next steps and can come out for a free on-site quote — no obligation.'):
+    return (f'<div class="qcta"><h3>{h}</h3><p>{p}</p><div class="qcta-row">'
+            f'<a class="btn btn-amber" href="{BIZ["sms"]}">{ICONS["msg"]}Text photos to {BIZ["phone"]}</a>'
+            f'<a class="btn btn-line" href="{BIZ["wa"]}" rel="noopener">{ICONS["wa"]}WhatsApp</a></div></div>')
+def howto_html(steps):
+    return '<ol class="hsteps">' + ''.join(f'<li id="step-{i}"><h3>{n}</h3><div>{t}</div></li>' for i, (n, t) in enumerate(steps, 1)) + '</ol>'
+def render_guide_body(g):
+    """Expand {{HOWTO}}, {{STOCK:name|caption}}, {{FIG:name}}, {{CTA}} / {{CTA:heading|text}}; give every <h2> an id; return (body, toc)."""
+    import re
+    b = g['body']
+    if 'howto' in g: b = b.replace('{{HOWTO}}', howto_html(g['howto']['steps']))
+    b = re.sub(r'\{\{STOCK:([a-z0-9-]+)(?:\|(.*?))?\}\}', lambda m: stock_fig(m.group(1), m.group(2) or ''), b)
+    b = re.sub(r'\{\{FIG:([a-z0-9-]+)\}\}', lambda m: fig(*P(m.group(1))), b)
+    b = re.sub(r'\{\{CTA(?::(.*?)\|(.*?))?\}\}', lambda m: quote_cta(m.group(1), m.group(2)) if m.group(1) else quote_cta(), b)
+    toc, seen = [], set()
+    def h2(m):
+        attrs, inner = m.group(1) or '', m.group(2)
+        if 'id=' in attrs: return m.group(0)
+        i = slugify(inner)
+        while i in seen: i += '-2'
+        seen.add(i); toc.append((i, strip_tags(inner)))
+        return f'<h2 id="{i}"{attrs}>{inner}</h2>'
+    b = re.sub(r'<h2([^>]*)>(.*?)</h2>', h2, b, flags=re.S)
+    return b, toc
+def guide_card(g):
+    ph = guide_photo(g)
+    thumb = (f'<div class="gthumb">' + _img(ph, photo_alt(ph), '(min-width: 760px) 520px, calc(100vw - 36px)') + '</div>') if ph else ''
+    return (f'<a class="card gcard" href="/guides/{g["slug"]}/">{thumb}<div class="gbody"><span class="eyebrow-s">{g["eyebrow"]}</span>'
+            f'<h3>{g["h1"]}</h3><p>{esc(g["desc"])}</p><span class="more">Read the guide →</span></div></a>')
 def guides():
     crumbs = [('Home', '/'), ('Guides', '/guides/')]
-    cards = '<div class="grid grid-2">' + ''.join(f'<a class="card" href="/guides/{g["slug"]}/"><div class="ico">{ICONS["book"]}</div><h3>{g["h1"]}</h3><p>{esc(g["desc"])}</p><span class="more">Read the guide →</span></a>' for g in GUIDES) + '</div>'
-    body = page_hero(crumbs, 'Local knowledge', 'Big Bear Cleanout &amp; Property Guides', 'Practical, local answers: fire abatement letters, the transfer station, hot tub removal, rental turnovers and estate cleanouts.') + f'<section><div class="wrap">{cards}</div></section>{cta_band()}'
+    cards = '<h2>All Big Bear guides</h2><div class="grid grid-2 gcards">' + ''.join(guide_card(g) for g in GUIDES) + '</div>'
+    body = page_hero(crumbs, 'Local knowledge · Checked against official sources', 'Big Bear Cleanout &amp; Property Guides',
+        'Step-by-step, local answers for Big Bear and San Bernardino Mountains owners: cabin cleanouts, furniture and appliance disposal, decluttering before you sell or rent, sheds and hot tubs, storm debris, the transfer station and fire abatement letters.') + f'<section><div class="wrap">{cards}</div></section>{cta_band()}'
     emit('/guides/', page('/guides/', 'Big Bear Cleanout, Dump & Fire Abatement Guides | Local How-To',
-        f'Local guides for Big Bear owners: fire abatement letters, the transfer station, hot tub removal, Airbnb turnovers & estate cleanouts.', body,
+        'Local how-to guides for Big Bear owners: cabin cleanouts, furniture and appliance disposal, sheds, hot tubs, storm debris, the transfer station and fire letters.', body,
         [business_ld(), crumbs_ld(crumbs), {'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': 'Big Bear junk removal & property guides', 'url': SITE + '/guides/',
           'hasPart': [{'@type': 'Article', 'headline': strip_tags(g['h1']), 'url': f'{SITE}/guides/{g["slug"]}/'} for g in GUIDES]}]), '0.6')
     for g in GUIDES:
         path = f'/guides/{g["slug"]}/'
         crumbs = [('Home', '/'), ('Guides', '/guides/'), (strip_tags(g['h1'])[:60], path)]
         others = ''.join(f'<li><a href="/guides/{o["slug"]}/">{o["h1"]}</a></li>' for o in GUIDES if o is not g)
-        body = page_hero(crumbs, g['eyebrow'], g['h1'], esc(g['desc'])) + f'''
+        gb, toc = render_guide_body(g)
+        ph = guide_photo(g)
+        hero_img = (ph, photo_alt(ph)) if g.get('photo') else None
+        inline_img = '' if (g.get('photo') or '{{FIG' in g['body'] or g['slug'] not in GUIDE_IMG) else fig(*P(GUIDE_IMG[g['slug']]))
+        toc_html = ('<nav class="toc" aria-label="On this page"><b>On this page</b><ol>' + ''.join(f'<li><a href="#{i}">{t}</a></li>' for i, t in toc)
+                    + ('<li><a href="#sources">Official sources</a></li>' if g.get('sources') else '') + '<li><a href="#faq">FAQ</a></li></ol></nav>') if len(toc) >= 3 else ''
+        rev = g.get('reviewed', 'September 2026')
+        src = (f'<h2 id="sources">Official sources we checked</h2><p class="small muted">Checked {rev}. Agencies change hours, fees and rules, so confirm on their page before you load up.</p><ul class="small src">'
+               + ''.join(f'<li><a href="{u}" rel="noopener">{t}</a></li>' for t, u in g['sources']) + '</ul>') if g.get('sources') else ''
+        end_cta = quote_cta('Get a free quote for your Big Bear job', 'Text or WhatsApp 2–3 photos, your neighborhood and any access notes (stairs, steep driveway, gate code). We confirm the price before any work starts.')
+        svc_links = ''.join(f'<li><a href="{u}">{t}</a></li>' for u, t in GUIDE_SERVICES.get(g['slug'], []))
+        body = page_hero(crumbs, g['eyebrow'], g['h1'], esc(g['desc']), img=hero_img) + f'''
 <section><div class="wrap two"><article class="prose">
 <div class="note"><h2 style="font-size:1.15rem;margin-top:0">{g["answer_q"]}</h2><p style="margin:0">{g["answer"]}</p></div>
-{fig(*P(GUIDE_IMG[g["slug"]])) if g["slug"] in GUIDE_IMG else ''}
-{g["body"]}
-<p class="small muted">Last reviewed: September 2026. Rules, hours and fees change — confirm with the agency before you go.</p>
+{toc_html}{inline_img}
+{gb}
+{src}
+<p class="small muted">Last reviewed: {rev}. Rules, hours and fees change; confirm with the agency before you go.</p>
+{end_cta}
 <h2>More guides</h2><ul>{others}</ul>
-<h2>Related services</h2><ul>{''.join(f'<li><a href="{u}">{t}</a></li>' for u, t in GUIDE_SERVICES.get(g['slug'], []))}<li><a href="/services/">All junk removal services in Big Bear</a></li></ul>
+<h2>Related services</h2><ul>{svc_links}<li><a href="/services/">All junk removal services in Big Bear</a></li></ul>
 <h2>Service areas</h2>{area_chips('Junk removal in {n}')}
 </article>{contact_box()}</div></section>
 {faq_html(g['faq'])}{cta_band('Want it handled instead?')}'''
-        art = {'@context': 'https://schema.org', '@type': 'Article', 'headline': strip_tags(g['h1']), 'description': g['desc'], 'url': SITE + path,
-               'mainEntityOfPage': SITE + path, 'datePublished': g['published'], 'dateModified': TODAY, 'image': SITE + '/images/opt/og-junk-removal-big-bear.jpg',
-               'author': {'@type': 'Organization', 'name': BIZ['name'], 'url': SITE + '/'}, 'publisher': {'@id': SITE + '/#business'}}
-        emit(path, page(path, g['title'], g['desc'], body, [business_ld(), art, faq_ld(g['faq'], path), crumbs_ld(crumbs)], og_type='article'), '0.6')
+        img = photo_url(ph) if ph else SITE + '/images/opt/og-junk-removal-big-bear.jpg'
+        words = len(strip_tags(gb + ' ' + g['answer']).split())
+        art = {'@context': 'https://schema.org', '@type': 'Article', '@id': SITE + path + '#article', 'headline': strip_tags(g['h1']), 'description': g['desc'], 'url': SITE + path,
+               'mainEntityOfPage': SITE + path, 'datePublished': g['published'], 'dateModified': g.get('modified', TODAY), 'image': img, 'inLanguage': 'en-US', 'wordCount': words,
+               'author': {'@type': 'Organization', 'name': BIZ['name'], 'url': SITE + '/'}, 'publisher': {'@id': SITE + '/#business'},
+               'about': g.get('about', strip_tags(g['h1'])), 'spatialCoverage': {'@type': 'Place', 'name': 'Big Bear Valley, San Bernardino Mountains, California'}}
+        if g.get('sources'): art['citation'] = [u for _, u in g['sources']]
+        lds = [business_ld(), art, faq_ld(g['faq'], path), crumbs_ld(crumbs)]
+        if 'howto' in g:
+            lds.append({'@context': 'https://schema.org', '@type': 'HowTo', '@id': SITE + path + '#howto', 'name': g['howto']['name'], 'description': g['howto'].get('desc', g['desc']),
+                        'image': img, 'inLanguage': 'en-US', 'step': [{'@type': 'HowToStep', 'position': i, 'name': html.unescape(strip_tags(n)), 'text': html.unescape(strip_tags(t)), 'url': f'{SITE}{path}#step-{i}'}
+                                                  for i, (n, t) in enumerate(g['howto']['steps'], 1)]})
+        emit(path, page(path, g['title'], g['desc'], body, lds, og_type='article', og_image=img if g.get('photo') else None), '0.6')
 def notfound():
     body = page_hero([('Home', '/'), ('Page not found', '/404.html')], '404', 'That page got hauled away', 'The page you\'re looking for doesn\'t exist. Try one of these instead:') + \
         f'<section><div class="wrap">{svc_cards()}<p style="margin-top:16px"><a href="/">Home</a> · <a href="/location/">Service areas</a> · <a href="/guides/">Guides</a> · <a href="/contact/">Contact</a></p></div></section>'

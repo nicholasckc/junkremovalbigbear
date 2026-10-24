@@ -1,7 +1,7 @@
 """Shared config, icons and page template for the Junk Removal Big Bear static site."""
 import json, html, os
 SITE = 'https://www.junkremovalbigbear.com'
-TODAY = '2026-10-05'
+TODAY = '2026-10-24'
 # ---------------------------------------------------------------------------
 # PHONE: confirmed by Nicholas (Sep 2026). The only number on the site: takes texts, WhatsApp and calls;
 # every tel:/sms:/WhatsApp link and the schema telephone use it. No second number (Nicholas, Oct 1 2026).
@@ -127,6 +127,36 @@ PHOTOS = {  # name: (master width, master height) after the 4:3 crop - photos fr
     'hot-tub-removal-deck': (1024, 768), 'junk-hauling-box-truck': (1024, 768), 'cabinet-tear-out': (1024, 768),
     'shrub-trimming-ladder-fuel': (1024, 768), 'weed-clearing-crew': (1024, 768), 'wildfire-dry-brush': (1024, 768),
     'appliances-electronics-pile': (794, 596), 'mountain-cabin-pines': (1024, 768), 'yard-junk-pile': (1024, 768)}
+# Free-licensed stock photos (Pexels License, https://www.pexels.com/license/) used on the guides. Illustrative only:
+# always shown with a visible "Stock photo" credit, never captioned or described as our crew, truck, customers or jobs.
+STOCK = {
+    'cabin-room-clutter': {'by': 'Wendelin Jacober', 'url': 'https://www.pexels.com/photo/old-messy-room-4146262/', 'pos': .5, 'size': (1244, 933), 'q': 60,
+                           'alt': 'Wood-paneled cabin room crowded with an old armchair, a sofa, framed pictures and a full bookshelf'},
+    'old-armchair': {'by': 'Cz Jen', 'url': 'https://www.pexels.com/photo/antique-chair-in-a-studio-25747109/', 'pos': .45, 'pre': (.07, .03, .93, .97), 'size': (1204, 903),
+                     'alt': 'Worn upholstered armchair standing in an empty, dusty room'},
+    'old-washing-machines': {'by': 'Boys in Bristol Photography', 'url': 'https://www.pexels.com/photo/old-washing-machines-by-the-wall-19493018/', 'pos': .55, 'size': (1400, 1050),
+                             'alt': 'Several old front-loading washing machines stacked against a wall next to an office chair'},
+    'cabin-living-room': {'by': 'Erik Mclean', 'url': 'https://www.pexels.com/photo/living-room-in-wooden-house-9899840/', 'pos': .5, 'size': (1244, 933),
+                          'alt': 'Tidy wood cabin living room with a fireplace, two sofas and a coffee table'},
+    'packing-donation-boxes': {'by': 'cottonbro studio', 'url': 'https://www.pexels.com/photo/a-person-packing-clothes-in-a-cardboard-box-6612087/', 'pos': .5, 'size': (1400, 1050),
+                               'alt': 'Hands folding clothes into a cardboard box during a declutter'},
+    'labeling-boxes': {'by': 'SHVETS production', 'url': 'https://www.pexels.com/photo/woman-in-white-t-shirt-holding-brown-cardboard-box-7203967/', 'pos': .5, 'size': (1244, 933),
+                       'alt': 'Person writing a label on a cardboard box while sorting belongings'},
+    'old-wooden-shed': {'by': 'Erik Mclean', 'url': 'https://www.pexels.com/photo/old-wooden-shed-9899865/', 'pos': .55, 'size': (1400, 1050), 'q': 56,
+                        'alt': 'Weathered red wooden shed with a plank door surrounded by autumn plants'},
+    'storm-fallen-tree': {'by': 'April Yang', 'url': 'https://www.pexels.com/photo/uprooted-tree-after-severe-storm-in-urban-area-32394146/', 'pos': .5, 'size': (1244, 933), 'q': 52,
+                          'alt': 'Uprooted tree and broken branches lying across a lawn beside a house after a storm'},
+    'snowy-pine-branches': {'by': 'Ali Eren Akkaya', 'url': 'https://www.pexels.com/photo/snow-covered-pine-branches-in-winter-forest-35192281/', 'pos': .5, 'size': (1244, 933),
+                            'alt': 'Pine branches weighed down with snow in a dark winter forest'},
+    'fallen-branches-snow': {'by': 'alexander ermakov', 'url': 'https://www.pexels.com/photo/tree-branches-on-snow-covered-riverside-12083857/', 'pos': .5, 'size': (1400, 1050), 'q': 58,
+                             'alt': 'Fallen tree and broken branches lying on snow-covered ground'},
+}
+for _n, _s in STOCK.items(): PHOTOS[_n] = _s['size']
+def stock_fig(name, cap='', maxw=620):
+    """Stock photo figure with a visible photographer credit. Never captioned as one of our jobs."""
+    s = STOCK[name]; c = (cap + ' ' if cap else '')
+    return (f'<figure class="photo nat" style="max-width:{maxw}px">' + _img(name, s['alt'], f'(min-width: {maxw + 36}px) {maxw}px, calc(100vw - 36px)')
+            + f'<figcaption>{c}<span class="credit">Stock photo: <a href="{s["url"]}" rel="noopener">{s["by"]} / Pexels</a></span></figcaption></figure>')
 def photo_widths(W):
     """480/768/1024 variants, never upscaled; the master width is added only if it is well above the largest variant."""
     ws = [w for w in (480, 768, 1024) if w <= W]
@@ -144,7 +174,8 @@ def fig(name, alt, cap='', maxw=620):
             + _img(name, alt, f'(min-width: {maxw + 36}px) {maxw}px, calc(100vw - 36px)') + f'{fc}</figure>')
 def hero_pic(name, alt):
     """Photo in the right column of a page hero (below the buttons on mobile). Not lazy: it can be the LCP element."""
-    return '<figure class="hero-pic">' + _img(name, alt, '(min-width: 1120px) 420px, (min-width: 900px) 38vw, calc(100vw - 36px)', eager=True) + '</figure>'
+    cr = f'<figcaption class="hero-credit">Stock photo: <a href="{STOCK[name]["url"]}" rel="noopener">{STOCK[name]["by"]} / Pexels</a></figcaption>' if name in STOCK else ''
+    return '<figure class="hero-pic">' + _img(name, alt, '(min-width: 1120px) 420px, (min-width: 900px) 38vw, calc(100vw - 36px)', eager=True) + cr + '</figure>'
 def gallery(items):
     """Row of linked photos: items = [(name, alt, href, label)]."""
     return '<div class="gallery">' + ''.join(
@@ -201,8 +232,8 @@ def footer():
 <p><a href="{BIZ["gbp"]}" rel="noopener">Find us on Google Maps</a></p></div>
 <div><h2>Services</h2><ul>{svc}</ul></div>
 <div><h2>Service areas</h2><ul>{areas}<li><a href="/location/">All service areas</a></li></ul></div>
-<div><h2>Help</h2><ul><li><a href="/guides/">Local guides</a></li><li><a href="/guides/big-bear-fire-abatement-letter/">Fire abatement letter guide</a></li><li><a href="/guides/big-bear-dump-transfer-station-guide/">Big Bear dump &amp; transfer station</a></li><li><a href="/contact/">Contact &amp; free quotes</a></li></ul></div>
-</div><p class="legal">© 2026 {BIZ["name"]}. {LICENSE_NOTE} We don't haul hazardous waste (paint, chemicals, oil, asbestos, propane tanks). Scenery photos: Unsplash (Joshua Chun, Dušan veverkolog).</p></div></footer>
+<div><h2>Help</h2><ul><li><a href="/guides/">Local guides</a></li><li><a href="/guides/big-bear-fire-abatement-letter/">Fire abatement letter guide</a></li><li><a href="/guides/big-bear-dump-transfer-station-guide/">Big Bear dump &amp; transfer station</a></li><li><a href="/guides/big-bear-cabin-cleanout-checklist/">Cabin cleanout checklist</a></li><li><a href="/guides/old-furniture-appliance-disposal-big-bear/">Furniture &amp; appliance disposal</a></li><li><a href="/contact/">Contact &amp; free quotes</a></li></ul></div>
+</div><p class="legal">© 2026 {BIZ["name"]}. {LICENSE_NOTE} We don't haul hazardous waste (paint, chemicals, oil, asbestos, propane tanks). Scenery and guide photos are free-licensed stock (Unsplash, Pexels), credited where shown; they are not photos of our jobs.</p></div></footer>
 <div class="callbar">{PH_TODO}<a class="c1" href="{BIZ["sms"]}">{ICONS["msg"]}Text</a><a class="c2" href="{BIZ["wa"]}" rel="noopener">{ICONS["wa"]}WhatsApp</a></div>'''
 TITLE_FIX = {  # SEO QA 2026-10-24: keep <title> <= 60 chars
     '/': 'Junk Removal Big Bear, CA | Hauling, Cleanouts & Weeds',
@@ -226,8 +257,9 @@ TITLE_FIX = {  # SEO QA 2026-10-24: keep <title> <= 60 chars
     '/guides/estate-cleanout-guide-big-bear/': 'Clearing an Inherited Cabin in Big Bear: Family Guide',
 }
 
-def page(path, title, desc, body, schema, og_type='website', robots='index, follow', canonical=True):
+def page(path, title, desc, body, schema, og_type='website', robots='index, follow', canonical=True, og_image=None):
     title = TITLE_FIX.get(path, title)
+    ogi = og_image or f'{SITE}/images/opt/og-junk-removal-big-bear.jpg'
     url = SITE + path
     schemas = ''.join(ld(s) for s in schema)
     can = f'<link rel="canonical" href="{url}">' if canonical else ''
@@ -251,14 +283,12 @@ def page(path, title, desc, body, schema, og_type='website', robots='index, foll
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{SITE}/images/opt/og-junk-removal-big-bear.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Junk Removal Big Bear logo, services and phone number">
+<meta property="og:image" content="{ogi}">
+{'' if og_image else '<meta property="og:image:width" content="1200">' + chr(10) + '<meta property="og:image:height" content="630">' + chr(10) + '<meta property="og:image:alt" content="Junk Removal Big Bear logo, services and phone number">'}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
-<meta name="twitter:image" content="{SITE}/images/opt/og-junk-removal-big-bear.jpg">
+<meta name="twitter:image" content="{ogi}">
 {schemas}
 </head>
 <body>

@@ -28,7 +28,7 @@ AREAS_CONTENT = {
   ('Trash and bulky items in the city', f'''<ul>
 <li><b>Curbside trash</b> is handled by Big Bear Disposal under contract with the city. The city prohibits leaving cans at the curb for more than 24 hours because of wildlife.</li>
 <li><b>One free bulky-item pickup per year</b> per residence — up to 3 cubic yards or 4 large items. Extra pickups cost a fee. Details: <a href="https://bigbeardisposal.com/services/residential-services/" rel="noopener">Big Bear Disposal</a>.</li>
-<li><b>Clean Bear Sites</b> (41790 Garstin Dr and 39690 Big Bear Blvd) are for residents and visitors staying in the city — bagged household trash and recycling only. No bulky items, construction debris, commercial waste or contractors.</li>
+<li><b>Clean Bear Site</b> (41970 Garstin Dr, open 7 AM–8 PM daily) is for City of Big Bear Lake residents and visitors with proof of eligibility. It has bins for household trash, recycling, green waste, e-waste, universal waste and soaked ashes — no bulky-item bin, so furniture, appliances and construction debris go elsewhere. The second site on Big Bear Blvd closed on August 2, 2026.</li>
 <li><b>Hazardous waste</b>: the county's household hazardous waste collection site (a government facility at the City Public Works Yard, normally open Saturdays) handles paint, oil and chemicals — check the <a href="https://sbcfire.org/hhw/" rel="noopener">San Bernardino County Fire HHW program</a> for current hours and closures.</li>
 <li>{TS}.</li></ul>
 <p>When the job is bigger than one free pickup, involves carrying things out of the house, or you aren't here to meet a pickup window, that's where we come in.</p>'''),
@@ -36,7 +36,7 @@ AREAS_CONTENT = {
   ('Access, snow and parking', f'''<p>Steep driveways are common around Boulder Bay and the south-side neighborhoods, and storms usually hit the west end of the valley first. After snow, tell us whether the driveway is plowed and where a truck can stop. {ROADS}</p>'''),
  ],
  faqs=[
-  ('Can I take my old couch to a Clean Bear Site?', 'No. Clean Bear Sites don\'t accept bulky household items. Use your annual Big Bear Disposal bulky pickup, the Big Bear Transfer Station, or a haul-away service.'),
+  ('Can I take my old couch to a Clean Bear Site?', 'No. The Clean Bear Site has no bulky-item bin. Use your annual Big Bear Disposal bulky pickup, the Big Bear Transfer Station, or a haul-away service.'),
   ('Do you work in Big Bear Lake on weekends?', f'Yes, we work 7 days a week ({BIZ["hours_text"]}), subject to availability.'),
   ('Can you clear a vacation rental between guests?', 'Yes. Send photos and your checkout and check-in times, and we schedule inside that window.'),
  ],

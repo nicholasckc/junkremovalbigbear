@@ -14,3 +14,16 @@ sameAs_llms: https://www.junkremovalbigbear.com/llms.txt
 contact: https://www.junkremovalbigbear.com/contact/
 
 # sameAs: Google Business Profile (Google Maps cid=354390746886661546), Yelp: https://www.yelp.com/biz/junk-removal-big-bear-big-bear-lake
+
+# Local guides (step-by-step, cited official sources)
+guide: https://www.junkremovalbigbear.com/guides/big-bear-cabin-cleanout-checklist/
+guide: https://www.junkremovalbigbear.com/guides/old-furniture-appliance-disposal-big-bear/
+guide: https://www.junkremovalbigbear.com/guides/declutter-cabin-before-selling-or-renting-big-bear/
+guide: https://www.junkremovalbigbear.com/guides/shed-removal-big-bear/
+guide: https://www.junkremovalbigbear.com/guides/post-winter-storm-debris-cleanup-big-bear/
+guide: https://www.junkremovalbigbear.com/guides/big-bear-dump-transfer-station-guide/
+guide: https://www.junkremovalbigbear.com/guides/hot-tub-removal-big-bear/
+guide: https://www.junkremovalbigbear.com/guides/big-bear-fire-abatement-letter/
+guide: https://www.junkremovalbigbear.com/guides/airbnb-turnover-checklist-big-bear/
+guide: https://www.junkremovalbigbear.com/guides/estate-cleanout-guide-big-bear/
+not_offered: tree felling/removal, moving, hazardous waste hauling, licensed contractor work
