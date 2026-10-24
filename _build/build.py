@@ -478,8 +478,33 @@ def extras():
 
 ## Contact
 - [Contact and free quotes]({SITE}/contact/)
+- [Privacy (website analytics without cookies)]({SITE}/privacy/)
 ''')
-    write('/_config.yml', '# GitHub Pages (Jekyll) settings: keep build tooling and internal docs off the public site.\nexclude:\n  - _build\n  - README.md\n  - LAUNCH-GUIDE.md\n  - localize-images.sh\n')
+    write('/_config.yml', '# GitHub Pages (Jekyll) settings: keep build tooling and internal docs off the public site.\nexclude:\n  - _build\n  - README.md\n  - LAUNCH-GUIDE.md\n  - localize-images.sh\n  - IMAGE-SOURCES.md\n')
+# Cloudflare Web Analytics: the site token must be created in the Cloudflare dashboard
+# (Analytics & Logs > Web Analytics > Add a site: junkremovalbigbear.com). Paste the site token here,
+# or leave it empty: without a token no beacon is added and nothing is counted.
+CF_BEACON_TOKEN = ''
+def privacy():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'analytics'))
+    import privacy_copy as PC
+    path = '/privacy/'
+    crumbs = [('Home', '/'), ('Privacy', path)]
+    em = f' or email <a href="mailto:{BIZ["email"]}">{BIZ["email"]}</a>' if BIZ['email'] else ''
+    secs = [('What we receive', [f'When you text, WhatsApp, call or email us, we receive what you choose to send, such as your name, phone number, the address or neighborhood of the job, photos of the items and your message.']),
+            ('How we use it', ['We use it to reply to you, quote and schedule the job, and follow up on work you book with us. We don\'t sell it.'])]
+    secs += [(h, [p.replace(' or send a form', '') for p in ps]) for h, ps in PC.en(links='text, WhatsApp, phone or email link')]
+    body_secs = ''.join(f'<h2>{esc(h)}</h2>' + ''.join(f'<p>{esc(p)}</p>' for p in ps) for h, ps in secs)
+    body_secs += f'<h2>Questions or changes</h2><p>To ask what we have from you, or to have it corrected or deleted, text <a href="{BIZ["sms"]}">{BIZ["phone"]}</a>{em}.</p>'
+    body = page_hero(crumbs, 'Privacy', 'Privacy', 'How we handle what you send us, and how this website counts visits without cookies.') + \
+        f'<section><div class="wrap narrow"><div class="prose">{body_secs}</div></div></section>'
+    wp = {'@context': 'https://schema.org', '@type': 'WebPage', '@id': SITE + path + '#webpage', 'url': SITE + path, 'name': 'Privacy | Junk Removal Big Bear', 'inLanguage': 'en-US', 'publisher': {'@id': SITE + '/#business'}}
+    emit(path, page(path, 'Privacy | Junk Removal Big Bear', 'How Junk Removal Big Bear handles your messages and photos, and how the website counts visits without cookies.', body, [wp, crumbs_ld(crumbs)]), '0.2')
+def analytics():
+    import subprocess
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'analytics', 'inject.py'), root, '--exclude', 'images,_build', '--types', 'text,whatsapp,call,email']
+                   + (['--token', CF_BEACON_TOKEN] if CF_BEACON_TOKEN else []), check=True)
 if __name__ == '__main__':
-    home(); services_hub(); service_pages(); vrt(); weed(); location_hub(); area_pages(); contact(); guides(); notfound(); extras()
+    home(); services_hub(); service_pages(); vrt(); weed(); location_hub(); area_pages(); contact(); privacy(); guides(); notfound(); extras(); analytics()
     print(f'built {len(PAGES)} indexable pages + 404')
