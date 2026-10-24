@@ -484,7 +484,7 @@ def extras():
 # Cloudflare Web Analytics: the site token must be created in the Cloudflare dashboard
 # (Analytics & Logs > Web Analytics > Add a site: junkremovalbigbear.com). Paste the site token here,
 # or leave it empty: without a token no beacon is added and nothing is counted.
-CF_BEACON_TOKEN = ''
+CF_BEACON_TOKEN = '2c94b8fbb8344ae78b0acc0cb3bdfe05'
 def privacy():
     sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'analytics'))
     import privacy_copy as PC
