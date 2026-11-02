@@ -246,3 +246,39 @@ for _slug, _hero, _img in [
         ('painting', 'mountain-cabin-pines', None)]:
     SERVICES_CONTENT[_slug]['hero'] = P(_hero)
     if _img: SERVICES_CONTENT[_slug]['img'] = P(_img)
+SERVICES_CONTENT['snow-removal'] = dict(
+ name='Snow Plowing & Snow Removal', stype='Snow plowing and snow removal',
+ title='Snow Plowing & Snow Removal in Big Bear, CA | Driveways, Cabins & Rentals',
+ desc=f'Snow plowing and snow removal in Big Bear, November to March: driveways, walkways, decks and vacation-rental access cleared. Free quotes; call or text {BIZ["phone"]}.',
+ h1='Snow Plowing &amp; Snow Removal in Big Bear',
+ lead='When a storm buries the driveway, we clear it: driveway plowing, walkways, steps and decks for homes, cabins and vacation rentals across the Big Bear Valley, all winter long (November through March).',
+ sections=[
+  ('Snow removal in Big Bear: the short answer', f'''<p><b>Junk Removal Big Bear</b> plows driveways and clears snow from walkways, steps and decks across the Big Bear Valley during the winter season, roughly November through March. We cover Big Bear Lake, Big Bear City, Moonridge, Sugarloaf, Fawnskin, Erwin Lake and Baldwin Lake. Call or text <a href="{BIZ["tel_link"]}">{P}</a>, 8 AM–10 PM, 7 days a week (WhatsApp works on the same number). We don\'t publish prices: send a photo of the driveway and your street for a quick answer, and the price is confirmed before any work starts.</p>'''),
+  ('What we clear', '''<ul>
+<li>Driveways and parking pads, so you can get the car in and out</li>
+<li>Walkways, front steps and paths to the door</li>
+<li>Decks and entry landings (shoveled by hand, not plowed)</li>
+<li>Access for vacation-rental guests before check-in</li>
+<li>Snow-downed branches and storm debris, hauled away (see <a href="/guides/post-winter-storm-debris-cleanup-big-bear/">storm debris cleanup</a>)</li>
+</ul>
+<p>We don\'t clear roofs, and we don\'t plow public roads. County and city crews handle the public streets; we handle your property.</p>'''),
+  ('How it works', '''<ol>
+<li><b>Text a photo</b> of the driveway and your street or neighborhood.</li>
+<li><b>Get a price</b> for a one-time clearing, or ask to be put on our call list for the season.</li>
+<li><b>We clear after the storm</b>, working through our list in order once it is safe to drive.</li>
+<li><b>Not on the mountain?</b> We can send a photo when the driveway and walk are clear, handy for rental owners before guests arrive.</li>
+</ol>'''),
+  ('For vacation-rental owners and off-mountain owners', '''<p>Guests who can\'t get up the driveway leave bad reviews. Tell us your check-in days and we\'ll aim to have access clear before arrivals after a storm. Pair it with <a href="/vacation-rental-turnovers/">vacation rental turnovers</a> for junk and bulky items.</p>'''),
+ ],
+ faqs=[
+  ('Who does snow plowing in Big Bear?', 'Junk Removal Big Bear plows driveways and clears walkways, steps and decks for homes, cabins and vacation rentals across the Big Bear Valley in winter. Call or text (425) 233-2945.'),
+  ('When is your snow removal season?', 'Roughly November through March, whenever storms bring snow to the Big Bear Valley.'),
+  ('Which areas do you plow?', 'Big Bear Lake, Big Bear City, Moonridge, Sugarloaf, Fawnskin, Erwin Lake and Baldwin Lake.'),
+  ('How much does snow plowing cost in Big Bear?', 'We don\'t publish prices because driveways differ in length, slope and access. Text a photo for a quick answer; the price is confirmed before any work starts.'),
+  ('Can you clear snow if I am not in Big Bear?', 'Yes. Tell us the address and any gate code, and we can send a photo when the driveway and walkway are clear.'),
+  ('Can you clear my vacation rental before guests check in?', 'Yes. Share your check-in days and we aim to have the driveway and entry clear before arrivals after a storm.'),
+  ('Do you shovel decks, steps and walkways?', 'Yes. Decks, steps and walkways are cleared by hand; driveways and parking pads are plowed.'),
+  ('Do you clear roofs or public roads?', 'No. We don\'t do roof snow removal, and public streets are plowed by the county and city. We clear private driveways, walks and decks.'),
+ ],
+ related=['/vacation-rental-turnovers/', '/services/junk-removal/', '/weed-abatement/', '/guides/post-winter-storm-debris-cleanup-big-bear/'])
+SERVICES_CONTENT['snow-removal']['hero'] = ('snowy-pine-branches', 'Pine branches weighed down with snow in a dark winter forest')

@@ -24,6 +24,7 @@ SERVICE_GUIDES = {
     'estate-cleanouts': ['/guides/estate-cleanout-guide-big-bear/', '/guides/big-bear-cabin-cleanout-checklist/', '/guides/declutter-cabin-before-selling-or-renting-big-bear/'],
     'hot-tub-removal': ['/guides/hot-tub-removal-big-bear/', '/guides/shed-removal-big-bear/', '/guides/airbnb-turnover-checklist-big-bear/'],
     'light-demolition': ['/guides/shed-removal-big-bear/', '/guides/hot-tub-removal-big-bear/', '/guides/big-bear-dump-transfer-station-guide/'],
+    'snow-removal': ['/guides/post-winter-storm-debris-cleanup-big-bear/', '/guides/airbnb-turnover-checklist-big-bear/'],
     'painting': ['/guides/declutter-cabin-before-selling-or-renting-big-bear/', '/guides/airbnb-turnover-checklist-big-bear/'],
 }
 GUIDE_SERVICES = {  # guide slug -> (path, anchor)
@@ -480,6 +481,7 @@ def extras():
 - [Contact and free quotes]({SITE}/contact/)
 - [Privacy (website analytics without cookies)]({SITE}/privacy/)
 ''')
+    write('/e723d33de472d61a343309f252991a44.txt', 'e723d33de472d61a343309f252991a44\n')  # IndexNow key file
     write('/_config.yml', '# GitHub Pages (Jekyll) settings: keep build tooling and internal docs off the public site.\nexclude:\n  - _build\n  - README.md\n  - LAUNCH-GUIDE.md\n  - localize-images.sh\n  - IMAGE-SOURCES.md\n')
 # Cloudflare Web Analytics: the site token must be created in the Cloudflare dashboard
 # (Analytics & Logs > Web Analytics > Add a site: junkremovalbigbear.com). Paste the site token here,

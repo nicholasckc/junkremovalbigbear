@@ -39,6 +39,7 @@ SERVICES = [  # path, name, short blurb, icon
     ('/services/appliance-e-waste-removal/', 'Appliance & E-Waste Removal', 'Fridges, freezers, washers, dryers, stoves, TVs and computers hauled away.', 'fridge'),
     ('/services/hot-tub-removal/', 'Hot Tub & Spa Removal', 'Dead spas drained, cut down, carried off the deck and hauled away.', 'tub'),
     ('/services/light-demolition/', 'Light Demolition', 'Minor tear-outs: small sheds, deck boards, fencing, cabinets and carpet — hauled off.', 'hammer'),
+    ('/services/snow-removal/', 'Snow Plowing & Snow Removal', 'Winter driveway plowing and snow clearing for homes, cabins and vacation rentals, November through March.', 'snow'),
     ('/services/painting/', 'Painting (Minor Jobs)', 'Minor interior and exterior jobs — walls, ceilings and trim inside; siding touch-ups, decks and fences outside.', 'brush'),
 ]
 FURNITURE = ('/services/furniture-removal/', 'Furniture & Mattress Removal', 'Sofas, beds, mattresses, dressers and patio sets carried out and hauled away.', 'sofa')
@@ -46,6 +47,7 @@ SERVICES_ALL = SERVICES + [FURNITURE]  # footer, schema, area pages, llms
 LICENSE_NOTE = 'Junk Removal Big Bear is not a licensed contractor. Painting, light demolition and similar work is limited to minor jobs under $1,000 total (labor and materials) that don\'t need a building permit, as California law allows.'
 _P = 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"'
 ICONS = {
+ 'snow': f'<svg viewBox="0 0 24 24" {_P} aria-hidden="true"><path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1L19.1 4.9M9 3l3 3 3-3M9 21l3-3 3 3M3 9l3 3-3 3M21 9l-3 3 3 3"/></svg>',
  'phone': f'<svg viewBox="0 0 24 24" {_P} aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>',
  'msg': f'<svg viewBox="0 0 24 24" {_P} aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
  'sofa': f'<svg viewBox="0 0 24 24" {_P} aria-hidden="true"><path d="M4 11V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v3"/><path d="M2 13a2 2 0 0 1 4 0v2h12v-2a2 2 0 0 1 4 0v5H2z"/><path d="M5 18v2M19 18v2"/></svg>',
