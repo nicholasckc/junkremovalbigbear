@@ -24,7 +24,23 @@ AREAS_CONTENT = {
  desc=f'Junk removal, cleanouts and hot tub removal in the City of Big Bear Lake — the Village, Boulder Bay, Fox Farm and lakefront homes. Free on-site quotes.',
  lead='The City of Big Bear Lake has its own trash contractor, drop-off rules and vacation rental program. Here\'s what that means for getting rid of junk — and where we can help.',
  sections=[
+  ('Junk removal in Big Bear Lake: the short answer', f'''<p><b>Junk Removal Big Bear</b> is a local junk removal and weed clearing service for the City of Big Bear Lake (ZIP 92315) and the rest of the Big Bear Valley, in business for {BIZ["years"]}. Call or text <a href="{BIZ["tel_link"]}">{P}</a>, 8 AM–10 PM, 7 days a week (WhatsApp works on the same number). We don\'t publish prices: send 2–3 photos for a quick answer or ask for a free on-site quote, and the price is confirmed before any work starts.</p>'''),
   ('Neighborhoods we cover', '<p>The Village, Boulder Bay, Fox Farm, the lakefront, the city side of Moonridge and everything in between inside the 92315 ZIP code.</p>'),
+  ('What we haul from Big Bear Lake homes and cabins', '''<ul>
+<li><a href="/services/furniture-removal/">Furniture and mattresses</a>: sofas, beds, dressers, patio sets and the bunk beds rental guests have broken.</li>
+<li><a href="/services/appliance-e-waste-removal/">Appliances and e-waste</a>: fridges, freezers, washers, dryers, stoves, TVs and computers.</li>
+<li><a href="/services/hot-tub-removal/">Hot tubs and spas</a>: drained, cut down, carried off the deck and hauled away.</li>
+<li><a href="/services/cabin-cleanouts/">Cabin, garage and home cleanouts</a>, including attics, crawl spaces and sheds.</li>
+<li><a href="/services/estate-cleanouts/">Estate cleanouts</a> of inherited cabins, manageable from off the mountain.</li>
+<li><a href="/weed-abatement/">Weeds, pine needles, brush and yard debris</a>, cleared and hauled the same visit.</li>
+</ul>
+<p>We don\'t take hazardous materials (paint, chemicals, oil, fuels, asbestos or propane tanks) and we don\'t do moving.</p>'''),
+  ('How a Big Bear Lake job works', '''<ol>
+<li><b>Text photos</b> of what needs to go and your neighborhood (for example the Village, Boulder Bay or Fox Farm).</li>
+<li><b>Get a price</b> from the photos, or we come out for a free on-site quote.</li>
+<li><b>We load and haul</b>: carrying out of the house, garage or deck is part of the job.</li>
+<li><b>Not in town?</b> Give us lockbox, gate-code or neighbor access and we send before-and-after photos when it\'s done.</li>
+</ol>'''),
   ('Trash and bulky items in the city', f'''<ul>
 <li><b>Curbside trash</b> is handled by Big Bear Disposal under contract with the city. The city prohibits leaving cans at the curb for more than 24 hours because of wildlife.</li>
 <li><b>One free bulky-item pickup per year</b> per residence — up to 3 cubic yards or 4 large items. Extra pickups cost a fee. Details: <a href="https://bigbeardisposal.com/services/residential-services/" rel="noopener">Big Bear Disposal</a>.</li>
@@ -39,6 +55,10 @@ AREAS_CONTENT = {
   ('Can I take my old couch to a Clean Bear Site?', 'No. The Clean Bear Site has no bulky-item bin. Use your annual Big Bear Disposal bulky pickup, the Big Bear Transfer Station, or a haul-away service.'),
   ('Do you work in Big Bear Lake on weekends?', f'Yes, we work 7 days a week ({BIZ["hours_text"]}), subject to availability.'),
   ('Can you clear a vacation rental between guests?', 'Yes. Send photos and your checkout and check-in times, and we schedule inside that window.'),
+  ('How much does junk removal cost in Big Bear Lake?', 'We don\'t publish prices because every mountain job is different. Text 2–3 photos for a quick answer or ask for a free on-site quote; the price is confirmed before any work starts.'),
+  ('Do you remove hot tubs in Big Bear Lake?', 'Yes. We drain the spa, cut it down, carry it off the deck and haul it away.'),
+  ('Can you clean out my Big Bear Lake cabin if I live off the mountain?', 'Yes. Send photos, give us access (lockbox, gate code or a neighbor), and we send before-and-after photos when the job is done.'),
+  ('What won\'t you take?', 'Hazardous materials: paint, chemicals, oil, fuels, asbestos and propane tanks. The county household hazardous waste program handles those.'),
  ],
  sources=['city_trash', 'bbd', 'city_vr', 'hhw', 'cabb', 'caltrans']),
 'big-bear-city': dict(
