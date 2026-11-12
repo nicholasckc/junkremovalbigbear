@@ -24,6 +24,8 @@ AREAS_CONTENT = {
  desc=f'Junk removal, cleanouts and hot tub removal in the City of Big Bear Lake — the Village, Boulder Bay, Fox Farm and lakefront homes. Free on-site quotes.',
  lead='The City of Big Bear Lake has its own trash contractor, drop-off rules and vacation rental program. Here\'s what that means for getting rid of junk — and where we can help.',
  sections=[
+  ('Junk removal, same-day jobs and snow in Big Bear Lake',
+   '<p>Junk Removal Big Bear is a local crew serving Big Bear Lake (ZIP 92315) and the rest of the Big Bear Valley, in business over 20 years. We haul furniture, appliances, hot tubs and yard debris, and we clear weeds to fire-department standards. Call or text (425) 233-2945, 8 AM–10 PM, seven days a week, for a free on-site quote.</p>\n<p>Same-day junk removal in Big Bear Lake is sometimes possible when the schedule is open; booking a day or two ahead is more reliable, especially after storms. Text 2–3 photos and your neighborhood to (425) 233-2945, 8 AM–10 PM, seven days a week. We confirm the price before any work starts and do not publish a price list.</p>\n<p>Junk Removal Big Bear plows driveways and clears walkways, steps and decks for homes, cabins and vacation rentals across Big Bear Lake from November through March. After a storm, text a photo of the driveway to (425) 233-2945. Off-mountain and rental owners can get a photo when the access is clear. We do not clear roofs or public roads. For winter driveway plowing, see <a href="/services/snow-removal/">snow plowing and snow removal</a>.</p>'),
   ('Junk removal in Big Bear Lake: the short answer', f'''<p><b>Junk Removal Big Bear</b> is a local junk removal and weed clearing service for the City of Big Bear Lake (ZIP 92315) and the rest of the Big Bear Valley, in business for {BIZ["years"]}. Call or text <a href="{BIZ["tel_link"]}">{P}</a>, 8 AM–10 PM, 7 days a week (WhatsApp works on the same number). We don\'t publish prices: send 2–3 photos for a quick answer or ask for a free on-site quote, and the price is confirmed before any work starts.</p>'''),
   ('Neighborhoods we cover', '<p>The Village, Boulder Bay, Fox Farm, the lakefront, the city side of Moonridge and everything in between inside the 92315 ZIP code.</p>'),
   ('What we haul from Big Bear Lake homes and cabins', '''<ul>
@@ -52,6 +54,12 @@ AREAS_CONTENT = {
   ('Access, snow and parking', f'''<p>Steep driveways are common around Boulder Bay and the south-side neighborhoods, and storms usually hit the west end of the valley first. After snow, tell us whether the driveway is plowed and where a truck can stop. {ROADS}</p>'''),
  ],
  faqs=[
+  ('Who does junk removal in Big Bear Lake?',
+   'Junk Removal Big Bear is a local crew serving Big Bear Lake (ZIP 92315) and the rest of the Big Bear Valley, in business over 20 years. We haul furniture, appliances, hot tubs and yard debris, and we clear weeds to fire-department standards. Call or text (425) 233-2945, 8 AM–10 PM, seven days a week, for a free on-site quote.'),
+  ('Do you offer same-day junk removal in Big Bear Lake?',
+   'Same-day junk removal in Big Bear Lake is sometimes possible when the schedule is open; booking a day or two ahead is more reliable, especially after storms. Text 2–3 photos and your neighborhood to (425) 233-2945, 8 AM–10 PM, seven days a week. We confirm the price before any work starts and do not publish a price list.'),
+  ('Do you plow snow in Big Bear Lake?',
+   'Junk Removal Big Bear plows driveways and clears walkways, steps and decks for homes, cabins and vacation rentals across Big Bear Lake from November through March. After a storm, text a photo of the driveway to (425) 233-2945. Off-mountain and rental owners can get a photo when the access is clear. We do not clear roofs or public roads.'),
   ('Can I take my old couch to a Clean Bear Site?', 'No. The Clean Bear Site has no bulky-item bin. Use your annual Big Bear Disposal bulky pickup, the Big Bear Transfer Station, or a haul-away service.'),
   ('Do you work in Big Bear Lake on weekends?', f'Yes, we work 7 days a week ({BIZ["hours_text"]}), subject to availability.'),
   ('Can you clear a vacation rental between guests?', 'Yes. Send photos and your checkout and check-in times, and we schedule inside that window.'),

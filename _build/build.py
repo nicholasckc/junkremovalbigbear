@@ -80,6 +80,8 @@ HOME_FAQ = [
  ('What can\'t you take?', 'Hazardous materials — paint, chemicals, oil, fuels, asbestos and propane tanks.'),
  ('Are you a licensed contractor?', 'No. Junk Removal Big Bear is not a licensed contractor, so painting, light demolition and similar work is limited to minor jobs under $1,000 total (labor and materials) that don\'t need a building permit, as California law allows.'),
  ('Do you do moving?', 'No. We remove and haul away things you no longer want; we don\'t move belongings between homes.'),
+ ('Do you offer same-day junk removal in Big Bear?', 'Same-day junk removal in the Big Bear Valley is sometimes possible when the schedule is open; booking a day or two ahead is more reliable, especially after storms. Text 2–3 photos and your neighborhood to (425) 233-2945. The price is confirmed before any work starts.'),
+ ('Do you plow snow in Big Bear?', 'Yes. We plow driveways and clear walkways, steps and decks across the Big Bear Valley from November through March. After a storm, text a photo of the driveway to (425) 233-2945. We do not clear roofs or public roads. See our snow removal page.'),
 ]
 def home():
     body = f'''<section class="hero hero-photo"><img class="hero-bg" src="/images/opt/big-bear-lake-pines-800.webp" srcset="/images/opt/big-bear-lake-pines-800.webp 800w, /images/opt/big-bear-lake-pines-1400.webp 1400w" sizes="100vw" width="1400" height="933" alt="" fetchpriority="high">
@@ -89,6 +91,7 @@ def home():
 <p class="lead">Junk hauled, cabins and garages cleared out, and weeds and pine needles cleared to fire-department standards — by a local crew that hauls it all away.</p>
 {btns()}
 <ul class="ticks"><li>Over 20 years in business</li><li>Free on-site quotes — or text us photos</li><li>Weed abatement letter? We clear it and haul it in one visit</li><li>Open {BIZ["hours_text"]}</li></ul>
+{google_badge()}
 </div><img class="hero-badge" loading="lazy" decoding="async" src="/images/opt/logo-384.webp" srcset="/images/opt/logo-384.webp 384w, /images/opt/logo-600.webp 600w" sizes="300px" width="300" height="300" alt="Junk Removal Big Bear logo"></div></section>
 {photo_slot('real photo of Nicholas/crew or truck at work (no customer faces or house numbers)')}
 <section class="gal-sec"><div class="wrap">{gallery([P('junk-removal-crew-armchair-truck') + ('/services/junk-removal/', 'Junk hauling'), P('weed-clearing-crew') + ('/weed-abatement/', 'Weed clearing'), P('junk-hauling-box-truck') + ('/location/', 'Anywhere in the Big Bear Valley')])}</div></section>
@@ -119,8 +122,16 @@ def home():
 <tr><td><b>Hours</b></td><td>{BIZ["hours_text"]}</td></tr>
 <tr><td><b>Call / text</b></td><td><a href="{BIZ["tel_link"]}">{BIZ["phone"]}</a> (call) · <a href="{BIZ["sms"]}">text</a></td></tr>
 <tr><td><b>Quotes</b></td><td>Free on-site quotes, or quotes from photos. No published prices.</td></tr>
+<tr><td><b>Google reviews</b></td><td><a href="{BIZ['gbp_cid']}">{BIZ['gbp_rating']} from {BIZ['gbp_reviews']} Google reviews</a></td></tr>
 <tr><td><b>Not offered</b></td><td>Moving, hazardous waste, tree removal, licensed contractor work</td></tr>
 </table></div></div></section>
+<section class="alt"><div class="wrap"><h2>Same-day junk removal, Big Bear Lake, and snow</h2>
+<p class="sec-intro">Short answers you can cite — then see the <a href="/location/big-bear-lake/">Big Bear Lake page</a> and <a href="/services/snow-removal/">snow removal</a> for the full detail.</p>
+<ol class="answers">
+<li><h3>Do you offer same-day junk removal in Big Bear?</h3><p>Same-day junk removal in the Big Bear Valley is sometimes possible when the schedule is open; booking a day or two ahead is more reliable, especially after storms. Text 2–3 photos and your neighborhood to (425) 233-2945, 8 AM–10 PM, seven days a week. We confirm the price before any work starts and do not publish a price list.</p><a href="/location/big-bear-lake/">Big Bear Lake junk removal →</a></li>
+<li><h3>Who does junk removal in Big Bear Lake?</h3><p>Junk Removal Big Bear is a local crew serving Big Bear Lake (ZIP 92315) and the rest of the Big Bear Valley, in business over 20 years. We haul furniture, appliances, hot tubs and yard debris, and we clear weeds to fire-department standards. Call or text (425) 233-2945, 8 AM–10 PM, seven days a week, for a free on-site quote.</p><a href="/location/big-bear-lake/">Big Bear Lake page →</a></li>
+<li><h3>Do you plow snow in Big Bear?</h3><p>Junk Removal Big Bear plows driveways and clears walkways, steps and decks for homes, cabins and vacation rentals across Big Bear Lake from November through March. After a storm, text a photo of the driveway to (425) 233-2945. Off-mountain and rental owners can get a photo when the access is clear. We do not clear roofs or public roads.</p><a href="/services/snow-removal/">Snow plowing and snow removal →</a></li>
+</ol></div></section>
 {faq_html(HOME_FAQ)}
 <section class="alt"><div class="wrap"><h2>Local guides</h2><p class="lead-s">Step-by-step help for Big Bear owners, checked against county and city sources.</p><div class="grid grid-3 gcards">{''.join(guide_card(g) for g in GUIDES if g['slug'] in ('big-bear-cabin-cleanout-checklist', 'old-furniture-appliance-disposal-big-bear', 'post-winter-storm-debris-cleanup-big-bear'))}</div>
 <p style="margin-top:16px"><a href="/guides/big-bear-fire-abatement-letter/">Fire abatement letter</a> · <a href="/guides/big-bear-dump-transfer-station-guide/">Dump &amp; transfer station</a> · <a href="/guides/hot-tub-removal-big-bear/">Hot tub removal</a> · <a href="/guides/shed-removal-big-bear/">Shed removal</a> · <a href="/guides/"><b>All guides →</b></a></p></div></section>

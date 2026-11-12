@@ -1,7 +1,7 @@
 """Shared config, icons and page template for the Junk Removal Big Bear static site."""
 import json, html, os
 SITE = 'https://www.junkremovalbigbear.com'
-TODAY = '2026-11-02'
+TODAY = '2026-11-13'
 # ---------------------------------------------------------------------------
 # PHONE: confirmed by Nicholas (Sep 2026). The only number on the site: takes texts, WhatsApp and calls;
 # every tel:/sms:/WhatsApp link and the schema telephone use it. No second number (Nicholas, Oct 1 2026).
@@ -22,6 +22,9 @@ BIZ = {
     'area_text': 'the Big Bear Valley and nearby mountain communities',
     'gbp': 'https://www.google.com/maps/search/?api=1&query=Junk%20Removal%20Big%20Bear&query_place_id=ChIJ75uRnPdVmUIRqmXds4EM6wQ',
     'gbp_cid': 'https://maps.google.com/?cid=354390746886661546',
+    # Last verified Google reviews: 5.0 / 14 after Phil Axtell reply 12 Nov 2026. Do not invent a different count.
+    'gbp_rating': '5.0',
+    'gbp_reviews': '14',
     # Yelp listing verified via its Apple Maps place card (Sep 26 2026). Note: Yelp still shows an old street address + hours; Nicholas to fix.
     'yelp': 'https://www.yelp.com/biz/junk-removal-big-bear-big-bear-lake',
 }
@@ -93,6 +96,8 @@ def business_ld():
         'openingHoursSpecification': [{'@type': 'OpeningHoursSpecification', 'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], 'opens': BIZ['opens'], 'closes': BIZ['closes']}],
         'sameAs': [BIZ['gbp_cid'], BIZ['yelp']],
         'hasMap': BIZ['gbp_cid'],
+        'aggregateRating': {'@type': 'AggregateRating', 'ratingValue': BIZ['gbp_rating'],
+                            'bestRating': '5', 'worstRating': '1', 'reviewCount': BIZ['gbp_reviews']},
         **({'email': BIZ['email']} if BIZ['email'] else {}),
         'knowsAbout': ['Junk removal', 'Weed abatement', 'Weed and brush clearing', 'Defensible space clearing', 'Cabin cleanouts', 'Estate cleanouts', 'Hot tub removal',
                        'Appliance and e-waste removal', 'Furniture and mattress removal', 'Vacation rental turnovers', 'Light demolition (minor jobs)', 'Painting (minor jobs)', 'Big Bear Valley disposal rules'],
@@ -124,6 +129,19 @@ def btns(dark=True):
             f'<a class="btn {sec}" href="{BIZ["tel_link"]}">{ICONS["phone"]}Call</a></div>'
             f'<p class="cta-alt small">Same number for text, WhatsApp and calls: <a href="{BIZ["sms"]}">{BIZ["phone"]}</a></p>')
 def btns_light(): return btns(False)
+G_LOGO = ('<svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true" focusable="false">'
+          '<path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>'
+          '<path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>'
+          '<path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>'
+          '<path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>'
+          '</svg>')
+def google_badge():
+    rating, count, url = BIZ['gbp_rating'], BIZ['gbp_reviews'], BIZ['gbp_cid']
+    aria = f"{rating} out of 5 from {count} Google reviews. Read our reviews on Google"
+    return (f'<!-- GBP_REVIEW_COUNT={count} -->'
+            f'<a class="gline" href="{html.escape(url, quote=True)}" target="_blank" rel="noopener" aria-label="{html.escape(aria, quote=True)}">'
+            f'{G_LOGO}<span class="gline-stars" aria-hidden="true">★★★★★</span>'
+            f'<span><b>{html.escape(rating)}</b> · {html.escape(count)} Google reviews</span></a>')
 PHOTOS = {  # name: (master width, master height) after the 4:3 crop - photos from the old site, see _build/images.py
     'junk-removal-crew-loading-truck': (1024, 768), 'junk-removal-crew-armchair-truck': (1024, 768), 'mattress-removal-crew': (1024, 768),
     'hot-tub-removal-deck': (1024, 768), 'junk-hauling-box-truck': (1024, 768), 'cabinet-tear-out': (1024, 768),

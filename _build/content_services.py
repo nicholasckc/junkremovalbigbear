@@ -272,6 +272,7 @@ SERVICES_CONTENT['snow-removal'] = dict(
  ],
  faqs=[
   ('Who does snow plowing in Big Bear?', 'Junk Removal Big Bear plows driveways and clears walkways, steps and decks for homes, cabins and vacation rentals across the Big Bear Valley in winter. Call or text (425) 233-2945.'),
+  ('Can you clear snow the same day as a storm?', 'Often we can get to you after a storm the same day, once it is safe to drive, subject to the call list. Text a photo of the driveway to (425) 233-2945; booking ahead of a forecast storm is more reliable.'),
   ('When is your snow removal season?', 'Roughly November through March, whenever storms bring snow to the Big Bear Valley.'),
   ('Which areas do you plow?', 'Big Bear Lake, Big Bear City, Moonridge, Sugarloaf, Fawnskin, Erwin Lake and Baldwin Lake.'),
   ('How much does snow plowing cost in Big Bear?', 'We don\'t publish prices because driveways differ in length, slope and access. Text a photo for a quick answer; the price is confirmed before any work starts.'),
