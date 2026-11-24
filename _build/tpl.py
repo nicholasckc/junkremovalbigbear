@@ -22,9 +22,9 @@ BIZ = {
     'area_text': 'the Big Bear Valley and nearby mountain communities',
     'gbp': 'https://www.google.com/maps/search/?api=1&query=Junk%20Removal%20Big%20Bear&query_place_id=ChIJ75uRnPdVmUIRqmXds4EM6wQ',
     'gbp_cid': 'https://maps.google.com/?cid=354390746886661546',
-    # Last verified Google reviews: 5.0 / 14 after Phil Axtell reply 12 Nov 2026. Do not invent a different count.
+    # Last verified public Google Maps count: 5.0 from 15 reviews on 23 November 2026. Do not invent a different count.
     'gbp_rating': '5.0',
-    'gbp_reviews': '14',
+    'gbp_reviews': '15',
     # Yelp listing verified via its Apple Maps place card (Sep 26 2026). Note: Yelp still shows an old street address + hours; Nicholas to fix.
     'yelp': 'https://www.yelp.com/biz/junk-removal-big-bear-big-bear-lake',
 }
