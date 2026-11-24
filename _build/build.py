@@ -310,7 +310,8 @@ def area_pages():
             (f'Do you do weed abatement in {c["name"]}?', f'Yes. We clear weeds, pine needles and brush to defensible space standards in {c["name"]} and haul the debris away the same visit.' + (' In Fawnskin, inspections and notices come from San Bernardino County Fire.' if slug == 'fawnskin' else ''))]
         c = dict(c, faqs=faqs)
         guides_html = ''.join(f'<li><a href="{u}">{t}</a></li>' for u, t in AREA_GUIDES)
-        body = flag + page_hero(crumbs, f'Service area · {c["zip"]}', c.get('h1', f'Junk Removal in {c["name"]}'), c['lead']) + f'''
+        hero_extra = google_badge() if slug == 'big-bear-lake' else ''
+        body = flag + page_hero(crumbs, f'Service area · {c["zip"]}', c.get('h1', f'Junk Removal in {c["name"]}'), c['lead'], extra=hero_extra) + f'''
 <section><div class="wrap two"><div class="prose">{secs}
 <h2>Services in {c["name"]}</h2>{svc_cards(SERVICES_ALL, 'grid grid-2')}
 <h2>Local guides for {c["name"]} owners</h2><ul>{guides_html}</ul>
@@ -472,6 +473,7 @@ def extras():
 - Licensing: not a licensed contractor. Painting, light demolition and similar work are limited to minor jobs under $1,000 total (labor and materials) that need no building permit (California B&P Code 7027.2).
 - Not offered: moving, hazardous waste (paint, chemicals, oil, fuels, asbestos, propane tanks), tree removal
 - Google Business Profile: {BIZ["gbp_cid"]}
+- Google reviews: {BIZ["gbp_rating"]} from {BIZ["gbp_reviews"]} Google reviews
 - Yelp: {BIZ["yelp"]}
 
 ## Services
